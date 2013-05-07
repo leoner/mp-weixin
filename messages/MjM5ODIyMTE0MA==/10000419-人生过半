@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>人生过半</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">人生过半</h1>
+			<span id="post-date">2013-04-27</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGwvLyzeRNuj7Jzeq8cG46yX25icoEyqpY1WAAQyhJH14g/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p><strong>{一事无成}</strong></p><p><br  /></p><p>今天我过生日，也是母难日。弱冠之后害怕过年， 而立以后怕过生日，每到这天都觉得很是伤感，算下来，人生过半了。按照世界卫生组织的统计，中国人男性的平均寿命是 72 岁，评估了一下自己的体质，估计要在平均线之下，所以，不折不扣人生过半。</p><p><br  /></p><p>想到即使乐观估算，不发生意外的情况下，这辈子剩下来的时间只有 30 多年，也就是一万多天的日子好过了，怎么能过得更有效率一点? </p><p><br  /></p><p>前天在北京和朋友聊天，被问起我的人生理想是什么，话说真是好久没有人这么问我了。还剩下这么一点时间，还谈什么理想，多做点有价值的事情吧。崔健在歌中唱到「我想发展自己/我又想改善环境/可你劝我撒泡猴儿尿好好看看自己」撒泡猴儿尿看看自己之后发现一事无成。</p><p><br  /></p><p><strong>{地球的法则}</strong></p><p><br  /></p><p>我之前应该推荐过这本书，《地球的法则:21世纪地球宣言》，昨天在飞机上重新读了一遍，觉得这真是一本好书。推荐大家能读一下。尤其推荐第五章和第六章，可以对反对转基因的那帮脑残们一记当头棒喝。此书作者斯图尔特.布兰德，Stay foolish，stay hungry 这句话经由乔布斯之口传遍世界，这句话最早是斯图尔特.布兰德说的。他也是是乔布斯年轻时的偶像。</p><p><br  /></p><p>这本书给我最大的启发是如何看待问题，以及如何更好地解决问题。</p><p><br  /></p><p><strong>{今日小道}</strong></p><p><br  /></p><p>亚马逊云服务的机房在北京已经搭建完成，近期可能对外运营。该来的终于要来了。<br  /></p><p><br  /></p><p>感谢给我发生日祝福的朋友，谢谢大家一直以来对我的支持。</p><p><br  /></p><p>题图: 我自己做的. 没什么特别的意思，就是一个感慨。</p><p><br  /></p><p>点击<span style="color:#ffffff;background-color:#000000;">{阅读原文}</span>可以查看我的支付宝收款页面，欢迎赞助。</p><p>https://me.alipay.com/Fenng </p><p><br  /></p><p>顺便说一下，支付宝这个页面到现在还对移动设备不友好。不知道什么时候能优化一下。</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">按照世界卫生组织的统计，中国人男性的平均寿命是&nbsp;72&nbsp;岁，评估了一下自己的体质，估计要在平均线之下，所以，不折不扣人生过半。</script>
+	<script id="txt-title" type="txt/text">人生过半</script>
+	<script id="txt-sourceurl" type="txt/text">https://me.alipay.com/Fenng#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000419&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000419&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGwvLyzeRNuj7Jzeq8cG46yX25icoEyqpY1WAAQyhJH14g/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000419&itemidx=1#wechat_redirect",
+						title  = htmlDecode("人生过半"),
+            desc   = htmlDecode("按照世界卫生组织的统计，中国人男性的平均寿命是&nbsp;72&nbsp;岁，评估了一下自己的体质，估计要在平均线之下，所以，不折不扣人生过半。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

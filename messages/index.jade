@@ -1,0 +1,9 @@
+extends ./layout
+
+block content
+   h1 账户列表
+   ul#users
+     each user in users
+       li
+          a(href='/messages/#{user.biz}') #{user.name}
+     

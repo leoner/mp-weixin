@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>不动如山</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">不动如山</h1>
+			<span id="post-date">2013-02-20</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlFzWWZ8o8uenzspzbaAFaH41mOLicSbayiaic7JwBZrIYlfQ/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今天听到了一些事情，在微博上发了几句感慨. 我抄录如下:</p><p><br  /></p><p>有个同行网站创始人在背后逢人就说我们攻击了他们网站，说的有鼻子有眼的。有些啼笑皆非，市场这么大，别人都把心思花在怎么「做的更大，做的更快，做的更好」上面了，谁会把心思花在远远不如你的人身上? 一家公司是否踏实，看看创始人是否花钱买粉丝就知道了，自己不踏实的人，才总会猜测别人攻击他。</p><p><br  /></p><p>弱者为什么是弱者? &nbsp;是他自己让自己成为的弱者。</p><p><br  /></p><p>我们这个行业(泛医疗互联网领域)内的一些弱者的特征：</p><p><br  /></p><p>1. 出身光鲜，动辄都博士什么的，但不愿意出苦力，总想使巧劲儿，最后导致根本没劲儿；</p><p><br  /></p><p>2. 受害者心态，做不好是因为别人太坏，员工太烂，市场太无情，但从不找自身原因；</p><p><br  /></p><p>3. 做的不好的一堆人抱团，互相安慰，互相吹捧。下棋要找高手，弄斧到班门。你跟比你还差的一起混能混出什么来? 幻想着左脚尖一点右脚尖就想上墙，准是看武侠小说看多了；</p><p><br  /></p><p>4. 不够诚信，欺骗客户，最常见的就是数据造假. 客户花钱在你这里投广告，效果不好就不好，分析原因，没达到预期也别自己编数据。信用是什么？诚信就是你的潜在收益，当别人的欺骗手法露馅的时候，就是你的信用开始有回报的时候。</p><p><br  /></p><p>跟这些人在一个行业里，只需要老老实实做事，就足够无敌了。并不需要做的多好(当然对自己的要求必须要更高)，做到基本水准已经可以立于不败之地了。</p><p><br  /></p><p>刚才无端想起孙子兵法中的一句话：故其疾如风，其徐如林，侵掠如火，难知如阴；不动如山，动如雷霆。</p><p><br  /></p><p>需要记之。<br  /></p><p><br  /></p><p>今日小道：盛大广告融资失败。原来的负责人谭思亮将离职创业。盛大最近半年可真是坏消息不断－这句话我是不是说过一次了?</p><p><br  /></p><p>刚才收到一位朋友的留言看了让我大笑：</p><p><br  /></p><p>「大辉哥，赶紧把今天的发了让我早点睡吧！媳妇床上等我半天了。」</p><p><br  /></p><p>哈哈，好好好，这就火速发布。</p><p><br  /></p><p>请留意：</p><p><br  /></p><p>现在是求职季节，点击 {阅读原文} 可看到 「i天下网商」招聘网站产品经理的信息。需要的话点击移步查看，不需要的不会对你干扰。</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">弱者为什么是弱者?&nbsp;&nbsp;是他自己让自己成为的弱者。</script>
+	<script id="txt-title" type="txt/text">不动如山</script>
+	<script id="txt-sourceurl" type="txt/text">https://jobsdigg.com/story/696035/#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000168&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000168&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlFzWWZ8o8uenzspzbaAFaH41mOLicSbayiaic7JwBZrIYlfQ/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000168&itemidx=1#wechat_redirect",
+						title  = htmlDecode("不动如山"),
+            desc   = htmlDecode("弱者为什么是弱者?&nbsp;&nbsp;是他自己让自己成为的弱者。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

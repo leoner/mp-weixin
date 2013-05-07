@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>信息的脉搏</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">信息的脉搏</h1>
+			<span id="post-date">2013-02-04</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGOD1kWvuUj9Aey7u4iaial4hEAFohdU1lGjdibSIicFtvqAQ/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今天留意到我的 Twitter 帐户 ( @Fenng ) 关注者已经超过了 4 万。很是欣喜。作为 Twitter 最早的那一波中文用户之一，见证了 Twitter 数年来的成长，颇有感慨。最新听说 Twitter 估值已经接近 100 亿美元。我想，对于有志于成为「世界的脉搏」的 Twitter 来说，这个估值并不算太贵。</p><p><br  /></p><p>Twitter 4 万关注者，微信超过两万，微波 21 万，个人站点订阅量超过 20 万，Alexa Rank 在 4 到 5 万之间。做个广告能值多少钱? 或许一文不值。</p><p><br  /></p><p>问：关于最近国外某调查机构出的关于新浪微博2012年用户活跃度下降40% 的报告，能否点评下?<br  /></p><p><br  /></p><p>答：如果你关注我的微博的话，会发现我已经评论过了。重新发一下：</p><p><br  /></p><p>GlobalWebIndex 出了一个不靠谱的报告，很多人都说「新浪微博减少近40%(实际不到)，Twitter增长40%」，惊呼，新浪微博完了. 而更扯淡的是，这个报告居然说 Twitter 的中国大陆活跃用户 Q2 到 Q4 增长了 50% 还多. 不知道怎么能统计出来这个... 总之，这样的报告我是不信。谁原意信谁信。</p><p><br  /></p><p>因为 GFW 的存在，中文 Twitter 用户的统计几乎是不可能的。GlobalWebIndex 的数据怎么做出来的呢？问卷调查? </p><p><br  /></p><p>很多媒体傻乎乎的相信这种报告，还转来转去的，我觉得挺好笑的。建议各位看数据的时候要有自己的判断，不要被一些乱七八糟的结论左右，包括我在这里说的。</p><p><br  /></p><p>问：大部分科技互联网爱好者喜欢逛论坛，科技博客，如何把握到现实里接地气和逛科技博客的比例呢?</p><p><br  /></p><p>答： 如果只是看，但是看的时候自己缺少判断力，看多少都是白看。阅读本身是一种训练。接地气的文章都是接地气的人写得。找不到接地气的人，读来的东西也都是虚的。</p><p><br  /></p><p>今日小道：</p><p><br  /></p><p>「听说乐逗游戏（idreamsky，代理了中国区的怒鸟、水果忍者和神庙逃亡）被360收购了，价格大概在七八千万左右，不确定是人民币还是美金。据说乐逗的创始人就以卖公司见长。」</p><p><br  /></p><p>题图：Mashable 站点 The Beginner&#39;s Guide to Twitter 这篇文章的配图.</p><p><br  /></p><p>点击「阅读原文」即可查看我以前写过的一篇《企业员工应遵守的 Twitter / 微博 准则》</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">更正一下：昨天吐槽说微信的​「星标消息」的问题，跟微信无关，是我的第三方接口的程序问题。特此声明。<br/><br/>今天留意到我的&nbsp;Twitter&nbsp;帐户&nbsp;(&nbsp;@Fenng&nbsp;)&nbsp;关注者已经超过了&nbsp;4&nbsp;万。很是欣喜。</script>
+	<script id="txt-title" type="txt/text">信息的脉搏</script>
+	<script id="txt-sourceurl" type="txt/text">http://dbanotes.net/review/twitter_guideline.html#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000122&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000122&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGOD1kWvuUj9Aey7u4iaial4hEAFohdU1lGjdibSIicFtvqAQ/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000122&itemidx=1#wechat_redirect",
+						title  = htmlDecode("信息的脉搏"),
+            desc   = htmlDecode("更正一下：昨天吐槽说微信的​「星标消息」的问题，跟微信无关，是我的第三方接口的程序问题。特此声明。<br/><br/>今天留意到我的&nbsp;Twitter&nbsp;帐户&nbsp;(&nbsp;@Fenng&nbsp;)&nbsp;关注者已经超过了&nbsp;4&nbsp;万。很是欣喜。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

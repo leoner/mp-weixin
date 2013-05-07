@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>人不学习要落后</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">人不学习要落后</h1>
+			<span id="post-date">2013-01-12</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlH4ibt8icGI4wLH8v4cVuVXUlpBvrkCl4TOv1jBXlDic1blw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今天研读了一下这篇论文「网络流量分类研究进展与展望」。前段时间曾经有大量的 VPN 等翻墙方法失效，据信与这篇论文有一定关系。</p><p><br  /></p><p class="p1">这篇论文的研究由臭名昭著的方校长领衔，介绍了流量分类研究的进展及面临的挑战，并提出了相关挑战的解决方案。这类研究的目的是什么呢? 「不仅可以帮助网络运营商提供更好的服务质量，而且能够对网络进行有效的监督管理，确保网络安全。」重点在「对网络进行有效的监督管理」，也就是说老大哥要盯着你。</p><p class="p1"><br  /></p><p class="p1">而已经有的网络流量分类研究的方法有哪些呢? 主要有四类：基于端口号的分类方法、基于有效负载的分类方法、基于主机行为的分类方法，以及基于机器学习的分类方法，当然他们有各自的优势和不足，及适用的场景。其中基于机器学习的分类方法，对于前几种方法不适用的情况依然可以奏效，研究人员相对比较兴奋。</p><p class="p1"><br  /></p><p class="p1">SSH 隧道流量分类的研究已经基本不存在障碍了，因而最近一周内，境外 IP 的 22 端口，有翻墙流量的基本也被封掉。<span style="line-height:1.5;">至于 HTTP 流量的的细粒度识别，基本已经没什么难度，对于 Facebook、Gmail、Youtube 的识别准确性，高达 93%。所以，HTTP 层面是一封一个准儿。</span></p><p class="p1"><br  /></p><p class="p1">除了 P2P 之外，Skype 一直是一个异类，因为国外不少电信运营商也对 Skype 比较忌惮，一直在研究 Skype 的流量特征，不过 Skype 一直在升级，不断的消除自己可被识别的特征，上面提及的四种研究方法奏效不大。</p><p class="p1"><br  /></p><p class="p1">最近微软不是说要在全球范围内关闭 MSN Messenger 服务么？独独保留中国大陆的 Messenger &nbsp;服务是为什么呢? 商业层面的考虑肯定会有。另外，如果中国用户都切入 Skype 的话，监控这个事情就不太好做了，而 Messenger 的所有聊天内容都是非加密的，可监控的，包括你说的每一个字。</p><p class="p1"><br  /></p><p class="p1">Skype 则不然，协议是加密的。当然我说的是国际版的 Skype，而不是 Tom-Skype，Tom-Skype 「会根据关键字将用户的文字聊天记录和用户信息上传并存放在可以从公司外部进入的8个中国大陆服务器上」，所以，我一直说中国互联网用户没有隐私，隐私个屁，无脑青年一说隐私，老大哥就发笑。</p><p class="p1"><br  /></p><p class="p1">论文同时「遗憾<span style="letter-spacing:1px;line-height:24px;">」</span>的指出，针对网络协议动态变化时的流量分类技术的研究还未有效展开，比如流量混淆: <span style="line-height:1.5;">TOR</span> 推出的 <span style="line-height:1.5;">obfsproxy (</span>模糊代理)。但我有理由相信，我们国家怀着「崇高使命」的青年科技工作者们已经针对类似课题展开相关的研究并且已经有实质进展了, 至少我相信在方校长的有生之年是可以做到的。</p><p class="p1"><br  /></p><p class="p1">一切阻碍信息流通的行为都是反动的，落后的，卑鄙的，<span style="letter-spacing:1px;line-height:24px;">不管他们觉得自己的动机多么正确。这是逆</span>历史潮流而动。有良知的互联网人应该唾弃这样的行为。</p><p><br  /></p><p>今天的内容可以会让不少朋友看不懂，没事的，即使你看不懂，我相信将来你的儿孙会看懂，我们的后代会看懂。</p><p><br  /></p><p>这是历史。</p><p><br  /></p><p>今日小道消息：有人爆料，近期百度正在与金山网络、腾讯及相关投资商谈判入股，目前已基本确定将控股金山网络，腾讯方面也已同意。我觉得这事儿怎么不太靠谱呢？金山网络到底有啥值钱的东西阿。怪事。百度入股微博还是挺靠谱的事儿，入股个金山网络有个毛用。<br  /></p><p><br  /></p><p>第二则小道，有人说中华英才网被爱尔兰尚龙集团收购。这个尚龙集团，在国内收购不少网站了，号称「全球15个区域，27个国家运营超过500个网站」，怎么看着感觉带着一股妖气呢？ 至少我的直觉如此。<br  /></p><p><br  /></p><p>昨日的图，应为「捕鼠器或是捕鸟器」，有叫「夹子」的，西北有的地方叫「夹脑」... 很多朋友都答对了，没法发神秘大奖了，干脆统一颁发一个「见多识广」称号。</p><p><br  /></p><p>友情提示：小道消息的所有历史内容可以通过 http://hutu.me 获取. </p><p><br  /></p><p>友情提示：本人的个人站点已经改版上线，地址是 http://dbanotes.net/ 看看不费电，不看会后悔。</p><p><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">今天研读了一下这篇论文「网络流量分类研究进展与展望」。前段时间曾经有大量的&nbsp;VPN&nbsp;等翻墙方法失效，据信与这篇论文有一定关系。</script>
+	<script id="txt-title" type="txt/text">人不学习要落后</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000051&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000051&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlH4ibt8icGI4wLH8v4cVuVXUlpBvrkCl4TOv1jBXlDic1blw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000051&itemidx=1#wechat_redirect",
+						title  = htmlDecode("人不学习要落后"),
+            desc   = htmlDecode("今天研读了一下这篇论文「网络流量分类研究进展与展望」。前段时间曾经有大量的&nbsp;VPN&nbsp;等翻墙方法失效，据信与这篇论文有一定关系。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

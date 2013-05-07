@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>张小龙：微信产品观(上)</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">张小龙：微信产品观(上)</h1>
+			<span id="post-date">2013-01-19</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6LwdYJKSFVpU0RGBu3fBp5QibaMTueRnj3WdAvJCXeEOTdVg/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><div style="word-wrap:break-word;color:#444444 ;"><p><em><span style="font-size:18px;word-wrap:break-word;">【7哥导读】张小龙接受采访，讲了微信产品设计思路。从很多小功能开始讲起，提到人性与产品设计的关系。值得产品经理反复细看。</span></em></p><p><em><span style="font-size:18px;word-wrap:break-word;"></span></em></p><p><em> </em></p><p><em>我们来看这个“摇一摇”的功能，它非常简单，任何一个人都会用，不用做任何的学习。我们会避免在界面里面出现任何的一个文字解释，<strong style="word-wrap:break-word;">一旦一个功能需要文字解释，这个功能的设计已经失败了</strong>。</em></p><p><br  /></p><p><em>我们很喜欢在程序里面加一些TIP，觉得这是一个很好的教育手段。如果你需要有一个TIP去教育用户，证明也很失败，你没有办法通过功能本身让用户一看就知道。那么用户看了这个以后，他会下意识的就摇一下，摇一下以后，这时候要给他一些刺激回馈出来，那么他会听到一个来福枪的声音，我们故意找一个来福枪的声音，这个声音很刺激。我们原来以为只有男生喜欢，后来发现女生也很喜欢，因为它代表了雄性。本来我们给女生设计的是一个“丁丁当当”的声音，后来把它取消了，都做成这个声音了。然后最初的版本摇一摇，后面是一个裸体女人的上半身，那是维纳斯，是艺术。但是我们的很多用户，包括公司内部的同事甚至领导说这个影响会不太好吧？然后我们就把它改成了一朵小花。所以到我们要放弃艺术，要追求一种大众的好的时候，其实损失就更多了。</em></p><p><span style="font-size:18px;word-wrap:break-word;"><br  /></span>====导读结束====</p><p><br  /></p></div><p>今天很感谢大家从这么远的地方跑到广州来，对于产品的分享，我个人是挺有兴趣的，我觉得能够探讨一下怎么做产品，本身也是挺有意思的一件事情。</p><p><br  /></p><p>这里先用一个小故事开始讲，这个故事是关于苹果手机的，为什么苹果的手机只有一个按钮？ (台下：我觉得对于用户来说，只有一个按钮不会有太多的干扰，只要从这里开始，其它的菜单都在这里面了，这是我个人的一些想法。)</p><p><br  /></p><p>嘉宾：上次在分享的时候Martin也在，Martin理解的原因是因为这一个按钮很容易坏掉，所以用户要不停的去换新的手机。这个也有一定的道理，因为我上一个苹果手机的按钮就坏掉了，后来没有办法，只好又换了一个，而且换的还是微信的4S，这个还是破例寄过来的，因为他说我们的微信在4S下录视频只能录一秒，我说那还不到4S。</p><p><br  /></p><div style="word-wrap:break-word;color:#444444 ;">台下：乔布斯是想说我的产品是我来引导用户使用，所以只有一个按钮的时候，你必须照我的操作，你只能按这个按钮来一步步操作。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：那两个按钮为什么就不能引导了？</div><div style="word-wrap:break-word;color:#444444 ;">台下：多一个就多一个选择了。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：就不给他选择？</div><div style="word-wrap:break-word;color:#444444 ;">台下：对，因为你要照我的思路来操作。之前看了《乔布斯传》，也看过一些，我感觉乔布斯是性格上有一点偏执的，他追求一种极致的简洁，可能跟他的理念有关系。他如果能用一个按钮来实现的话，他绝对不会用两个按钮来实现。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：那能不能不用按钮？</div><div style="word-wrap:break-word;color:#444444 ;">台下：其实大部分手机都不用按钮，但是可能这个按钮还是必要的。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：最重要的不是回答的正不正确，主要是看有没有一个自己的想法，任何理由都可以的。</div><div style="word-wrap:break-word;color:#444444 ;">台下：简单。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：对，简单是一个很好的回答，非常好。这个问题其实没有一个标准答案。</div><div style="word-wrap:break-word;color:#444444 ;">台下：我想补充一下，如果死机的话可能会把手机摔了，这可能是一个发泄的入口。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：发泄用的？</div><div style="word-wrap:break-word;color:#444444 ;">台下：如果死机的话你会把它摔了，所以用户要去点。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：对，这也是很合理的，因为发泄很重要的。这个没有标准答案，我说的答案也是一个仅供参考的答案，大家不要当真。为什么只有一个按钮？你再看一下为什么是白色的？其实白色的比黑的更酷一些，对不对？白色的其实是苹果最想做的，当时是做不出来，供应商做不到，所以就做了黑的先来应付一下大家，所以做了很久，后来才做出了白色的。你看这个白色的机子，再加上一个按钮，你会想到什么？一个白色的东西加一个按钮在上面，并且一按就会有奇迹发生，并且一按就会有一些事情发生了。</div><div style="word-wrap:break-word;color:#444444 ;">台下：像马桶。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：对了。我看过一个故事，苹果的首席设计师叫乔纳森·艾弗，他以前是做马桶设计的。一个设计师设计的经验会延续的，所以你可以想象得到这里面包含了一些历史的经验。我们经常看到一些马桶上面有两个按钮，那个体验就不好了，你每次冲水都不知道该按大的按钮还是按小的按钮。</div><div style="word-wrap:break-word;color:#444444 ;">台下：我每次冲水的时候都两个按钮一起按。</div><p>嘉宾：那你是浪费水。这是我开的一个小玩笑，不是一个真实的东西。但是这个玩笑里面其实也是有一些故事，这个故事就是艾弗设计师以前确实是做日用品的设计，当时他的很多积累是来自于工业用品。然后到苹果以后，后来乔布斯回到苹果以后，发现他的设计理念跟乔布斯的很接近，然后才留下来一起来做。</p><p><br  /></p><p>我们现在用的很多是苹果的东西，这里面的很多产品是可以给我们很多启发的。所以对于苹果为什么这么做，它的硬件为什么这样做？软件为什么这样做？其实有很多值得思考的地方。我自己也看了《乔布斯传》这本书，我看了以后觉得它没有把苹果的一些设计思想和精髓写出来，比如说的一些故事。在IPhone发布的时候，他说我们这个产品是领先其它手机5年的，这个5年领先在什么地方？IOS的设计，它的理念是什么？它的哲学是什么？这个其实是很值得去思考的。</p><p><br  /></p><p>这个故事就讲到这里，我们开始今天的正题，先用简单的思维来开始。这句话大家都听了很多，听得已经起老茧了，包括少就是多，为什么少就是多？为什么简单就是美？在这里我也希望大家能参与一下，看哪位同学先来回答一下这个问题？为什么简单就是美？为什么复杂就不美了？有没有哪位同学有勇气按照自己的理解来回答一下？</p><p><br  /></p><p><strong style="word-wrap:break-word;"><span style="font-size:18px;word-wrap:break-word;">什么才是简单——从腾讯微信说起</span></strong></p><p><strong style="word-wrap:break-word;"><span style="font-size:18px;word-wrap:break-word;"><br  /></span></strong></p><p>我相信男生都用了，女生用了也不会告诉我们。大家都用了吧？我摇到了一个TINA的三公里以外的。如果大家想加我的话可以一起摇一下，我们可以互加一下。但是深圳的同事，你们在100公里以外就加不到了。我们必须要同时摇，我们数1、2、3，当数到3就同时摇。大家都进入这个界面了吗？1、2、3，摇！因为必须在三秒之内摇，然后我们会看到一个列表，刚好我们摇的人就在这个里面了。我们看到这个列表里面有十几个人，就是我们刚才一起摇的人。基本上是都能捕捉到的。</p><p><br  /></p><p>大家可能已经在讨论这里面的技术问题了，这个是怎么样互相找的。这个技术问题，我相信不是一个问题，对于腾讯的技术来说，这个非常容易就做到了。我这里想说的是，作为一个产品功能，我们为什么要这样做？这个功能非常简单，优秀的开发同事可能一两天就可以开发出来，但是我们怎么样把一个功能做成一种极简的体验，这个难度非常难。</p><p><br  /></p><p>你可能今天看到摇一摇的功能很简单，如果我们做也很容易，问题就在这里，如果我们面对一个功能的时候，我们能做到这个地步，并且是别人还没有这样做过的时候，我们这样做了，这是非常难的。这里是有一些方法可以遵循的，也就是简单是美的方法。我们看一下这里面体现出来什么样简单的特点。</p><p><br  /></p><p>在这个界面里面没有任何的按钮，没有任何的菜单，也没有任何的其它入口。下面多了一个菜单可以拉出来，上一次摇到的人，这个是我们的一个败笔，准备把它给取消掉的。也就是这个界面没有任何的东西，只有一个图案，没有按钮，没有菜单，没有文字介绍。那么这个就像是Iphone的手机或者马桶只有一个按钮是一样的道理，它只有一个图片，然后这个图片只需要用户做一个动作，就是摇一摇的动作。这个动作也非常简单，这是人类有史以来最有启发性的一个动作。我因此而研究过人类的起源，人类为什么会直立行走？因为人类要把手用来抓石头，用来打猎，最后脚就用来做别的东西了，最后就直立行走了。</p><p><br  /></p><p>然后我们内部开发这个功能的时候，我们把它叫做“（录一录）”功能，内部代码叫“录一录”，我们的服务器上开发的代码叫（Lusefor）。这是人类最原始的东西，最原始的东西往往就是体验最好的。前不久我在微博上写过一句话，<strong style="word-wrap:break-word;">我们怎么样体现出最原始的东西就是体验最好的。</strong>我们回忆一下在Windows的时代，多任务是怎么体现出来的，我们要按“ALT+Tab”键，然后在Iphone里面，我们只要按底下这个按钮按两次就可以了，这个简单很多。在苹果底下，四个指头把它录下来就可以了，它就可以把多任务给切换过来了。我们看到这是一个从复杂到简单的演化过程，实际上ALT+Tab是非常复杂，很不人性化的。所以我们说Windows的体验不好，MICoS的体验好，经常会有人争论，争论到最后，大家要有一个判断依据，依据是什么，哪个东西更人性化或者更简单，或者更原始，它就是好的。我们买一个iPhone或者iPad给一个四岁小孩子用都会用，四岁的小孩体现的是它的原始或者简单，那么它是体验好的，如果要经过学习，它就不好了。</p><p><br  /></p><p>同样的，我们来看这个“摇一摇”的功能，它非常简单，任何一个人都会用，不用做任何的学习。我们会避免在界面里面出现任何的一个文字解释，<strong style="word-wrap:break-word;">一旦一个功能需要文字解释，这个功能的设计已经失败了</strong>。</p><p><br  /></p><p>我们很喜欢在程序里面加一些TIP，觉得这是一个很好的教育手段。如果你需要有一个TIP去教育用户，证明也很失败，你没有办法通过功能本身让用户一看就知道。那么用户看了这个以后，他会下意识的就摇一下，摇一下以后，这时候要给他一些刺激回馈出来，那么他会听到一个来福枪的声音，我们故意找一个来福枪的声音，这个声音很刺激。我们原来以为只有男生喜欢，后来发现女生也很喜欢，因为它代表了雄性。本来我们给女生设计的是一个“丁丁当当”的声音，后来把它取消了，都做成这个声音了。然后最初的版本摇一摇，后面是一个裸体女人的上半身，那是维纳斯，是艺术。但是我们的很多用户，包括公司内部的同事甚至领导说这个影响会不太好吧？然后我们就把它改成了一朵小花。所以到我们要放弃艺术，要追求一种大众的好的时候，其实损失就更多了。</p><p><br  /></p><div style="word-wrap:break-word;color:#444444 ;">你会看到这个过程很有意思，先有一个声音，然后有一扇门打开，再合上。然后甚至在打开的时候，如果你想换一个图片的话，你可以把手指伸到这个缝里面去点一下，点一下可以换一个背景图，没有发现吧？</div><div style="word-wrap:break-word;color:#444444 ;">台下：发现了。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：还是女生发现了，不是男生发现了。<strong style="word-wrap:break-word;">上一次Pony很认真的给我发了一个邮件，说我们摇一摇的功能真的很好，但是我们要防止竞争对手抄袭模仿我们的功能。</strong>因为上次我们做了一个查看附近的人，然后竞争对手也做了，并且加了一个小创新在里面，叫做表白功能。这样通过一个小创新来突出，跟我们就不一样了。Pony说为什么我们没有预先把这些该想到的都想进去，让别人想模仿的时候都没有办法再来做一个微创新了。我说微创新是永无止境的，别人总可以加一点东西来跟你不太一样。然后他说这个摇一摇，我们怎么样能够把该做的都做了，而且别人没法在上面来改变一下。我说不用着急了，因为我们这个东西已经做到最简化了，别人没法超越了，我们当时是有这种自信的。这种自信一方面是说我们已经最简化了，因为就像这个手机只有一个按钮一样，除非你做一个没有按钮的手机。这里只有一个动作，甚至连按钮都没有。另外一个原因，我当时在邮件里面解释了，我说这个体验的整个过程是非常严实的，它是一种人类的性的驱动力在完成整个过程的，没有什么吸引你的驱动力比性的驱动力会更加原始，这是弗洛依德说的，不是我说的。所以这也是一个科学，不是一个道德低下的问题。</div><div style="word-wrap:break-word;color:#444444 ;">从这两个角度，一方面是它确实做得很简单，另外一方面它让你很爽，这个爽是来自很深层次的原因。所以我们说我们的竞争对手无法超越，就是这个原因。我不知道你们有没有赞同这一点或者理解到这一点。看起来很简单的一个东西，但是它已经是要有一些方法或者一些思考去达成这种简单的。手机里面可以体现出这种东西出来，因为手机可以认为是手指的一个衍生，是你的第六根指头。所以在手机底下体验是有一个非常有突破的空间，这跟你在电脑上通过鼠标和键盘来交付是不一样的，手机是跟你的身体连在一起的，是很直接的。为什么很多人喜欢汽车，对汽车那么追求？汽车是你的双腿的延伸。那个才是真正的体验。相反的，我们通过鼠标、通过键盘，就像你摸一个女孩子还要隔着衣服一样的。手机是很直接的。</div><div style="word-wrap:break-word;color:#444444 ;">怎么样看待简单是美？我的理解是<strong style="word-wrap:break-word;">简单是一种审美观</strong>，它不是一种完全非常理性的结论说我们尽可能的做得简陋一点就好了。而是说你脑袋里面是不是有一种观念在这里，但是你看到一个界面，一看它密密麻麻的铺满了按钮，然后你就知道这个东西一点都不美，然后你就说这里不对，你要把它给简化一下。这种审美就很难解释了，我就不多讲了，再往下看。</div><p><strong style="word-wrap:break-word;"><br  /></strong></p><p><strong style="word-wrap:break-word;">产品经理应该像上帝一样了解人性普遍规律</strong></p><p><br style="word-wrap:break-word;color:#444444 ;"  /></p><div style="word-wrap:break-word;color:#444444 ;">我记得看过一句话是说我们喜欢简单，因为上帝创造宇宙的时候，他定下来的规则也非常的简单。这句话好像是开普勒说的，有没有谁记得开普勒定律这些东西？很多物理学家会说我们发现宇宙的规律是很简单的，既然宇宙的规律都这么简单，我为什么要把很多事情搞复杂化？为什么说产品经理是站在上帝身边的人？一个是我想奉承一下产品经理，赞美一下大家，另外一点是说大家很像上帝，上帝是一个什么样的人？上帝是一个建立了简单的规则，然后让这个世界演化。</div><div style="word-wrap:break-word;color:#444444 ;">我这里想表达的是，产品经理和上帝一样，也会俯瞰芸芸众生，知道他们的欲望，然后给他们制定一些规则，让他们按照这个规则来运转。当你做到了这一点，你就会像上帝一样的，你会有上帝的成就感。</div><div style="word-wrap:break-word;color:#444444 ;"><strong style="word-wrap:break-word;">首先你要了解他们的欲望，然后你要通过你的产品去满足，并且他们在使用的过程里面是按照你的预期来的，你知道他们会怎么样自己去演化，然后你就在旁边看热闹就行了。</strong></div><div style="word-wrap:break-word;color:#444444 ;">就像我们只做了一个很小的功能摇一摇，然后每天有几千万上亿次摇动在发生。我们知道这耗费了很多能量，所以我们下一步的计划是在摇动的时候做一个能量收集器，能够把摇动产生的动能收集起来用来发电，然后我们把它慈善的捐出去。因为每天浪费了太多的生物能，很多人都在做无用功，其实他又找不到女孩子。我们后台的数据看过这种搭讪的成功率是很低的，但是据无数的男性在那里拼命的摇啊摇，然后还有很多女性在那里摇，你们知道为什么吗？如果你们对女性的心理研究不透彻的话，你就损失了一半的用户。所以我们的产品经理现在都在看一本书叫《女性的起源》，我推荐你们也看一下。我们有一半的用户是女性。</div><div style="word-wrap:break-word;color:#444444 ;">女性为什么会摇呢？其实在座的很多女同学，她们不愿意说而已，有没有哪位女同学敢于说一下？（台下：检验魅力值。）</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：说得非常对，这里说一个小插曲，可以体现出产品经理对于女性的无知。当时做附件的人总以为我们会让女性用户受到骚扰了，我们很对不起她们，我们会有这种负疚感，我们为了让这个功能用起来，我们真的对不起这些女用户。</div><div style="word-wrap:break-word;color:#444444 ;">然后发布的第二天，我就赶紧给我们的那些女同事说，是不是有很多人骚扰你们，给你们打招呼过来了？然后跟我想的相反，她们说我们每个人都在底下看谁收到的打招呼多一些。</div><div style="word-wrap:break-word;color:#444444 ;">所以我们对我们的用户，每一个人千万不要说对我们的用户很了解了，其实不是这样子的。在座的是不是有这种虚荣心的体现？当然我们的隐私做得非常好，她会收到打招呼，但是她不会被骚扰，这些是我们做得好的地方。</div><div style="word-wrap:break-word;color:#444444 ;">之所以这么说，这里确实是给在座的各位一个很大的奉承和赞美，但是你要做到这一点，你必须要像上帝一样，要知道用户的心理，并且知道用一个什么样的规则去引导他。为什么这么说呢？规则是很简单的，只有简单的规则才可以演化出一个非常复杂的事件出来。所以我经常很不认同说，在很多做产品里面，一开始就做一个复杂的规则出来，最后没有任何演化的空间。我们看到很多的产品，像Twitter之类的产品都非常简单，它的规则简单到你们都瞧不起它，但是这样的东西是最有生命力的。如果谁一上来给我拿一个产品计划的逻辑，我都要花一个小时才能看懂，那一定不是一个好的产品。</div><div style="word-wrap:break-word;color:#444444 ;">我们再回来看，第一点是说乔布斯的理念，当然也不是乔布斯发明的，是之前的一个美国的嬉皮士说的这一句话。我们用另外一个角度来解读它，我在它前面加了一句，意思是我们要让用户保持饥饿，让他们保持愚蠢。看起来是在嘲弄用户，对吗？</div><div style="word-wrap:break-word;color:#444444 ;">但是如果你在做一个产品里面，你没有这种信心说你把握住了用户的需求，你没有办法去控制他的每一步所要做的方向，那你就控制不住这个产品，这个产品就已经在失控之中了。作为产品经理来说，一方面是自身要保持饥渴，保持一个觉得自己很无知的状态。但是对我们的用户来说，我们是要想办法让他们知道他们的饥渴在哪里。</div><div style="word-wrap:break-word;color:#444444 ;"><strong style="word-wrap:break-word;">第二点，我们要满足他们的贪嗔痴。</strong></div><div style="word-wrap:break-word;color:#444444 ;">贪嗔痴是什么？</div><div style="word-wrap:break-word;color:#444444 ;">在佛教里面说人的本性是贪嗔痴，佛认为所有的人是瞎子，是无名的，那么睁开了眼的人就看到了光明的人，觉悟了的人就叫佛。</div><div style="word-wrap:break-word;color:#444444 ;">普通的人，他认为有三个基本的约束力，使得人不是佛，而是普通的人，就是贪嗔痴。</div><div style="word-wrap:break-word;color:#444444 ;">贪是贪婪，嗔是嫉妒，痴是执着。</div><div style="word-wrap:break-word;color:#444444 ;">那我们要洞察这一点，是因为我们的产品对用户产生黏性，就是让用户对你的产品产生贪，产生嗔，产生痴。</div><div style="word-wrap:break-word;color:#444444 ;">我们给大家各种钻，钻体现了什么心理？其实都体现了人性的这几个弱点，各种黄钻、绿钻，他会贪，他要升级；他会嗔，他会跟人比较，说你的钻比我的等级高，所以我也要升上去；他会痴，觉得我一定要把所有的钻给收齐。我们这里不是说所有的东西都要去做钻之类的东西，即使是一个体验好的产品，就像苹果的手机，它同样的会对用户产生这样的吸引力，因为这是人性本身的一个共同的弱点。</div><div style="word-wrap:break-word;color:#444444 ;">所以当我们在做一个产品的时候，我们在研究人性，而不是说在研究一个产品的逻辑。</div><div style="word-wrap:break-word;color:#444444 ;">逻辑本身没有什么好研究的，开发的同事可能更懂一些。但最重要的是你的产品为什么是这样子，而不是那样子，最后是对于人性的分析。这个人性不是说我们一些产品需要，我们摇一摇需要有人性，其它产品就不需要了？不是这样的，所有的产品都需要有人性的研究。为什么要有白色的iPhone，为什么iPhone只有两种颜色？你可以对每一个好的产品都提出来问题，那么它背后肯定都是从人性的角度来说的，而不是从别的理由来说的。所以乔布斯曾经说过一句话，记者问他：你们推出新产品的背后是做了很多的用户调研吗？还是别的一些方式来知道我们应该做什么产品？乔布斯说我们不需要去做调研，我们也不需要去看统计数据，但是我们知道用户心里面需要什么样的东西。这个知道并不是说你去问一万个用户，而是你对于人心的洞察或者人在内心里面的一些渴望的洞察，那你就会知道了。</div><div style="word-wrap:break-word;color:#444444 ;">我们经常说什么是产品体验？总结一个字的话，产品体验就是什么？爽，作为两个字来说是好玩。事实上在微信，如果我们问一下用户为什么喜欢用微信？没有一个人会给你说它可以帮我省钱，或者是帮我很方便的发短信，他们反而不会这么说。他们会告诉你这个东西挺好玩的，或者用起来挺爽的。这个会超出你的预期，你们会觉得我们本来是做一个功能，做一个通讯工具，但是用户不是这么看的。用户看的重点和你看到的是不一样的，你在拼命的给他说我帮你解决了通讯问题，用户说其实这不是我关心的。如果出现这种很大层面上的偏差，就很麻烦了。</div><div style="word-wrap:break-word;color:#444444 ;">有一次我在一个聚会里面，这个聚会里面来了好几个女生，我跟这个女生说你们装一个微信吧，她们说装微信干什么？我说装微信可以免费发短信，可以发图片，都省了彩信的钱，还可以直接说话，连打字都不需要了。这几个女孩子没有一个人有兴趣，很奇怪的看着我，我为什么要用这个东西。然后我现场给她们演示了一下，你看我附近有很多美女，我可以跟她们直接打招呼，这些人立马两眼放光，一个个拿出手机让我帮她们装。我当时都很震撼，这两个差别会这么大。我承认我当时对人了解太少了，但是真实的结果就是这样子的。</div><div style="word-wrap:break-word;color:#444444 ;">所以当我们的竞争对手360做了一个“口信”，他们的定位很清晰，因为他们很善于做这种用户的需求把握，觉得越实在的产品，对用户有实惠的产品，用户就会越喜欢。事实上很多产品之前也是这么成功的，所以他们做口信也是按照这个思路，说我帮你省了短信费，可以集成到一起。我看了以后就窃喜，因为我知道这个路是不对的。在很多时候，用户在你这里省一点钱干什么，他会去买一个别的东西，奢侈品什么的，他的钱总是要花掉的，但是他要的是一种很爽的感觉。</div><div style="word-wrap:break-word;color:#444444 ;">所以我们做产品要找到用户心理诉求的本质，这个本质是什么？我们可以简化一下，比如对微博来说，因为这个帖子是当时给微博的同事来讲的，所以用微博来举例。用户上微博干什么？<strong style="word-wrap:break-word;">用户上微博的原因是为了炫耀，是因为害怕孤独，不是利群而离群，是用它有追感。</strong>前面大家可能明白，后面这个“有追感”会比较难理解。想一下你们在微博上干什么？</div><div style="word-wrap:break-word;color:#444444 ;">台下：自言自语。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：很少有人能做到这一点，你写一句话的时候，你脑袋里面想到哪些听众会看到，你会为他们写东西，你会构筑一个自己的形象，你会想我写了这句话以后，别人看了我的形象是不是又朝我想要的方向变了一点。你会看到一个人爱上你了，或者给你发私信了，马上第一时间去看一下，你会很在意。</div><div style="word-wrap:break-word;color:#444444 ;">实际上微博是一个构筑另一个自我的地方，构筑一个自我。就像我们平时在生活里面，通过各种行为来构建一个自我一样的，或者是自我形象。那里面爆出来很多人心的缺陷在里面，一个内心强大的人是不需要写微博的。比如韩寒不写微博，韩寒前两天写了一篇文章，我觉得写得挺好的。他说他为什么不写微博的原因，那篇文章值得看一下。我当时说了一句话，韩寒对于微博的用户心理分析得这么清晰，他要不做互联网产品是中国互联网事业的一大损失。</div><div style="word-wrap:break-word;color:#444444 ;">如果做微博的人对于用户为什么写微博的心理不能够分析得很透彻的话，那我们就是在一个很肤浅的层面来做产品。所以微博是一个很有意思的主题，我们自己写微博的时候，你观察一下自己的动静也发现挺有意思的。自言自语为什么做不到？因为没有人会写日记写那么多，那个才是自言自语，一旦有人群的地方就不是自言自语了，那挺难的。</div><p><br  /></p><div style="word-wrap:break-word;color:#444444 ;"><strong style="word-wrap:break-word;">群体用户和个体用户的区别</strong></div><p><br style="word-wrap:break-word;color:#444444 ;"  /><span style="color:#444444 ;">这里想讲一下互联网产品与传统工具的区别是什么。</span></p><div style="word-wrap:break-word;color:#444444 ;">这其实不是我的观点，而是我看了凯文·凯利写的《失控》的书以后总结出来的，我也希望在座各位有空的话也去看一下，我给很多人推荐了这本书。因为这本书很厚，所以很多人都没有耐心的看完它，我自己也是。那本书非常好看。如果我们面试一个大学生，如果他告诉我他看完了这本书，我肯定就录用他了，不过他们不知道这个秘诀。如果我们做互联网产品的不看一下这本书，我认为知识是不全面的，有缺陷的。因为他从生物学的角度、社会学的角度来描述了一种群体效应，这种群体效应如果只通过一页PPT来讲述的话有点太肤浅了。总的来说，结论是说群体的智商低于个体智商，这个观点不是在那本书里面的，而是在另外一本书里面的，我不记得书名，是一种群体心理学的书。说一个人在一个组织里面，这个组织的平均智商是低于个体智商的，任何组织，公司是一个组织或者说大的政党是一个组织，个体的智商才是更高一些的，群体会拉平这个智商。比如说在微博里面，微博上多了，你的智商会降低的，大家认同吗？你没有发现这个变化，因为你每天在降低一点点。</div><div style="word-wrap:break-word;color:#444444 ;">很简单的，你每天在微博上说的话，你会发现你说的话会跟大众越来越一致，别人在说什么，你也在说什么。你不会说一些大家不能理解的东西了，因为你会觉得那很突兀，会让大家不舒服。所以微博的转发那么高，自己写的那么低，就是这个原因，大家拼命的一团和气，互相夸两句。所以这种群体是有一个趋同性的。</div><div style="word-wrap:break-word;color:#444444 ;">另外一个观点是群体是一个完整的生命，我们小时候都看过蜜蜂是怎么飞的，有一堆蜜蜂一起飞。在这里大家忽略了一个很有趣的事情，就是这一堆蜜蜂谁是领头的，谁来组织它们，这一堆蜜蜂会有一个目标，它们会统一行动，但是每一个蜜蜂都是个体，没有一个领导，不像我们公司还分出一层层的管理干部，蜜蜂是没有的，蜜蜂也没有一个CEO在那里。那么谁在指挥这一群蜜蜂？</div><div style="word-wrap:break-word;color:#444444 ;">台下：趋同心。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：趋同心是让他们有统一，但是他们表现的像一个有生命的独立个体一样的，它们会朝一个目标一起过去，没有人发号施令。</div><div style="word-wrap:break-word;color:#444444 ;">台下：是翅膀在扇动的。</div><div style="word-wrap:break-word;color:#444444 ;">嘉宾：它可以一起扇动，但是它们会一起到一个地方做完某一件事情再回来。这个我们就不讨论了，因为没有人知道这个原因是什么，还在研究。</div><div style="word-wrap:break-word;color:#444444 ;">这里想说的是一群蜜蜂体现出单独个体的特征出来，也就是说一群蜜蜂有一个独立个体的属性。虽然这个属性是从哪来的，没有人知道。同样一个道理，一群人，社会里面的人，它会体现出一群人的属性出来，跟个人是不一样的。比如说如果你到前线当了一个战士，你可能对杀人这件事情会很麻木，完全变了一个人，因为那个群体都是那样子的，那是一个群体性。</div><div style="word-wrap:break-word;color:#444444 ;">那么群体会有群体的运作规律，为什么我们要说群体，要说这个东西？因为这个和我们的产品很相关。我们的产品是什么？我们只要找几十号人开发一个东西，然后我们会给几千万、几亿人来用。这些用户是一个群体，而不是一只蜜蜂，不是一个人。</div><div style="word-wrap:break-word;color:#444444 ;">在很多年以前我们写软件的时候，我们是针对一个客户来写，这个客户要什么，我就给他做什么。但是现在不是，现在你的客户是谁？你的客户是一群蜜蜂，不是单个的蜜蜂。你决定一个单个个体的需要，不代表群体的需要，是这样一回事情。</div><div style="word-wrap:break-word;color:#444444 ;">第三点，群体的含义是很难预测的，因为没有人知道这个群体性是从哪儿来的。所以我们对这种群体的反映，因为我们做产品就是一个群体反映的引发器。对群体反映，我们应该去试验而不是去策划。</div><div style="word-wrap:break-word;color:#444444 ;">如果在座的人，有人告诉我说我们做了一个产品规划，把半年或者一年未来的版本都计划好了，那一定是在扯淡。互联网产品不存在我们能做一个计划，做到半年或者一年之后，我们要做什么。而且经验好了，就放在这里。三个月都做不到，更不要说一年以后的计划。</div><div style="word-wrap:break-word;color:#444444 ;">同样的东西，如果有一个产品经理很信誓旦旦的跟我说，我们做这一个东西，一定会在用户里面产生一个什么样的效果，多半也是不可信的。因为这种，刚才说的，群体的效应是很难预料的。你会很难预料往群体里面放一个产品之后，然后它们自己滚动会形成一个什么样的东西。</div><div style="word-wrap:break-word;color:#444444 ;">就像漂流瓶，现在漂流瓶很火，火到它成为一个独立的社区，这是从用户的使用覆盖面来说，邮箱1/3的活跃用户是他贡献的，将近一半，将近1/3的活跃用户。但是漂流瓶很简单，我们做时其实不知道它会产生什么样的效果，是预料不到的。漂流瓶是一个很简单的东西，就是一个人仍一个瓶子，然后有人很弱智的回答了，并漂回来，就这么简单的规则。但是我们把它放在一个海量的用户群体里面，它会产生一个群体效应。这个群体效应是不可预测的，大家千万记住这件事。虽然说我们可以凭经验、感觉它会怎么样，但如果要很客观的预测是不可能的。漂流瓶是群体效应一个很典型的例子。所以这里鼓励我们有很多的思路，我们应该多去尝试，而不是去分析。</div><div style="word-wrap:break-word;color:#444444 ;"><strong style="word-wrap:break-word;">产品规则越简单，越能让群体形成自发的互动。</strong>最好的规则很简单，漂流瓶的规则也很简单。如果这个规则太复杂了，你想你把一个复杂的规则放到一起，用户反而不知道怎么样用这个规则互动起来。只有简单的规则，用户群才能很好的互动。但并不是说你规则简单，就一定会传染开来。后来公司好像做了一个人，还是一个产品测试，是我们在座的人做的，随机聊天。后来我玩了几分钟，每次进去，对方首先问你是男的，还是女的，其实我之前也是这么问的，而且遇到的都是培训的人。所以越简单越好，这里面存在一个引导的问题。我们要做的工作是在群体里面做一个加速器、催化剂，是做这一类的工作，而不是把这一块钉死了之后，用户进来以后，只能怎么样，一步一步的走。</div><p><br  /></p><div style="word-wrap:break-word;color:#444444 ;"><br  /></div><p><br  /></p><p style="padding:0px;min-height:1.5em;word-wrap:break-word;word-break:break-all;color:#3e3e3e;">-----个人介绍---------<br  /></p><p class="p1" style="padding:0px;min-height:1.5em;word-wrap:break-word;word-break:break-all;color:#3e3e3e;"><span style="letter-spacing:1px;line-height:1.5;">鬼脚七，一个简单的人，分享电商资讯、搜索变化、淘宝动态、产品设计、管理心得、生活感悟；偶尔文艺，偶尔深沉，但从不八卦。关注微信账号: 鬼脚七 ，回复 m 查看鬼脚七的所有文章</span></p><p><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">张小龙接受采访，讲了微信产品设计思路。从很多小功能开始讲起，提到人性与产品设计的关系。值得产品经理反复细看。</script>
+	<script id="txt-title" type="txt/text">张小龙：微信产品观(上)</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000051&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000051&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/DibgiaTFa6LwdYJKSFVpU0RGBu3fBp5QibaMTueRnj3WdAvJCXeEOTdVg/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000051&itemidx=1#wechat_redirect",
+						title  = htmlDecode("张小龙：微信产品观(上)"),
+            desc   = htmlDecode("张小龙接受采访，讲了微信产品设计思路。从很多小功能开始讲起，提到人性与产品设计的关系。值得产品经理反复细看。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

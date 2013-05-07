@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>「客户第一，员工第二」&nbsp;请听题：怀孕女员工第几?</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">「客户第一，员工第二」&nbsp;请听题：怀孕女员工第几?</h1>
+			<span id="post-date">2013-01-06</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlH75mbFaAfK7XEmrnReh4cPCx9gyo0EdfbiaFAfU8C7amw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p><span style="line-height:1.5;">我听过很多次这样的说法：绝大多数公司</span><span style="line-height:1.5;">不愿意招没生过孩子的女员工。</span><span style="line-height:1.5;">为什么? 因为没生过孩子的女员工没准儿哪天怀孕了，要生孩子，要休产假，会耽误团队和公司的发展。</span></p><p><span style="line-height:1.5;"><br  /></span></p><p><span style="line-height:1.5;">这种事情在中小公司时有发生，但是各大公司最近几年也很盛行，快成了人事部门开源节流的指标了。电商京某公司因为最近一年来准妈妈比较多，所以目前招聘优先录用三年以上经验已婚育的女性了，消息来源可靠。他妈的，你在家里种西红柿，不许别人生孩子? 而杭州某电商公司，据说 HR 们也已针对怀孕女员工的对策研究过好几回了，HR 堆里不是女人多么，如果别人这样对待她们，<span style="letter-spacing:1px;line-height:24px;">她们</span>自己会怎么想呢? 操他妈的，好像他们都是石头缝蹦出来的一样。</span></p><p><span style="line-height:1.5;"><br  /></span></p><p><span style="line-height:1.5;">不少公司标榜所谓的「客户第一，员工第二」，那么怀孕的女员工第几呢?</span></p><p><br  /></p><p>虽然我所在的公司是一家不折不扣的小公司，但在这一点上，我自认为比绝大多数公司做得好(<span style="letter-spacing:1px;line-height:24px;">无论是在我加入之前还是这两年我的感受)</span>。一家公司会因为员工那几个月无法工作而短期有点损失--就算有好了，长期来看，这些员工会和公司同进同退。以前一直觉得公司的福利不够，感觉拿不出手，现在觉得，我们比绝大多数公司都更加人性化一点，允许我谦卑的自豪一下。</p><p><br  /></p><p><span style="line-height:1.5;">今日消息：今天看到有人说收到</span><span style="line-height:1.5;">世纪佳缘创始人龚海燕短信，「</span><span style="line-height:1.5;">大意说已离职世纪佳缘，打算重新创业」。此前，新闻稿说是「请辞」，之后看到</span>龚海燕的自己写的文章，感觉背后故事其实不少。公司发展壮大，创始人个人能力出现瓶颈也是难免的事情。不知道再次创业是做什么。</p><p><br  /></p><p>另一个消息：淘宝天猫双 11 的交易额 191 亿有百分之30左右是虚假交易. 这是我第三次听到这个了，姑且听之。做 App ，有刷榜的；做网站，有刷 PV 的；做电商，还有刷交易的... 咱就老老实实做不行么? </p><p><br  /></p><p>题图: 随便找的一张.不知名字.</p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">我听过很多次这样的说法：绝大多数公司不愿意招未婚的女员工。为什么，因为这些女员工会怀孕，要生孩子。会耽误公司的发展。</script>
+	<script id="txt-title" type="txt/text">「客户第一，员工第二」&nbsp;请听题：怀孕女员工第几?</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000032&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000032&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlH75mbFaAfK7XEmrnReh4cPCx9gyo0EdfbiaFAfU8C7amw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000032&itemidx=1#wechat_redirect",
+						title  = htmlDecode("「客户第一，员工第二」&nbsp;请听题：怀孕女员工第几?"),
+            desc   = htmlDecode("我听过很多次这样的说法：绝大多数公司不愿意招未婚的女员工。为什么，因为这些女员工会怀孕，要生孩子。会耽误公司的发展。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

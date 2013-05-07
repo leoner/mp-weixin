@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>邮件的习惯</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">邮件的习惯</h1>
+			<span id="post-date">2013-04-24</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGn1Udnmyc8ubAzibYSocjx2HB9nVeaMBFKnIbryIFS2AA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>昨天有朋友微信里让我写一下邮件的习惯，老实说，我处理邮件有很多坏习惯，比如，最近一段时间以来，邮件回复就不够及时，这样在和一些联系人的沟通上就会带来较大的问题。再比如，因为每天待处理的邮件比较多，有的时候会漏掉重要的邮件(而且还没办法做特征过滤)，这一点我到现在还不知道怎么解决。</p><p><br  /></p><p>抛开这些不说，说点我喜欢收到什么样的邮件吧:</p><p><br  /></p><p>正文直接明了，默认字体，别用各种斜体以及花里胡哨的字体，如果需要强调的内容，加粗显示即可。特别特别需要强调的内容，用颜色标识一下，但也仅限于此了。</p><p><br  /></p><p>邮件内容过长的话，要做基本的排版，总不能一段不分一句话一口气到底吧? 别忘了有些人是宽屏的，难道要他们把脖子甩过去? </p><p><br  /></p><p>要写标题，简明扼要。简明扼要到别人不打开正文也可以获知是什么内容。</p><p><br  /></p><p>邮件中签名档清晰简洁，不要带图片. 我在前一家公司的时候，不知道哪个脑残想出来的主意，让所有员工都把签名档嵌入一个图片，那个图片有 20KB。用客户端收邮件的人最讨厌这个了，耗费带宽，有的时候 Web 邮箱默认还不让显示图片，总之，费力不讨好。</p><p><br  /></p><p>邮件礼仪是一个可以写很多内容出来的话题，我挑几条别人不怎么提的，就写到这里吧。</p><p><br  /></p><p>说白了就是什么呢? 你最讨厌收到什么样的邮件，你就别那么干就行了。换位思考一下就好。</p><p><br  /></p><p>你最讨厌的邮件习惯是什么？说来听听吧…</p><p><br  /></p><p><span style="color:#ffffff;background-color:#000000;">{小道问答}</span></p><p><br  /></p><p>问：如果你发现员工简历作假，你会辞退他吗?</p><p><br  /></p><p>答：正确的答案应该是直接辞退。</p><p><br  /></p><p>但是，且慢，很多事情不是非要一个正确答案。如果是已经入职并且工作一段时间的员工，发现简历作假的话，我更想跟他仔细谈一谈，聊聊作假的原因是什么，然后评估一下是不是因为招聘条件太教条，比如必须规定是本科，而该员工可能只是一个专科，简历上为此做了处理。</p><p><br  /></p><p>对于简历中作假的惩罚力度应该小于在工作中作假的惩罚力度。</p><p><br  /></p><p>如果还没有入职，我可能不会考虑录用。</p><p><br  /></p><p>这或许不是一个很好的回答。另外说一下，我所在的公司，并不看重学历，实际能力更重要。</p><p><br  /></p><p>有 Mac 的用户吧? 知道 Markdown 的有多少? 推荐一款 Markdown 的编辑器 Mou ，今天在北京偶然遇到 Mou 的开发者罗晨，建议媒体朋友采访一下他，一个人单枪匹马做出了一款很好用的工具。</p><p><br  /></p><p>题图：作弊 设计师/艺术家：张发财</p><p><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">你最讨厌的邮件习惯是什么？</script>
+	<script id="txt-title" type="txt/text">邮件的习惯</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000393&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000393&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGn1Udnmyc8ubAzibYSocjx2HB9nVeaMBFKnIbryIFS2AA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000393&itemidx=1#wechat_redirect",
+						title  = htmlDecode("邮件的习惯"),
+            desc   = htmlDecode("你最讨厌的邮件习惯是什么？"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

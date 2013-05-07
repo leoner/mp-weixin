@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>微信公众号使用和微博推广实用技巧初级版</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">微信公众号使用和微博推广实用技巧初级版</h1>
+			<span id="post-date">2013-02-06</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6LweUuDyf4moHyVDl5XAIk6s8tT3YfLdWicz3ngX9NgOOYxw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p><p><span style="font-family:宋体"> &nbsp; &nbsp;我玩微信公众账号从1月3日晚上正式开始，大约三个月时间，期间还有一个星期左右太忙，没有怎么维护，但目前粉丝数从零增长到了50000左右，活跃度非常强，每天大约有5000个回复。</span></p><p><span style="font-family:宋体"><br  /></span></p><p><span style="font-family:宋体">这里一些经验和技巧供大家参考。我这里没有用外部的工具，目前微信的工具不多，皮皮微信做的不错，而且在持续改进，如果需要使用外部工具，可以试试。我这里只介绍使用微信自带功能实现的技巧。</span></p><p><span style="font-family:宋体"> </span></p><p><span style="font-family:宋体">1 </span><span style="font-family:宋体">设置一个好的被添加自动回复。</span></p><p><span style="font-family:宋体"><br  /></span></p><p><span style="font-family:宋体"> &nbsp; &nbsp;粉丝关注你，都是有所求的，设置一个好的“被添加自动回复”还是蛮重要的。我试过多种，发现现在的还是蛮有效的。有三个原则要考虑：</span></p><ul style="list-style-type:disc;"><li><p><span style="font-family:宋体;"> 简</span><span style="font-family:宋体;">洁。太长人们在手机上就直接忽略了。我看见过有身边加我的公众号以后，直接返回删除会话。</span></p></li><li><p><span style="font-family:宋体">人情味。这个是微信互动的特殊属性，一定要注意。</span></p></li><li><p><span style="font-family:宋体">还要告诉粉丝，如何互动。</span></p></li></ul><p><span style="font-family:宋体"> &nbsp; &nbsp;大家可以参考我的设计：</span><span style="font-family:宋体;"></span></p><p><span style="font-family:宋体"><br  /></span></p><p><em><span style="font-family:宋体"><span style="color:#222222;font-size:14px;">欢迎关注鬼脚七！</span><br style="color:#222222 ;"  /><span style="color:#222222;font-size:14px;">嗯，要过年了，祝您平安！</span><br style="color:#222222 ;"  /><span style="color:#222222;font-size:14px;">如果您有问题，可以直接回复我；</span><br style="color:#222222 ;"  /><span style="color:#222222;font-size:14px;">如果您有时间，可以回复&quot; m &quot;查看所有文章列表. </span><img src="http://res.mail.qq.com/zh_CN/images/mo/DEFAULT2/0.gif" style="border:0px;vertical-align:top;color:#222222 ;"  /></span><span style="font-size:14px;"> &nbsp;</span><span style="font-family:宋体"><br  /></span></em></p><p><br  /></p><p> &nbsp; &nbsp;当然如果有时间，你可以每天更新你的被添加自动回复的内容，这样做得更精致一些。大家可以参考@青龙老贼的设计。你问回复m是干什么？那就是互动。让粉丝看见历史文章列表。</p><p><br  /></p><p> &nbsp; 最好不要设置默认自动回复。之前我设置过，觉得用户体验不好。太冰冷，没有人情味。</p><p><br  /></p><p><br  /></p><p>2 如何实现一个历史文章列表？</p><p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p><p><span style="font-family:宋体"> &nbsp; &nbsp;在微信公众号有个功能：关键词自动回复。这个功能很强大，可以实现很多交互，回复m查看历史文章，回复数字查看具体文章，都是通过这个实现的。</span></p><p><span style="font-size:16px;font-family:宋体"><br  /></span></p><p><span style="font-size:16px;font-family:宋体"> &nbsp; 首先，在关键词自动回复中，添加规则，规则名无所谓。建议是数字或者文章名，方便你记忆查看。然后在左侧添加关键词就好了。第一篇文章写1，第二篇文章写2....，右侧把你的图文选择一个放上去，点击保存就好了。如下图：</span></p><p><span style="font-size:16px;font-family:宋体"><img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6Lweia0ZPKdgzrbN5Zb9BqibS1CNQ7Qia3OhlTvK05Q4YiaMzPw/0"  /><br  /></span></p><p><br  /></p><p>设置完成以后，你还需要一个查看的关键词回复，同样的操作，你看看我的后台就好了：</p><p><img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6Lweia0ZPKdgzrbN5Zb9BqibS1CRxticUWt7ynOLUSLVIXAkvQ/0"  /><br  /></p><p><br  /></p><p> &nbsp; &nbsp;左侧是命令字母匹配，右侧是文字信息。如果不够，就在最下面提示回复 mm 查看更多。然后你再设置一个&quot;mm&quot; 关键词自动回复，把剩余的文章写进去。</p><p><br  /></p><p>要注意几点，</p><ul style="list-style-type:disc;"><li><p>添加关键词一定要选择全匹配。如果不选择全匹配，会导致用户回复中，只要包含了m，都会自动回复的....很乱。</p></li><li><p>注意大小写都要罗列进去。你问为什么？因为用户的手机输入有时候会自动的.....我的左侧之所以有那么多，是因为试了很多次只有m最好....</p></li></ul><p> &nbsp; &nbsp;为什么用m这个字母最好？咱们群里有人用L，有人用ls，有人用a。我试过好几个，m是最合适的。m这个字母无论大小写，都没有其他歧义，L的小写看上去是1，而且m在键盘上的输入位置很合适，用a的话，大小写区分太大，而且位置在键盘的最左侧。另外，m代表 more 的意思，也有代表性。<br  /></p><p><br  /></p><p>3 如何在自己的文章中推广？</p><p><br  /></p><p> &nbsp; &nbsp;我之前每篇文章最后都加上自己的二维码，后来发现体验不好，效果也不好，因为如果在手机上看文章，用户无法扫描的。改成了展现微信号：鬼脚七。因为我的账号认证过，可以通过&quot;鬼脚七&quot;直接搜索到。后来发现还是容易混淆，因为很多用户习惯微信号是英文字母。于是我以后就把自己的原始微信号公布出去：taobaoguijiaoqi . 有点顺眼了。</p><p><br  /></p><p> &nbsp; 最后我一般会加一段个人介绍，因为很多时候文章是会被转发的，其他不是你的粉丝的人看见这个账号，可能会需要了解你是谁。大家可以参考我的末尾介绍：</p><p><br  /></p><p style="padding:0px;min-height:1.5em;word-wrap:break-word;word-break:break-all;color:#3e3e3e;"><em><span style="line-height:1.5;font-size:14px;">==以下是广告您也看看==</span></em></p><p style="padding:0px;min-height:1.5em;word-wrap:break-word;word-break:break-all;color:#3e3e3e;"><em><span style="letter-spacing:1px;line-height:1.5;font-size:14px;">鬼脚七，一个简单的人，分享电商资讯、搜索变化、淘宝动态、产品设计、管理心得、生活感悟；偶尔文艺，偶尔深沉，但从不八卦。我的微信号</span><span style="line-height:1.5;font-size:14px;">: taobaoguijiaoqi 加为好友回复 m 可以查看我之前的所有文章</span></em></p><p><br  /></p><p> &nbsp; &nbsp;为什么有最后一句，&quot;回复 m 可以查看我之前所有文章&quot; ? 这就是个小技巧。如果刚好有人看见我这篇文章，觉得不错，但犹豫是否要加关注呢？如果看见还可以查看所有文章，估计就动心了.....</p><p><br  /></p><p> &nbsp; &nbsp;为什么是&quot;加为好友回复m 可以查看所有文章&quot;? 而不是&quot; 关注我回复m查看所有文章&quot;? 你可以思考一下现状，大多数人使用微信，只会用沟通和加好友，不知道有关注账号一说。这时候你叫他关注你，他就不懂了.....但你说加为好友，他懂的。于是就关注你了，哈哈。</p><p><br  /></p><p>后来设计了一个图片说明，显得更加正式一些。</p><p><br  /></p><p>4 如何在微博上拉微信粉丝？</p><p><br  /></p><p> &nbsp; &nbsp;在微博上拉粉丝，效果非常好，但也有很多技巧。看看我的微博例子就能发现。以下是几个技巧：</p><p><br  /></p><p> &nbsp; A) 如果你有一篇好的文章，可以在微博上用长微博发，在微博内容上写你的微信号，在长微博上也写你的微信号。当有人转发你的文章，哪怕把图片另外弄下来自己重发，都能看见你的微信号。也就是说，别人微博上的粉丝，也可能成为你的微信粉丝。</p><p><img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6Lweia0ZPKdgzrbN5Zb9BqibS1CrcVMYZ4BZTp3gJPDrwgDYQ/0"  /><br  /></p><p> &nbsp; B) 如果你有干货文章要发了，你可以在微博上发预告，说今晚要在微信上发好文了，请大家提前注意了......</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6Lweia0ZPKdgzrbN5Zb9BqibS1CZjgvuITIic1libhHF6kH02OQ/0"  /><br  /></p><p> &nbsp; &nbsp; </p><p> &nbsp; C) &nbsp;有事没事你可以在微博上转发一下你之前的微信文章，因为微博粉丝会经常漏掉你的信息。我每转发一次，基本上微信能增加上百粉丝。也可以拿你的微信粉丝说事儿，例如有人问你的问题及你的回答，有一些回复中搞笑的事情都可以写，虽然有些矫情，偶尔为之不要太过就好。</p><p><br  /></p><p> &nbsp; D) &nbsp;在微博上更要写英文微信号：taobaoguijiaoqi, 加为好友回复m 查看之前所有文章，不要写关注，有时候我也忘记，还是写的关注。很多人在我的微博上关注我后，直接回复 m ，发现没有效果。然后私信我回复m，还没有效果，很搞笑的......</p><p><br  /></p><p> &nbsp; &nbsp;E) 还有有些文章只在微信中有，微博上没有，这时候你的粉丝就急了，只能加你的微信账号了.......</p><p><img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6Lweia0ZPKdgzrbN5Zb9BqibS1CvDC0Lhh40Flxia81j1NI9zQ/0"  /></p><p><br  /></p><p> &nbsp; &nbsp;好了，暂时先写这么多，还有一些技巧以后慢慢写，希望对大家有帮助。说好了，大家千万不要转发.......就是内部先分享一下！</p><p><br  /></p><p style="padding:0px;min-height:1.5em;word-wrap:break-word;word-break:break-all;color:#3e3e3e;"><img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6LweUuDyf4moHyVDl5XAIk6s8JibF60LpvxL7R5rCmko083g/0"  /><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">我玩微信公众账号从1月3日晚上正式开始，大约一个月时间，期间还有一个星期左右太忙，没有怎么维护，但目前粉丝数从零增长到了8100左右，活跃度非常强，每天大约有1000多个回复。<br/>这里一些经验和技巧供大家参考。</script>
+	<script id="txt-title" type="txt/text">微信公众号使用和微博推广实用技巧初级版</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000094&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000094&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/DibgiaTFa6LweUuDyf4moHyVDl5XAIk6s8tT3YfLdWicz3ngX9NgOOYxw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000094&itemidx=1#wechat_redirect",
+						title  = htmlDecode("微信公众号使用和微博推广实用技巧初级版"),
+            desc   = htmlDecode("我玩微信公众账号从1月3日晚上正式开始，大约一个月时间，期间还有一个星期左右太忙，没有怎么维护，但目前粉丝数从零增长到了8100左右，活跃度非常强，每天大约有1000多个回复。<br/>这里一些经验和技巧供大家参考。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

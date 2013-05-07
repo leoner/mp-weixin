@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>费厄泼赖</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">费厄泼赖</h1>
+			<span id="post-date">2013-01-26</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGWwWicKsRoGErmHIAYlbJkBLIlnlGuoPibkHFoZ8ZaD6PQ/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>{从今天开始，大家可向我提问，我每天回答一个稍典型一点的问题。尽量言简意赅。}</p><p><br  /></p><p>复旦大学软件学院副教授韩伟力在论坛上发帖寻找研究防火墙(GFW)的博士生，被深明大义的学生们吐槽，结果韩教授自己还振振有词，此事近几日在微博上被众多人吐槽。为 GFW 做研究的狗腿子们至少应该想一下，你们有选择不参与的权力，有技术能力但不明辩是非的话，跟《鹿鼎记》里的归辛树一家其实毫无分别。浑浑噩噩，行尸走肉而已。</p><p><br  /></p><p>看到媒体说，技术人员通过浏览器插件抢票造成不公平。就像某教授说的「绝对不公平... 过去有体力的农民工可以买到票；现在，有技术的人能买到票」不知道在这个教授眼里，没体力的有技术的人过去买不到票算不算不公平？在这个国家谈公平？还好意思谈公平? 公平与否，我真的不知道。我相信，就这个话题，公知会说，归根结底是运力不足的问题；经济学家会说，车票应该涨价(到现在还没看到网上售票应该提价的建议，估计也都是白痴经济学家); 铁道部会说，用插件购票给网站造成了压力。我们怎么说？去他大爷的，我们又不是政协委员，又不是人大代表。我们只想回家。</p><p><br  /></p><p>前几日说，李彦宏在百度年会上的演讲提到「从北京西站北广场到颐和园东门，如果按照地图产品来查找公交路线，使用百度地图给出的路线比其他同类地图产品少步行177米。这177米是怎么出来的？是我们一个普通的地图产品工程师利用自己半年多来的业余时间，坐遍了北京所有的公交车，研究每一次换乘。这177米是他用脚为用户量出来的。」</p><p><br  /></p><p>然后我在第二天收到消息说「那位坐遍北京公交车的同学，逐条线路坐公交是上学时候就开始坚持做到事情，兴趣使然。这样说的话还是挺合理的。」<br  /></p><p><br  /></p><p>这个事情还有第三段，另一家做地图的人站出来说那个路线是错误的，「因为最后步行要穿过颐和园，而颐和园是要 20 块门票的」。这...「让我这个专门发小道消息的人都很尴尬」</p><p><br  /></p><p>这个故事不知道还有没有下文。还一波三折的，想想也有趣。<br  /></p><p><br  /></p><p>今日小道：昨日提到某门户的安装量的问题，今天收到反馈说累计安装用户6000万，每日联网用户1500万。给我反馈的信息源头应该靠谱。</p><p><br  /></p><p>今日小道之二：支付宝有可能根据业务范围拆分成国内和国际业务。国内业务有可能由樊副总裁接管，据说是这样。还没最后确认。</p><p><br  /></p><p>记得向我提问题。提问环节将命名为：我爱问小道。</p><p><br  /></p><p>题图：前几日雾霾天气，河南大河报的内容。</p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">{从今天开始，大家可向我提问，我每天回答一个稍典型一点的问题。尽量言简意赅。}</script>
+	<script id="txt-title" type="txt/text">费厄泼赖</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000092&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000092&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGWwWicKsRoGErmHIAYlbJkBLIlnlGuoPibkHFoZ8ZaD6PQ/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000092&itemidx=1#wechat_redirect",
+						title  = htmlDecode("费厄泼赖"),
+            desc   = htmlDecode("{从今天开始，大家可向我提问，我每天回答一个稍典型一点的问题。尽量言简意赅。}"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

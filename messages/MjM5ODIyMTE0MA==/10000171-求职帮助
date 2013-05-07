@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>求职帮助</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">求职帮助</h1>
+			<span id="post-date">2013-02-21</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlFSALebRGo28BBoAxIbFw19BcJnTjBXvqumLUwRo3uXlA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>--今日问小道--<br  /></p><p><br  /></p><p>问: 能不能讲讲大学生投简历，需要注意点什么（投互联网公司），或者你自己喜欢什么样的简历?</p><p><br  /></p><p>答：这是我以前在 JobsDigg.com 上贴过的简历中的加分点。来自我的微博( @Fenng )的内容整理. <br style="color:#707070 ;"  /><br style="color:#707070 ;"  />现在看工程师的简历，容易加分的亮点是： <br style="color:#707070 ;"  /><br style="color:#707070 ;"  />1. Github 上的项目地址. (是否具备一定的网络协作能力)<br style="color:#707070 ;"  />2. Stack Overflow 有积分. (或是否通过英文搜索引擎查询内容而非百度)<br style="color:#707070 ;"  />3. Twitter ID. (是否知道翻墙这个事儿)<br style="color:#707070 ;"  /><br style="color:#707070 ;"  />看产品经理的简历，容易加分的亮点是： <br style="color:#707070 ;"  /><br style="color:#707070 ;"  />1.知乎 ID (可以去查看发过的内容，判断是否有持续学习的能力)<br style="color:#707070 ;"  />2.长期更新的Blog (良好的写作能力)<br style="color:#707070 ;"  /><br style="color:#707070 ;"  />注意是说*容易加分*，有些硬性要求当然不能跳过。 <br style="color:#707070 ;"  /><br style="color:#707070 ;"  />李开复的评论： <br style="color:#707070 ;"  /><br style="color:#707070 ;"  />1）看邮件用什么邮箱（有些加分，有些减分） <br style="color:#707070 ;"  />2）看他发的微博、关注什么人、什么人关注他 <br style="color:#707070 ;"  />3）搜索（网络搜索+微博搜索）他 <br style="color:#707070 ;"  /><br style="color:#707070 ;"  />再补充发送求职信的建议： <br style="color:#707070 ;"  /><br style="color:#707070 ;"  />求职者发送简历的时候，邮件标题很重要。最好以{名字}的简历+ {目标职位} 的形式. 比如，「梁朝伟的简历 求职网络编辑」。这样招聘方收到邮件，一目了然。 <br  /></p><p><br  /></p><p>发送格式最好是正文粘贴一份内容加上 PDF 格式. 最好不要用 Word 格式，当然能不用附件最好。</p><p><br  /></p><p>另外也有人问过毕业生找工作的事情。恰好昨天翻看《编程随想录》，又看到 Joel 写的对计算机专业学生的几条建议：</p><p><br  /></p><p>1. 毕业前练好写作</p><p>2. 毕业前学好 C 语言</p><p>3. 毕业前学好微观经济学</p><p>4.不要因为枯燥就不选休非计算机专业的课程</p><p>5.选修有大量编程实践的课程</p><p>6.别担心所有工作都被印度人抢走</p><p>7.找一份好的暑期实习工作</p><p>8. 寻找专业人士的帮助，培养你的自信心</p><p><br  /></p><p>我觉得写得都挺受用的。对于最后一条要强调一下，很多人似乎只做这一条，对前面几条根本不考虑。那么最后也是无济于事。你不可能指望别人说几句就让你功力大增，最重要的还是要你去做。</p><p><br  /></p><p>最近不少人托我招人或是是求职的。总人工帮转发也不是个事儿，把以前的一个小站简单装修了一下，油漆还没干，不过能用了。有类似需求的请到: https://jobsdigg.com 注册个帐号自己张贴信息吧，免费，自助式服务.<br  /></p><p><br  /></p><p>今日小道：马云，马化腾，马明哲三马合建的保险公司，众安公司，杭州分公司已经在招人。</p><p><br  /></p><p>小提示：植物大战僵尸 iOS 平台限时免费中... 还有没玩过这个游戏的没?</p><p><br  /></p><p>题图：埃舍尔 Drawing Hands 1948 Lithograph</p><p><br  /></p><p>点击 {阅读原文} 可以看到「创业团队诚招 PHP、前端」的信息，需要的朋友请点击阅读。</p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">致新订阅者：目前自动应答功能出现小故障,&nbsp;如要访问全部内容请输入&nbsp;history&nbsp;.&nbsp;或是直接用浏览器访问:<br/><br/>http://hutu.me/&nbsp;&nbsp;<br/><br/>欢迎爆料或是向我提问.</script>
+	<script id="txt-title" type="txt/text">求职帮助</script>
+	<script id="txt-sourceurl" type="txt/text">https://jobsdigg.com/story/696036/#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000171&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000171&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlFSALebRGo28BBoAxIbFw19BcJnTjBXvqumLUwRo3uXlA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000171&itemidx=1#wechat_redirect",
+						title  = htmlDecode("求职帮助"),
+            desc   = htmlDecode("致新订阅者：目前自动应答功能出现小故障,&nbsp;如要访问全部内容请输入&nbsp;history&nbsp;.&nbsp;或是直接用浏览器访问:<br/><br/>http://hutu.me/&nbsp;&nbsp;<br/><br/>欢迎爆料或是向我提问."),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

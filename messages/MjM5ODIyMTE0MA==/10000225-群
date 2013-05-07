@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>群</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">群</h1>
+			<span id="post-date">2013-03-10</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEyC676xgRKJLNypIzibalcDZiaqW1sicz6gZ27ialH60h30g/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>在我看来，如果要评选一个 IM 工具的功能「更影响沟通的有效性、更能浪费生产力」的话，恐怕非「群」(Group) 莫属。</p><p><br  /></p><p>经常看到有讨论技术的人会开很多 QQ 群，然后一大堆人加入，我最不屑这样的讨论技术的方式，我不相信有谁通过 IM 群学会了很多东西，当然，他们浪费了很多宝贵时间我倒是深信不疑的。所以我曾不乏偏激的说：</p><p><br  /></p><p>喜欢用群的人都是喜欢用开会来消磨时间的。他们享受群，认为那东西理所当然的是「好」的沟通工具。我也赞同群里面 90% 都是一些垃圾信息的说法。小笑话、新闻链接、有趣的小图片占据了这 90% 的大部分内容。</p><p><br  /></p><p>我不排除有人把「群」用的出神入化，比如昨天就有一位互联网大佬给我讲述他当年用群的功能做推广的案例，但这只是个例。实际上，现在很多公司也的确在利用群进行推广。</p><p><br  /></p><p>有效利用群的一个好办法是，定时浏览一下群内记录即可，比如消息密集的群每天查看一次就差不多了，别担心会错过重要的信息信息。如果真的有重要的信息，还有电话，邮件，以及面对面的来访。</p><p><br  /></p><p>微信的群现在也有泛滥的趋势，我自己也会频繁拉进各种群，一般我进去之后只做一件事情：发一个小道消息的广告，然后退出。</p><p><br  /></p><p>群的质量和群内人的水平有直接关系。所以，群内人越多，基本上群内的信息也会越差。到现在微信里我只只加入了和贝塔有关的两个群，QQ 上用的最多的也只有两三个。还是属于那种的确可以从中获取有效信息的群。</p><p><br  /></p><p>在群内少花一点时间，就可以多一点时间阅读。</p><p><br  /></p><p>我知道有一些公司是禁止员工是用群进行交流的，对于类似举动，我不赞同，也不反对。</p><p><br  /></p><p>即使是交流手段和工具越来越多，一些垃圾而低效的方式也还是会永远存在。</p><p><br  /></p><p><strong>小道盒子</strong></p><p><br  /></p><p>小道盒子最近进行了升级，出口线路有所调整。有使用中遇到问题的朋友，请即刻回复我。</p><p><br  /></p><p>另外，小道盒子近期将恢复供货。</p><p><br  /></p><p>题图：关于北朝鲜的漫画. </p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">偶然看到自己以前写过关于群这个话题，有必要重新讨论一次。先抛出我的观点。</script>
+	<script id="txt-title" type="txt/text">群</script>
+	<script id="txt-sourceurl" type="txt/text">http://app.dxy.cn/idrug.htm#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000225&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000225&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEyC676xgRKJLNypIzibalcDZiaqW1sicz6gZ27ialH60h30g/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000225&itemidx=1#wechat_redirect",
+						title  = htmlDecode("群"),
+            desc   = htmlDecode("偶然看到自己以前写过关于群这个话题，有必要重新讨论一次。先抛出我的观点。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

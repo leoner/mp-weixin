@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>五分钟之败</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">五分钟之败</h1>
+			<span id="post-date">2012-12-27</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGGuaeicy8UdN9quiaFD7sV7Z1icK9WkjjPptWIkPZTApZVw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p class="p1">开心农场的原创公司上海五分钟网络科技有限公司，一度是大学生创业的典范，公司发展形势一片大好之际，却因 CEO 年少轻狂做出诸多错误决定导致公司走向歧途，例如放弃开心农场的运营与开发，以几百万人民币的价格向腾迅出售开心农场(后更名为 QQ 农场)，将 COO 逐出公司，投资人则基本属于被蒙蔽的状态，<span style="letter-spacing:1px;line-height:24px;">五分钟公司</span>最终将于 2013 年 1月正式关门大吉。</p><p class="p2"><br  /></p><p class="p3">腾讯以区区几百万买断开心农场的运营，堪称一个经典案例。腾讯买的便宜，对创业团队五分钟来说，则是卖掉了下金蛋的鹅。当腾讯把 QQ 空间的 API 开放给开心农场之后， 五分钟的服务器根本无法承载千万量级用户带来的压力，负责对接五分钟团队的腾讯商务拓展经理提出解决方案「这款游戏我们来运营吧，你们不用管了」… &nbsp;这只大学生创业团队居然就...接受了! 我听到的价格是买断费是 200 万，有媒体说是 500 万，单位是人民币。</p><p class="p4"><br  /></p><p class="p1">据信五分钟公司内部曾谋求更换 CEO 的方式拯救公司，遗憾是 CEO 坚持不退位，结果双输，导致资产清算，并于 8 月份正式出售给凯英和智明星通等公司，微游戏则被投资人、新浪微博和 COO 转股的方式收购，五分钟公司转型棋牌游戏的研发和运营，产品日收入三位数以内，最后失去投资人的支持而以失败告终。</p><p class="p5"><br  /></p><p class="p1">有人说，CEO 不退位的原因是觉得没面子，以及想继续用公司的方式保住自己杨浦区政协委员代表的资格。不过，从种种迹象上来看，CEO 行为颇为怪异，现在其人在大连修道，没错，修道。在公司的后期，也是每天在办公室打坐修道。实乃怪事，咄咄怪事。</p><p class="p5"><br  /></p><p class="p1">这家公司的败局根本不在外部，完全是内因。</p><p class="p1"><br  /></p><p class="p1">创业者应该从这个案例吸取一定的教训。</p><p class="p1"><br  /></p><p class="p1">题图：五分钟公司 Logo.</p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">有时候成功来的太突然，让人措手不及，最终迷失方向。<br/><br/>开心农场的原创公司上海五分钟网络科技有限公司，12月底正式关门大吉。这家颇有潜力的创业公司为何有如此败局?</script>
+	<script id="txt-title" type="txt/text">五分钟之败</script>
+	<script id="txt-sourceurl" type="txt/text">http://hutu.me/159#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000003&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000003&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGGuaeicy8UdN9quiaFD7sV7Z1icK9WkjjPptWIkPZTApZVw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000003&itemidx=1#wechat_redirect",
+						title  = htmlDecode("五分钟之败"),
+            desc   = htmlDecode("有时候成功来的太突然，让人措手不及，最终迷失方向。<br/><br/>开心农场的原创公司上海五分钟网络科技有限公司，12月底正式关门大吉。这家颇有潜力的创业公司为何有如此败局?"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

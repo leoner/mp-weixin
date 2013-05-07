@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>免费午餐不好吃</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">免费午餐不好吃</h1>
+			<span id="post-date">2013-05-05</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGA3ezkyA8utrLEWVEbLfCsmqqw1mpXibWmPAS3bvj9T7Q/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>昨天一位朋友告诉我，他用 Air-WASU 的所谓免费无线网络阅读小道消息，然后就看到了这条彩票广告。估计他是做技术的，所以明白这是<span style="color:#ffffff;background-color:#000000;">华数劫持微信内嵌页面的广告</span>。如果换了一个人，估计就要直接骂我做广告了。我不知道我的读者中是否看过类似形式的广告。看到的话，告诉我。微信公众后台对内容的格式控制有一定限制，想放广告也不能随意放，尤其是不能放到题图的广告位置去。</p><p><br  /></p><p>杭州「免费」的公众 Wifi 网络有两个，Air-WASU 和 i-Hangzhou，每个在开通的时候都大张旗鼓的宣传，「便民工程」，但实际上根本没法用，要么连不上，要么连上了没速度，要么连上了有速度弹广告。天下没有免费的午餐，类似 Air-WASU 或是 i-Hangzhou 这种午餐吃了之后也是有隐形的成本的，注册要填手机号，说不上时候垃圾 就来了。看似免费实则不然。</p><p><br  /></p><p>阅读财新新世纪，这期封面报道是写移动 4G 网络的，看了一下暂行的资费，不但流量价格没降下来，甚至更贵。如果手机带宽上不去，移动互联网也不可能真正的繁荣。扯远了，国情如此，慢慢等待吧。<br  /></p><p><br  /></p><p>前几天在 YouTube 上听了中国人民大学教授、著名社会学家<span style="color:#ffffff;background-color:#000000;">周孝正</span>的一些讲座，关于当下中国社会的讲述，有不少启发，推荐给大家，给看看吧，国内视频网站应该也有。</p><p><br  /></p><p><span style="color:#ffffff;background-color:#000000;">{今日小道}</span></p><p><br  /></p><p>据说 PPS 被卖给百度的过程中，创始人之一的雷量都没有参与决策，占股 12% 的他估计在此之前就已不在公司核心决策圈内，而且，因为爱奇艺的人要进驻 PPS，原 PPS 员工人人官降一等。</p><p><br  /></p><p>今年莫非是行业收购年? 年初到现在一直是各种收购的消息。</p><p><br  /></p><p><span style="color:#FFFFFF;background-color:#000000;">{友情提示}</span></p><p><br  /></p><p>提示: 在 iPhone 和 iPad 上 不能更新 App Store 的朋友，更新页面呈现灰色，很可能你安装了「彭博商业周刊」，请先删掉，关闭 App Store ，重新打开，更新。具体原因造成的暂时还不清楚。<br  /></p><p><br  /></p><p>「彭博商业周刊」是一本好杂志，强烈建议重新安装回来。</p><p><br  /></p><p>这篇文章来自「小道消息」，微信号: 「WebNotes」. 觉得这篇有价值，点右上角分享到朋友圈。</p><p><br  /></p><p>长期收集业内各种有趣的信息以及爆料。</p><p><br  /></p><p>点击 {阅读原文} 查看小道消息的历史文章.</p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">天下没有免费的午餐，类似&nbsp;Air-WASU&nbsp;或是&nbsp;i-Hangzhou&nbsp;这种午餐吃了之后也是有隐形的成本的，看似免费实则不然。</script>
+	<script id="txt-title" type="txt/text">免费午餐不好吃</script>
+	<script id="txt-sourceurl" type="txt/text">http://hutu.me#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000447&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000447&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGA3ezkyA8utrLEWVEbLfCsmqqw1mpXibWmPAS3bvj9T7Q/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000447&itemidx=1#wechat_redirect",
+						title  = htmlDecode("免费午餐不好吃"),
+            desc   = htmlDecode("天下没有免费的午餐，类似&nbsp;Air-WASU&nbsp;或是&nbsp;i-Hangzhou&nbsp;这种午餐吃了之后也是有隐形的成本的，看似免费实则不然。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

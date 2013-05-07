@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>一份工作</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">一份工作</h1>
+			<span id="post-date">2013-04-06</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlFwT1nudibxuD0tdyc4svgth44icJapiazznQp28iazjnIysA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今天偶然看到这样一组数据：</p><p><br  /></p><p><span style="color:#ffffff;background-color:#000000;">2013年中国高校毕业生人数达699万，比2012年多19万，创历史新高。截至今年3月，本科毕业生签约率为38%，硕士毕业生不足三成，而放弃就业转而考研的人数也达到历年最高。</span></p><p><br  /></p><p>看得我是着实吓了一跳。本科生签约率为38%，实际情况可能更糟，因为很多学校在这个数字上造假，签约并不表示真的找到了工作。考研创新高，意味着只是暂缓压力，考研以后还是要工作的吧? 总不能一路都上去一直补贴社会吧? 在现在的社会环境下，没有实际目的的都研究生都博士，实际上是变相的在补贴社会。</p><p><br  /></p><p>怎么办? 找到适合自己的工作，去为自己创造价值，为这个社会创造价值。 我找不到工作怎么办? 学习，学习一技之长，然后去找工作。我没有一技之长，怎么办? 现在学，也来得及。不知道学什么? 那就学习怎么和别人沟通，怎么用网络搜索，怎么发现自己的兴趣点。这些总可以了吧? </p><p><br  /></p><p>现在是4月初，国内一般的大学都是 7 月中旬毕业，也就是说你差不多还有三个月的时间，除去一个月在学校里的各种应酬和一些活动，还差不多有两个月的时间，用这两个月的时间集中学习一点实用的技能，足以找到一份可以餬口的工作。</p><p><br  /></p><p>以互联网行业为例，国内绝大多数互联网公司里的大部分岗位，其实并不需要多么高深的技术或者技能。两三个月的时间，如果学习强度大一点，差不多可以基本做到「可以干活」。入了门之后，持续学习，可以在这个行业立足。或许有人不信，也或许有人没有这份自信心，可与其没头苍蝇一样的乱撞，还不如沉下心来学习几个月，至少对你没什么损失。</p><p><br  /></p><p>如果两三个月时间不够，再加上几个月够不够? </p><p><br  /></p><p>可能有人说，学习太辛苦，能否轻松一点走个捷径啥的? 没有，要学习基本上都很难轻松。毕竟你都在学校悠哉悠哉好几年了，辛苦几个月换来一份工作也不算很过份吧? 如果觉得下不了这个功夫，那就跟着别人一起挤招聘会，或者嫌日头晒那不如就继续闷头打游戏吧，没准什么时候能拿个电子竞技冠军回来，那也算事业有成了。问题是，电竞冠军多少是需要一点天分的，更需要汗水，你能坚持住么? </p><p><br  /></p><p>今日无小道消息，太累了。</p><p><br  /></p><p>另外，今天要特别感谢一下在草榴上推荐我微信帐号的朋友. 1024…</p><p><br  /></p><p>题图：2013 年国家公务员考试开考. &nbsp;武汉华中科技大学西十二教学楼考点. 远处那是孔子塑像? </p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">「2013年中国高校毕业生人数达699万，比2012年多19万，创历史新高。截至今年3月，本科毕业生签约率为38%，硕士毕业生不足三成，而放弃就业转而考研的人数也达到历年最高。」</script>
+	<script id="txt-title" type="txt/text">一份工作</script>
+	<script id="txt-sourceurl" type="txt/text">http://hutu.me/4#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000330&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000330&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlFwT1nudibxuD0tdyc4svgth44icJapiazznQp28iazjnIysA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000330&itemidx=1#wechat_redirect",
+						title  = htmlDecode("一份工作"),
+            desc   = htmlDecode("「2013年中国高校毕业生人数达699万，比2012年多19万，创历史新高。截至今年3月，本科毕业生签约率为38%，硕士毕业生不足三成，而放弃就业转而考研的人数也达到历年最高。」"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

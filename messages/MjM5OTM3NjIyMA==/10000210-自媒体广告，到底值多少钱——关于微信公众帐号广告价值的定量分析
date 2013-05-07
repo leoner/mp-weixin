@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>自媒体广告，到底值多少钱——关于微信公众帐号广告价值的定量分析</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">自媒体广告，到底值多少钱——关于微信公众帐号广告价值的定量分析</h1>
+			<span id="post-date">2013-03-25</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6Lwe5TZVkjO0wv13JOibawJH6kic5Q43NJyXl98RUWZ9zoCUA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p><span style="font-size:14px;">【7哥闲谈】</span></p><p><span style="font-size:14px;">1 还有人在微信留言中跟我纠结我周六推荐的《世界上最远的距离》，作者是泰戈尔还是张小娴。若有机会我找张小娴确认一下。不过是谁写的对我们来说，真不太重要，重要的是这首诗写得真的很好！</span></p><p><br  /></p><p><span style="font-size:14px;">2 今天的文章和电商没有关系，是对自媒体的一些思考，思考新媒体对于传统媒体的挑战，思考关于自媒体广告如何定价。文章比较枯燥和无趣，本来想编个故事来写，但期待这篇文章给所有广告主在买自媒体广告时做定价参考，还是专业一点好。<br  /></span></p><p><br  /></p><p><span style="font-size:14px;">3 我读硕士研究生时，专业论文写得还不错。写这篇文章有点让我回到研究生写论文的感觉。我还特地找了一些EDM和短信推广的专家和公司做了咨询，文章尽量写得不学术。如果我写的文章还算可以的话，很大一部分功劳要归于我天津大学研究生导师夏长亮教授，在这里对他表示感谢。听说现在夏老师是天津工业大学的副校长，如果夏老师现在的学生也看到这篇文章，帮我向他问好，下次去天津一定去拜访他。</span></p><p><span style="font-size:16px;"><br  /></span></p><p><span style="font-size:14px;">4 这篇文章写于上周末，所以今天文章推送比较早。今晚没有文章了，周二或者应该还有“凤凰”《关于淘宝直通车的那些事(2)》她收到很大的鼓励，正在努力写文章。</span></p><p><span style="font-size:16px;"><br  /></span></p><p><span style="font-size:14px;">5 如果您对自媒体和媒体广告定价都不感兴趣，您就可以阅读到此为止:) . </span></p><p><span style="font-size:14px;"><br  /></span></p><p><span style="font-size:14px;">6 本文推送于早上8:56 ，在上班路上了。</span></p><p><br  /></p><p><span style="font-size:14px;">====闲谈结束====</span></p><p><span style="font-size:14px;">【本文导读】云科技的微信账号两万多粉丝，广告定价每天一万元，有人说太贵，也有人说很太便宜。自媒体广告到底应该如何定价？这是个有意思的话题，也很学术。我用数学方法做了推导，有点枯燥，如果您不关心过程，可以快速阅览看看最后的公式。</span></p><p><span style="font-size:14px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p><span style="font-size:18px;"></span></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">随着微信的飞速发展，自媒体越来越火。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">什么是自媒体？简单一点理解，就是之前喜欢写博客的那些人，把自己的博客建立一个方便大家订阅的账号，博客内容写得再正式一点。我的微信账号 “鬼脚七” 被很多业界人士作为自媒体账号推荐，其实我就是写写博客而已。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">自媒体人如何盈利就成了很多人讨论的话题。当时云科技的账号两万多粉丝，广告定价每天一万元，之后反响不错，两个月有十几个广告主。有人说太贵，也有人说太便宜。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">自媒体广告到底应该如何定价？这是个有意思的话题，也很学术。本文用数学方法做了推导，也许有点枯燥，不过做一个定量分析也是蛮有意思的事情。</p><p><br  /></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">为了更方便讨论，先假定两个前提：</p><ol style="list-style:outside;background-color:#f8f7f5;margin:0px 0px 10px 32px;padding:0px;color:#333333;font-family:arial, helvetica, sans-serif;font-size:14px;line-height:25.1875px;background-repeat:no-repeat repeat;"><li style="margin:0px 0px 10px;padding:0px;list-style-type:decimal;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">本文提到的自媒体，只指在微信上的公众账号，而且是专门每天写文章的个人账号，如云科技和鬼脚七。类似如交友、招車、美食搜索等应用不在其内；另外一些专业媒体站点账号也不在其内，如爱范儿、新浪科技、天下网商、虎嗅、鞭牛士等。因为这些账号是做信息的聚合推送，每天多篇多次，微信只是渠道而已。</p></li><li style="margin:0px 0px 20px;padding:0px;list-style-type:decimal;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">本文提到的自媒体广告，只是指在作者文章尾部添加的文字、图片和链接的广告。不包括整篇文章是软文，或整篇文章都是广告的形式。因为广告文章，已经不是自媒体。</p></li></ol><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">在计算广告价值之前，先看看自媒体文章的传播广度。由于微信自己没有提供这个数据，我根据自己的微信公众账号(taobaoguijiaoqi)统计数据来推导，供大家参考。</p><p><span style="font-family:宋体;font-size:18px;"></span></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">目前自媒体传播有以下几个途径：</p><ul style="list-style:outside;background-color:#f8f7f5;margin:0px 0px 10px 32px;padding:0px;color:#333333;font-family:arial, helvetica, sans-serif;font-size:14px;line-height:25.1875px;background-repeat:no-repeat repeat;"><li style="margin:0px 0px 10px;padding:0px;list-style-type:disc;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">订阅用户的推送，也就粉丝阅读。微信上粉丝活跃度非常高，微信用户每天整体的活跃度大约在 52%。估计一下，订阅文章打开率在 90%。</p></li><li style="margin:0px 0px 10px;padding:0px;list-style-type:disc;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">朋友圈的分享。朋友圈类似微博的时间流，微信用户发现好文章，偶尔会分享到自己的朋友圈。我统计了我朋友圈的最近 100 个更新中，有 31 个更新是在分享微信文章。我微信的通讯录中有 500 人，当然，我是属于微信控。我们假设平均每人的微信通讯录中有 200 人。</p></li><li style="margin:0px 0px 20px;padding:0px;list-style-type:disc;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">微信群的传播。我的微信上有十三个群，覆盖人数在 1500 人。非微信控的用户微信群估计不多，假设平均每个用户群覆盖的人数在 300 人左右。<span style="font-family:宋体;font-size:18px;"></span></p></li></ul><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">以上是属于正常的微信文章传播范围，不包括被分享和转载到 PC 上阅读的那部分。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">如果阅读者中有 3% 的人愿意分享到朋友圈或者微信群中，每个人的分享会让 20 个人产生阅读，阅读者又有 3% 的人愿意分享，这就是个无限循环，根据数学公式计算，影响的比例是</p><p><span style="font-family:宋体"><img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6LwdiaHNlWXU61yLHcDBdGGrfxqd87Af4UOK37m1J13cYIEA/0"  /><br  /></span></p><p><span style="font-family:宋体;font-size:18px;"><span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">学数学的人都知道</span></span><span style="background-color:#f8f7f5;color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:1.8em;">，这是等比数列求和：</span></p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">1/(1-3%*20) = 2.5</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">我把这个比例定义为自媒体“<strong>鬼脚七传播指数</strong>”</span><span style="line-height:1.8em;">：</span></p><p style="font-size:medium;padding:0px 0px 0px 30px;min-height:1.5em;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><strong>鬼脚七传播指数</strong> = 1/ <span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">(1 – 粉丝分享率*单分享影响人数)</span></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">那么微信文章的传播率基本上可以按照这个公式计算：</p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">阅读人数 = 粉丝数＊打开率 ＊<strong>鬼脚七传播指数</strong></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">假如鬼脚七的粉丝数是 40000，打开率是 90%，<strong>鬼脚七传播指数</strong> = 2.5，那么我的微信每篇文章的阅读人数是<span style="line-height:1.8em;">：</span></p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">阅读人数 = 40000 * 90% ＊2.5 = 90000 (人)</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">阅读人数还不只是如此，我的微信017号文章《互联网广告，卖得是未来》曾经提过，因为粉丝数是会随着时间增长，由于微信公众号读者有聚焦性更强的特点，新增粉丝更有可能会阅读历史文章，因此每篇文章的后续阅读量仍然还会增加。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">那么每篇文章阅读的几率到底如何？</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">这个和微信公众账号的交互方式有关，我的微信中设置了回复 m 查看目录的方式，新增用户可以很方便的查看之前的文章。从数据统计显示每个新增的用户会查看 6 到 7 篇历史的文章。目前微信的公众账号自定义菜单正逐步对外开放，这种交互也将会更加方便，那么看历史文章的比例会更高。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">经过我的推导，未来</span><span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">阅读人数和粉丝查看历史文章数成正比，和每周新增文章数成反比，和每周新增粉丝数成正比。我把未来阅读人数定义为<strong>鬼脚七新增数：</strong></span><span style="line-height:1.8em;">：</span></p><p style="font-size:medium;padding:0px 0px 0px 30px;min-height:1.5em;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><strong>鬼脚七新增数</strong> = 查看历史文章数 / 每周新增文章数 ＊每周新增粉丝数</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">数学好的同学可以自己推导一下，结果会差不多。</span>为了方便计算，假设我的账号每个新增用户会查阅 6 篇历史文章，我每周发布 6 篇新文章。每周新增粉丝3500，则<span style="line-height:1.8em;">：</span></p><p style="font-size:medium;padding:0px 0px 0px 30px;min-height:1.5em;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><strong>鬼脚七新增数</strong> = 6 / 6 * 3500 = 3500.</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><span style="line-height:1.8em;">同时，这一周的新增粉丝他们阅读以后，又有可能分享，每个分享又可以影响 20 人。这也是一个无线循环。<strong>鬼脚七传播指数</strong>又会起作用。</span></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">那么修正之后，阅读人数的计算方式又变了：</p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">阅读人数=(粉丝数＊打开率 + <strong>鬼脚七新增数</strong>) ＊ <strong>鬼脚七传播指数</strong></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">根据这个公式和之前数字的假设，我每新发送一篇文章，最终阅读人数：</p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">阅读人数=(40000*90% + 3500 ) ＊ 2.5 &nbsp;= 98750 (人)</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">这公式都按照平均数计算，没有考虑不同文章的质量好坏，是否是干货等。而且有些自媒体人的历史文章重复阅读价值不大，例如文章内容是时事点评、某软件新功能介绍等。例如最近关于微信的文章很多，这种文章过了一两个月，会全部被人遗忘。但有的自媒体人的文章，历史文章价值就很大，会经常被后来新增粉丝阅读。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">对比微博的阅读率也算有意思的事情。最近微博新增了微博阅读数，我的微博一般情况会达到也是好几万、十几万不等。不过微信的几万人阅读深度比微博的要强很多，特别是自媒体人的专业性的文章，每个阅读者都会从头到位看，有得甚至看好多遍。而微博的阅读数统计偏高，因为读者同时看多篇微博，阅读数都会累计——这个差异很明显。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">计算完文章传播率和阅读人数，引出一个新的探寻——如果微信文章底部投放广告，广告价值又该如何计算呢？</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">目前广告有几种常见的计费方式，如 CPT（按时间付费），CPM（按千次展现付费），CPS（按成交或者效果付费），CPC（按每次点击付费）。自媒体广告，目前无法归纳到其中任何一种。倒是目前有两种推广方式和自媒体很类似。这两种方式虽然一直被人鄙视，但非常经典。那就是 EDM（大部分为邮件推广）和短信推广，部分邮件和短信甚至被人列为垃圾邮件和垃圾短信。这两种推广都是自媒体文章一样，直达到用户的手机或者电脑，而且每个邮件或者短信的主题都只有一个，非常明确。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">邮件推广是通过同时给几万甚至几十万邮箱地址，群发邮件来达到推广的效果。目前普通的 EDM，平均打开率是 11.3%（来自 2012 年 Q3 中国邮件营销行业数据报告）。如果群发邮件的数在几十万，则每封邮件的费用成本 1 分 5 左右。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><span style="font-family:宋体;font-size:18px;"> </span><span style="line-height:1.8em;">假设一个场景， 假定发每封邮件收费 1.5 分的话，1 万封邮件有 1000 人打开看， 相当于花了 150 元，买了 1500 人阅读。相当于：</span></p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">每人阅读价格=0.15 元</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">短信推广的费用计算方法又不一样，如果发送几万条短信，每条短信的报价大约是 4 分 5，平均每条短信的到达率是 90%，真正有效阅读率不会超过 20%。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">那么发送 1 万条短信，成本 450 元，阅读 1800 条。相当于：</p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">每条阅读价格=450/1800=0.25 元。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">在自媒体文章最后增加一部分广告，很类似EDM和短信推广，可以按照每个用户有效阅读来计算费用。综合上面两种情况，我们可以把每次有效阅读价格定为 0.2 元，把我推导的这个自媒体每个有效阅读的价格，这里定义为“<strong>鬼脚七价格</strong>”：</p><p style="font-size:medium;padding:0px 0px 0px 30px;min-height:1.5em;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><strong>鬼脚七价格</strong> = 0.2 元。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">有了阅读人数和<strong>鬼脚七价格</strong>，自媒体广告的价格就可以定义出来了</p><p style="font-size:medium;padding:0px 0px 0px 30px;min-height:1.5em;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">每篇文章广告价值 = 阅读人数 ＊ <strong>鬼脚七价格</strong></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><span style="line-height:1.8em;">举例说明：40000 粉丝，每周增长 3500，打开率 90%，分享率 3%，单分享影响人数 20，<strong>鬼脚七价格</strong>为 0.2，每篇文章的广告价格为：</span><br  /></p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">广告价格= 98750＊0.2 = 19750 元。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">咱们来计算之前云科技一个多月之前的报价是否靠谱。<span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">假设云科技当时粉丝是 25000，</span><span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">由于云科技和鬼脚七的账号定位非常类似，</span><strong style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;">鬼脚七传播指数</strong><span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">也按照2.5计算，</span>一周新增 1400（云科技之前提到说每写一篇文章增加 200 左右），<strong>鬼脚七新增数</strong>差不多是1400，<strong>鬼脚七价格</strong>不变按照0.2计算。</p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">广告价格=（25000*90%+1400) * 2.5＊0.2 = 11950元。</p><p style="font-size:medium;padding:0px;min-height:1.5em;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><span style="line-height:1.8em;">云科技之前的广告推送，还包括了网站的浏览和 RSS 订阅，每天只卖一万元，绝对是卖便宜了。现在云科技的粉丝早就突破3万，加上RSS订阅以及云科技粉丝影响力的价值(本文后面会谈到影响力)，每天每篇文章的广告价值应该在20000左右了。</span><br  /></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">同样的公式，也可以扩展到媒体和资讯类微信公众号，目前此类微信公众号不少，这里以 AppSolution 为例，以方便用推荐 App 后下载的数量及价格来验证推导的广告价格。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">应用推荐类微信号和自媒体号的一个显著区别就是读者的分享意愿会大幅降低，因此文章内容的影响力大多基于其受众数量，我前文推导的自媒体文章传播的“<strong>鬼脚七传播指数</strong>”（2.5 倍传播率）就会需要调整，如果假设阅读用户都不会传播，则<strong>鬼脚七传播指数 = 1.0 。<span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">假设 AppSolution 粉丝数按 8 万计算，一周递增 1400，</span></strong>每周发6篇文章，每个用户看3个历史文章，则：</p><p style="font-size:medium;padding:0px 0px 0px 30px;min-height:1.5em;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><strong>鬼脚七新增数</strong> = 3 / 6 * 1400 = 700.</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><strong style="line-height:1.8em;">鬼脚七价格</strong>不变，仍然是0.2。<span style="line-height:1.8em;">按推导公式，AppSolution 的广告价格为：</span><br  /></p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">广告价格=（80000 * 90% + 700) ＊1.0＊0.2 = 14540 元。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><span style="font-family:宋体;font-size:18px;"><span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">按 AppSolution 此前透露的，其应用推荐下载数为 3000 人下载，则每次下载的单价是 14540/3000= 4.85 元，基本也算是目前 App 有效激活的推广价格。这个也可以算本文所推导出来的定价公式的一个有力旁证了。</span><br  /></span></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><span style="line-height:1.8em;">继续探寻还会引出一个有趣的问题。如何简单得衡量广告价格的上浮问题？</span><br  /></p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">前文说到新增粉丝和文章数量对微信公众号阅读率的提升。那广告价格上浮显然和粉丝增速，文章的活跃度密切相关。</p><p style="padding:0px 0px 0px 30px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">月上浮比例= 月末新增/月初基数</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">用上面三个帐号计算下各自的月价格上浮比例，则为：</p><ul style="list-style:outside;background-color:#f8f7f5;margin:0px 0px 10px 32px;padding:0px;color:#333333;font-family:arial, helvetica, sans-serif;font-size:14px;line-height:25.1875px;background-repeat:no-repeat repeat;"><li style="margin:0px 0px 10px;padding:0px;list-style-type:disc;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">鬼脚七：3500*4/40000=35%</p></li><li style="margin:0px 0px 10px;padding:0px;list-style-type:disc;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">云科技：1400*4/25000=22.4%</p></li><li style="margin:0px 0px 20px;padding:0px;list-style-type:disc;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">AppSolution：1400*4/80000=7%</p></li></ul><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">——得出什么结论？好的自媒体，广告价格后市看好。用文章公式得出的自媒体的广告价格虚高吗？恰好，几天前，看到朋友圈的一则消息：“XX财经日报的实际发行量是 2 万 4 千份，头版半版广告折后价 50 万一天。和传统媒体比起来，自媒体广告还是太便宜。你们懂得。大家见仁见智了。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">这里还有几个重要的问题要说明：</p><ol style="list-style:outside;background-color:#f8f7f5;margin:0px 0px 10px 32px;padding:0px;color:#333333;font-family:arial, helvetica, sans-serif;font-size:14px;line-height:25.1875px;background-repeat:no-repeat repeat;"><li style="margin:0px 0px 10px;padding:0px;list-style-type:decimal;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">EDM 和短信推广的报价，都只是提供发送服务，发送方并不提供本身邮件地址和手机号。而自媒体的订阅用户就很自然解决这个问题，对广告主来说节省了这部分费用。</p></li><li style="margin:0px 0px 10px;padding:0px;list-style-type:decimal;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">EDM 和短信推广的定价就合理么？从有手机开始就有了短信推广，从有了邮箱开始，就有了 EDM，到现在已经至少有十几年，其定价应该值得参考。</p></li><li style="margin:0px 0px 10px;padding:0px;list-style-type:decimal;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;"><strong>广告和客户群还相关。</strong>这种推广的效果还跟广告主以及自媒体账号的粉丝群体相关，当然还跟文章相关，如果推送的广告刚好和文章内容相关，效果就更好了。广告主如何选择不同的自媒体人做为投放对象，不在文本讨论范围之内，相信有专家比我更清楚。</p></li><li style="margin:0px 0px 10px;padding:0px;list-style-type:decimal;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">每篇文章的打开比例、历史文章查看比例、传播比例都和自媒体作者的专业度相关。不同的作者，每个参数可能会不一样。这里只是提供参考公式，每个作者可以根据自己的账号实际情况来计算。</p></li><li style="margin:0px 0px 10px;padding:0px;list-style-type:decimal;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">最合理的广告计算方式不同的文章，<strong>鬼脚七传播指数</strong>有区间浮动。我之前写得一篇很经典的文章《是谁在阻碍我们创新》，<strong>鬼脚七传播指数</strong>应该能到10.0，文章质量一般的，这个指数就只能是1～2之间了。</p></li><li style="margin:0px 0px 10px;padding:0px;list-style-type:decimal;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">大家根据自己账号的特殊性，也可以计算自己的<strong>鬼脚七传播指数</strong>的，如果文章传播率低，这个指数就低，传播率高，指数就高。<strong>鬼脚七新增数</strong>也会有波动，简单计算就是把每周粉丝数做一个折扣，但<strong>鬼脚七价格</strong>基本不变，可按照0.2计算。<br  /></p></li><li style="margin:0px 0px 20px;padding:0px;list-style-type:decimal;"><p style="padding:0px;min-height:1.5em;margin-top:0px;margin-bottom:0px;">粉丝增速，文章的活跃度将直接影响到广告的价格上浮比例。</p></li></ol><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">文章写到这里，其实还有些漏洞，那就是影响力。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">——我的观点是，影响马云或李彦宏和影响我邻家小妹的效果完全不一样，如果让马云或李彦宏有一个比较深刻的印象，以后马云和他的朋友聊起来或者谈投资，无意想起甚至这个广告内容，对广告主的影响会完全不一样。对于自媒体订阅方式看，马云或李彦宏很可能也很方便订阅我的账号，但垃圾短信和垃圾邮件，对马云和李彦宏绝对产生不了任何有效阅读。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">因此自媒体广告真正的价值，肯定不是本文这么计算。最准确的方式应该是<strong>按影响力付费</strong>，只是难点在于影响力太难量化，这里也许可以引入另外一个维度就是影响力溢价指数，这个问题我还在思考，以后可以另外成文。</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">当然，更难的可能还是人们的意识和广告既有利益链的打破。新媒体对传统媒体的挑战才刚开始，从读者到渠道，从内容到广告，都在发生彻底的变化，本文还只是把广告价格问题做了简单分析。借用一句大话西游中最凄美的台词作为本文的结尾：</p><p style="padding:0px;min-height:1.5em;font-size:medium;background-color:#f8f7f5;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><strong>我猜到了这开头，却猜不到这个结局。</strong></p><p><span style="font-family:宋体"></span></p><p style="padding:0px;min-height:1.5em;color:#3e3e3e;"><span style="font-size:14px;"><span style="font-size:16px;"><span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">最后感谢搜狐邮箱北方大区总监姜波提供EDM相关数据，需要EDM服务的同学可以联系其新浪微博@姜-波-单眼皮波波猪；</span></span></span></p><p style="padding:0px;min-height:1.5em;color:#3e3e3e;"><span style="font-size:14px;"><span style="font-size:16px;"><span style="color:#333333;font-family:arial, helvetica, sans-serif;font-size:medium;line-height:28.796875px;background-color:#f8f7f5;">感谢AppSolution的Wilson 提供相关数据和文章修改建议。对手机App感兴趣的朋友，可以关注这个微信账号: appsolution.</span></span></span></p><p style="padding:0px;min-height:1.5em;color:#3e3e3e;"><strong><span style="font-size:14px;"><br  /></span></strong></p><p style="padding:0px;min-height:1.5em;color:#3e3e3e;"><strong><span style="font-size:14px;">作者介绍</span><span style="font-size:14px;">：</span></strong></p><p style="padding:0px;min-height:1.5em;color:#3e3e3e;"><strong><span style="font-size:14px;">鬼脚七，一个简单的人，分享电商资讯、搜索变化、淘宝动态、产品设计、管理心得、生活感悟；偶尔文艺，偶尔深沉。做一个有思想的人！</span><span style="font-size:14px;">微信账号: taobaoguijiaoqi 加为好友后回复 m 可以看到作者之前的所有文章。</span></strong></p><p style="padding:0px;min-height:1.5em;color:#3e3e3e;"><strong><span style="font-size:14px;">声明：请尊重每个自媒体人的劳动成果，本文谢绝专业网站和媒体自主转载此文，如果需要转载，请和新浪微博@淘宝鬼脚七 私信联系。要求把以上的作者介绍和本声明一起发表。</span></strong></p><p style="padding:0px;min-height:1.5em;color:#3e3e3e;"><strong><span style="font-size:14px;"><br  /></span></strong></p><p style="padding:0px;min-height:1.5em;color:#3e3e3e;"><strong><span style="font-size:14px;">如果你觉得文章对你有帮助，希望表达感谢，最好的方式就是帮我分享这篇文章，并把我的微信账号推荐给你觉得对他有帮助的朋友！</span></strong></p><p style="padding:0px;min-height:1.5em;color:#3e3e3e;"><span style="font-family:sans-serif;font-size:16px;"> </span></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">云科技的微信账号两万多粉丝，广告定价每天一万元，有人说太贵，也有人说很太便宜。<br/>自媒体广告到底应该如何定价？这是个有意思的话题，也很学术。本文用数学方法做了推导，也许有点枯燥，不过做一个定量分析也是蛮有意思的事情。</script>
+	<script id="txt-title" type="txt/text">自媒体广告，到底值多少钱——关于微信公众帐号广告价值的定量分析</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000210&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000210&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/DibgiaTFa6Lwe5TZVkjO0wv13JOibawJH6kic5Q43NJyXl98RUWZ9zoCUA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000210&itemidx=1#wechat_redirect",
+						title  = htmlDecode("自媒体广告，到底值多少钱——关于微信公众帐号广告价值的定量分析"),
+            desc   = htmlDecode("云科技的微信账号两万多粉丝，广告定价每天一万元，有人说太贵，也有人说很太便宜。<br/>自媒体广告到底应该如何定价？这是个有意思的话题，也很学术。本文用数学方法做了推导，也许有点枯燥，不过做一个定量分析也是蛮有意思的事情。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

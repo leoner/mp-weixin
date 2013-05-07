@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>绝对肤浅</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">绝对肤浅</h1>
+			<span id="post-date">2013-05-07</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEFQFKWjibTQ3MmNVv8RA7jY8njLAbfWkGqu9UXT5z3rcw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>说几句关于产品的感悟。</p><p><br  /></p><p>今天我问微信团队的一位朋友，为什么我们公司的微信公众帐号「丁香园」的历史信息是不完整的，有的文章看不到，有些文章还能看到。微信的朋友告诉我，只有群发给所有人的信息才会出现在历史信息中。我恍然大悟，事后一想，这是个「功能」而不是「缺陷」(为什么?)，我应该之前能想明白的。但是因为思维定势，我一直以为是微信后台取数据出现了故障。</p><p><br  /></p><p>类似的问题也经常有网友问我，你为什么每次微信都要配个图? 你不知道多浪费流量嘛? 我也知道有些文章不必配图，但是公众平台后台功能就是这样的。如果消息短，可以直接发文字信息即可。如果消息过长，就只能发图文信息。还看到有人说，为什么微信朋友圈发文字信息的功能做得那么隐蔽? 为什么隐蔽，或许微信的初衷就没想让你只发文字信息啊，原本只是一个彩蛋，但没想到用的人越来越多了而已。</p><p><br  /></p><p>一个好产品，意味着会让一部分人觉得非常难用。如果你想讨好绝大多数人，就意味着必须要妥协，而妥协带来的后果就是增加更多的功能，让产品变得更加复杂，复杂到最后，任何一个人的需求都能满足，做到这样，就不是一个好产品了。对于人来说或许也是这样，八面玲珑的人未必就是真的老好人。</p><p><br  /></p><p>昨天说了几句杭州的免费无线网络。今天收到一位读者诚恳的回复，摘录如下：</p><p><br  /></p><p>「Air-WASU 这广告劫持的不仅是微信，而是所有 Web 页面。与 i-Hangzhou不同，这个 SSID 是华数出资运营，考虑运营成本，内嵌广告是无奈之举。i-Hangzhou 是市政府投资并召集几家运营商共同运营，华数只是其中一家而已，故没广告，至于手机注册其实只为监管而已。至于信号不好难于连上的问题… 因为运营是非盈利性质，无线城网设备的升级优化无法有足够资金支持，请理解。」</p><p><br  /></p><p>看了这些，我也不好再说什么了。或许 GDP 就是这么搞出来的吧，投入不少资金，又不是很情愿，对用户实际价值又不大，浪费。</p><p><br  /></p><p>这两天工作效率有点降低，一直在折腾配置笔记本的环境，处理信息的效率降低了不少，请大家谅解。</p><p><br  /></p><p>有读者反馈内容肤浅，我决定弄点更肤浅和通俗的内容来。</p><p><br  /></p><p><span style="color:#FFFFFF;background-color:#000000;">{小道消息}</span></p><p><br  /></p><p>1. 收到线报，金山云新开了两个云存储产品项目，和之前快盘的产品功能重合度极高，疑似内部山头林立在抢占资源圈地盘。对于大公司内部强资源这现象大家怎么看? </p><p><br  /></p><p>题图：筷子 &nbsp;从产品的角度上看，你觉得筷子算是一个好产品么?</p><p><br  /></p><p>这篇文章来自「小道消息」，微信号: 「WebNotes」. 觉得这篇有价值，点右上角分享到朋友圈。</p><p><br  /></p><p>长期收集业内各种有趣的信息以及爆料。</p><p><br  /></p><p>点击 {阅读原文} 查看小道消息的历史文章.</p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">从产品的角度上看，你觉得筷子算是一个好产品么?</script>
+	<script id="txt-title" type="txt/text">绝对肤浅</script>
+	<script id="txt-sourceurl" type="txt/text">http://hutu.me/#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000451&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000451&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEFQFKWjibTQ3MmNVv8RA7jY8njLAbfWkGqu9UXT5z3rcw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000451&itemidx=1#wechat_redirect",
+						title  = htmlDecode("绝对肤浅"),
+            desc   = htmlDecode("从产品的角度上看，你觉得筷子算是一个好产品么?"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

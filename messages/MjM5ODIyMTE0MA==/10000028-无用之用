@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>无用之用</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">无用之用</h1>
+			<span id="post-date">2013-01-03</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEyLCop7FW6xEWcUv0ib00H57iaQxkmWg9GStGQnYSKWLAA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>你整天更新那些破网站能找到媳妇么? &nbsp;与之类似，我媳妇儿经常说我「整天更新那些微信微博啥的有什么用? 」然后就是各种唠叨，说久了，我也要寻思一下，有啥用?<br  /></p><p><br  /></p><p>其实我也说不清这有什么用，不能赚钱，浪费时间。写的肤浅，遭人笑话；假装深奥，又装不像；偶尔因为写的东西不讨人喜欢，还会挨骂，王小波说「写作就是一个反墒的过程」，其实折腾微信这事儿对我个人来说，也是个<span style="letter-spacing:1px;line-height:24px;">反墒的过程。或许，这就是互联网人的手艺活儿，自得其乐。</span></p><p><span style="letter-spacing:1px;line-height:24px;"><br  /></span></p><p><span style="letter-spacing:1px;line-height:24px;">说到底，终究不过是「无用之用」。</span></p><p><span style="letter-spacing:1px;line-height:24px;"><br  /></span></p><p><span style="letter-spacing:1px;line-height:24px;">The Use of Useless.</span></p><p><br  /></p><p>今日消息：百度产品和技术的副总裁王梦秋已在上月离职，据说将创业。王梦秋为美丽说创始人徐易容的夫人。有点好奇她是否会加入美丽说。</p><p><br  /></p><p>按理说，每到年末，各家公司高管变动实属平常。不过百度最近这形势似颇有不妙。最近几日刚传出 360 和 Google 就广告业务达成合作，眼看着 $QIHU 股价一路飙升中... 这一年来，百度市值跌落不少，而 360 股价则是扶摇直上。两重天。</p><p><br  /></p><p>从用户的角度上看，有竞争是好事情，百度各种服务的改进最近节奏挺快的，比 2012 年上半年明显快多了。</p><p><br  /></p><p>-------小道盒子用户通知<span style="letter-spacing:1px;line-height:24px;">-------</span></p><p><span style="letter-spacing:1px;line-height:24px;"><br  /></span></p><p class="p1">今天「小道盒子」做了一次升级，主要解决下面的问题</p><p class="p2"><br  /></p><p class="p1">- 解决在某些情况下 DNS 被污染且无法复原的问题;</p><p class="p1">- 加快加密隧道的连接速度，并提高稳定性;</p><p class="p1">- 解决部分 IP 不在国内 IP 名单中，导致部分国内网站访问缓慢的问题;</p><p class="p2"><br  /></p><p class="p1">最新版本是18，所以系统有一个从 16 到 17 到 18 的过程，且在 17 版本时可能会有上网不稳的情况，此时只需要耐心等待升级到 18 即可，不需要做任何操作，也不用重启，升级后系统会自动重启生效。</p><p class="p2"><br  /></p><p class="p1">如果没有正常升级，请单独给我消息。</p><p><br  /></p><p>题图：来自网络趣图. 请到花瓣网搜索.</p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">你整天更新那些破网站能找到媳妇么?&nbsp;&nbsp;与之类似，我媳妇儿经常说我「整天更新那些微信微博啥的有什么用?&nbsp;」</script>
+	<script id="txt-title" type="txt/text">无用之用</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000028&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000028&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEyLCop7FW6xEWcUv0ib00H57iaQxkmWg9GStGQnYSKWLAA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000028&itemidx=1#wechat_redirect",
+						title  = htmlDecode("无用之用"),
+            desc   = htmlDecode("你整天更新那些破网站能找到媳妇么?&nbsp;&nbsp;与之类似，我媳妇儿经常说我「整天更新那些微信微博啥的有什么用?&nbsp;」"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

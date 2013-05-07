@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>a3-我们理解的网络、搜索、计算机都将消失</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">a3-我们理解的网络、搜索、计算机都将消失</h1>
+			<span id="post-date">2013-02-19</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6LwdYJKSFVpU0RGBu3fBp5Qibam6icLGgZ02WvScJBZrQj4zA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p><span style="font-size:14px;"><span style="font-size:14px;"></span></span></p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><em>【7哥导读】作者 David Gelernter 是耶鲁大学计算机科学的教授，预测过互联网的诞生。这篇是《WIRED》(连线杂志)2月1日的文章，很值得看，国内把这篇文章标题翻译成为：互联网将从空间模式走向时间模式，为了尊重作者，我保留了原文标题的翻译，原文标题为《The End of the Web, Search, and Computer as We Know It 》。第一遍没看懂没关系，多看两遍就理解了。英文好的朋友的可以点击最后的阅读原文，查看英文版本。</em></p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><em>人们常常会问，下一代网络将会是什么样。而实际上，并不会有下一代网络出现。</em></p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><em>当前基于空间的网络将逐渐被基于时间的“世界流”取代。这样的趋势已经发生，并从人们的“生活流”开始。早在90年代，我和埃里克·弗里曼(Eric Freeman)就做出了这样的预言，并在16年前的《连线》杂志文章中阐述了这一点。</em></p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><em>这种“生活流”，即由多种元素组成、内容可搜索、即时的消息流，以博客文章、RSS源、Twitter消息和其他对话流，以及Facebook留言墙和时间线的形式呈现出来。其结构反映了从平台向流的转变，这样的流是流动的，真实地代表了时间。</em></p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><em>这有些类似于从桌面向魔法日记的转变。这样的日记会自动翻页，追踪你生活中的每时每刻。如果你触摸这一日记，那么翻页就会停下。日记将成为一本参考书，是你生命完整的、可搜索的指南。将日记放下后，翻页又将开始。</em></p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">今天，在数字世界中，这种类似日记的结构正在取代基于空间的结构，并获得主导地位：互联网上的所有信息很快都将变成基于时间的结构。基于空间的结构是静态的，而基于时间的结构是动态的，一直在流动，就像时间本身。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">互联网将成为一部历史。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><strong style="margin:0px;padding:0px;">基于时间的模式将产生巨大影响</strong></p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">到目前为止，网络仍然基于空间，就像是一个杂志摊。我们会使用这样的描述“最左侧从上往下第二本”来找到一本杂志。日记有所不同，这是以时间为基础的。时间成为了空间的一个维度，因此我们会使用“星期四的日记”和“去年春季的所有东西”来描述日记中的内容。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">现在，对时间的关注已越来越明显，尤其考虑到我们自然而然地将生活视作一部小说，并以时间为线索串联在一起。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">计算机行业在经历了20年的发展后才来到这里。计算机行业不再仅仅是保存资源，并以创造性的方式利用资源。在新的世界中，我们可以专注于以最佳方式，而不是最廉价、最保守的方式来利用互联网。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">目前，互联网的最重要功能是提供最新信息，告诉我们当前正在发生什么。这也是数字世界中基于时间的结构越来越多的原因：为了满足对最新数据的需求。无论是Twitter消息还是Facebook时间线，都是以时间来组织的信息流，告诉你最新发生的事。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">当然，我们仍可以浏览或搜索过去。在数字世界中，时间可以前进或后退。任何信息对象都可以在“当前”被加入，并向后流动，这就像是河流中的小树枝。你可以将文件、消息和传统网站(即静态的、单一的元素)丢在信息流中，而这样的信息流将成为内容可搜索的云文件系统。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">如果我们将所有博客、信息源和对话流整合在一起，那么会发生什么?通过整合网络上的每一条时间流，包括正在兴起的私有时间流，我们将得到一条世界流：数字世界整体的一张快照。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">没有人能够全面了解世界流，因为其中大部分的信息流动是私有的。但所有人都能看见其中的一部分。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">请想象一口老式水井，其中有水桶和井绳，将水桶放入井下就可以打水。这口“时间之井”有着无限的深度，因此水桶可以无限制地放入井下，而井绳总能满足长度需求，因此将不断有井绳被放出。在许多时间流网站上，我们都可以无限地滚动浏览，这就像是被放出的井绳。水桶代表了世界流的起点，即最老的数据对象，井绳的轱辘代表现在，而井绳就是信息流本身。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">与当前的静态网站不同，在世界流中，信息将持续稳定地流动。那么这意味着什么?</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><strong style="margin:0px;padding:0px;">信息流将彻底改变搜索</strong></p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">当前的操作系统和浏览器，以及搜索模式将逐渐被边缘化，因为人们不再希望关联至计算机或“网站”。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">人们真正想要的是信息。在数字世界中，未来将诞生数以亿计的私人生活流，因此我们的基础软件将是“流浏览器”。这类似于当前的浏览器，但其功能则包括添加、删除和浏览时间流。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">在时间流中搜索内容与流代数学有关。相对基于空间的结构所采用的代数学方法，这种方法相对简单。内容搜索实质为流的提取。流代数学中的简单实用功能将带来巨大便利：向我们提供完全合适的信息。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">所有的信息来源都是生活流。流浏览器将帮助我们获取希望的信息，这就像是度身定制的咖啡机。我们面前摆放着成千上万不同的流“原料”，我们从中找到自己想要的，将其混合在一起得到适合自己的一款。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">所有网站的内容都将摆脱空间的束缚，成为庞大的时间流的一部分。我们不再需要依靠亚马逊网站通知我们，某本关注的新书是否已经到货。我可以将多家图书零售商的生活流混合在一起，随后应用自己的搜索条件。流代数学方法允许添加任何新的流，并允许从中提取任何内容。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">电子商务将出现巨大变革。尽管网络的构架方式没有太大变化，但我们不必再刻意寻找有什么新商品。基于时间的世界流将使我们能通观全局，而不必坐下来看一场专门的时尚秀。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">世界流的结构允许我们以任何想要的方式混合及订制信息。我最喜欢的耶鲁大学橄榄球队新闻、图书的到货状态以及购物推荐将与其他消息、文档和日程表通知混合在一起。当前的应用是否已提供这种功能?并没有。它们做不到这一点，除非提供不同信息的上亿条信息流采用共同接口，使流浏览器能方便地从中提取信息。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">这种对精密控制的需求是否会影响网络的发展?从某种方面来说确实如此，但这也只是时间问题。相对于“找找看有什么收获”，“供我所需”的模式总是更有用。无论速度有多快，大部分搜索都仍只是浪费时间。从某种方面来说，我们将利用时间去节约时间。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">我们不再需要无休止地进行大量独立搜索，流浏览器将可以向我们持续提供所需的信息。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">不过，这样的未来并不意味着操作系统、浏览器和搜索服务的消亡，而只是改变了我们所知的“计算机”的定义。无论体积是大是小，计算机的主要功能未来将转向对全球数字流的持续追踪，与车载收音机接收电台信号类似。我们不会再过多地关注计算设备本身，而是更多地关注信息世界，以及与之相关联的个人生活。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">最终，网络，或称为数字世界，将不会再是一团乱麻的蜘蛛网。这样的趋势已经启动。数十亿用户将记录自己的生活，并将无缝地整合到没有尽头的故事中：地球将讲述自己的故事。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"><img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6LwfCYXLpicpXVhtyvZiaTra9P6cBnUSo5wLaKWDe0fBrxdTA/0" style="max-width:600px;height:auto;vertical-align:middle;margin:2px;padding:0px;border:0px solid #cccccc;"  /></p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">作者在2月14日又有补充说明，大意是作者目前正在做一些实验。其内容并不影响全文的观点，有兴趣大家可以看看英文原文。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">作者简介：大卫·盖勒特是耶鲁大学计算机科学教授，以及Lifestreams.com网站首席科学家。他预测了万维网的诞生，被认为是具有远见的科学家。他出版过多本图书，并曾是美国全国艺术基金会监事会成员。他同时也是一名画家，作品收录在曼哈顿Yeshiva大学美术馆中。</p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;"> <img src="http://mmsns.qpic.cn/mmsns/DibgiaTFa6LwfKxAMWCM2sgtY17RzONks8zYEM7RkE6lba7D70FHUJ4Q/0" style="border:0px;max-width:100%;font-size:medium;color:#333333;font-family:arial, helvetica, sans-serif;line-height:28.796875px;background-color:#f8f7f5;height:auto !important;"  /></p><p style="padding:0px;line-height:1.8em;color:#333333;font-family:arial, helvetica, sans-serif;margin-top:0px;margin-bottom:20px;">点击“阅读原文”查看英文原文</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">互联网正在从基于空间的模式向基于时间的模式转变，这将极大地改变搜索服务和人们使用计算设备的方式。</script>
+	<script id="txt-title" type="txt/text">a3-我们理解的网络、搜索、计算机都将消失</script>
+	<script id="txt-sourceurl" type="txt/text">http://www.wired.com/opinion/2013/02/the-end-of-the-web-computers-and-search-as-we-know-it/#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000117&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000117&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/DibgiaTFa6LwdYJKSFVpU0RGBu3fBp5Qibam6icLGgZ02WvScJBZrQj4zA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTM3NjIyMA==&appmsgid=10000117&itemidx=1#wechat_redirect",
+						title  = htmlDecode("a3-我们理解的网络、搜索、计算机都将消失"),
+            desc   = htmlDecode("互联网正在从基于空间的模式向基于时间的模式转变，这将极大地改变搜索服务和人们使用计算设备的方式。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

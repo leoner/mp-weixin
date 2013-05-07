@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>无解之解</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">无解之解</h1>
+			<span id="post-date">2013-03-04</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEicjbFGgjxXL3ZmYcmEUdnYLQA8tkFRhpkC8my8aDLCEQ/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今天在微博上看到一位做技术的朋友提出的问题:</p><p><br  /></p><p>「怎么能不让DBA看到应用的任何数据?」</p><p><br  /></p><p>是个有趣的问题，不过是个不需要解决的问题，为什么不需要解决？因为即使解决了，也是个非常糟糕的办法，反而带来更多的隐患，付出更大的成本，看似解决，实际上无济于事。最多给点心理安慰。</p><p><br  /></p><p>不知道大家想过没有，有的时候我们费了很大力气不过是在寻找无解问题的解决方案，也就是说你把精力耗费在了不正确的地方。 比如这个如何彻底避免 DBA 看到所有数据? 还有类似如何彻底杜绝 Unix 系统管理员(SA)执行 rm 命令? 如何设计完备且不会让员工钻空子的流程制度? 如何避免让医生看到手术台上病人裸露的身体… </p><p><br  /></p><p>在大一点的公司里面，这类问题一般体现了领导者的行政意志，一层一层压下来，结果执行层面只得硬着头皮搞解决方案。如果领导者最后能醒过神来还好，否则的话，就会苦了不少人。</p><p><br  /></p><p>创业团队和小公司，应该尽量避免绕开这类问题，不要在这种无意义的事情上浪费太多的成本。当然大公司该浪费就浪费吧，那么多人，那么多资源，不浪费一点怎么能称之为大公司呢? </p><p><br  /></p><p>说起大公司，其实我心底一直敌视大公司，或者说鄙视大公司的所作所为，有的时候看到一些大公司做的蠢事就觉得乐不可支，而且坚信今天的各家大公司早晚有一天会成为历史，会因为自己的愚蠢死掉，会因为自己的傲慢错过更多的机会，会因为自己的庞大而无法适应新的时代，会被各种小公司蚕食掉，而哪些新成长起来的小公司会再演变成大公司，这就是商业社会发展的客观规律。</p><p><br  /></p><p>--今日问答--</p><p><br  /></p><p>问：小道君，关注很久了，目前有点困惑。我做内容以及运营出生的，也做过千万级流量平台的内容负责人。应朋友邀请现在在做一行业平台，因为是朋友，很多事情不好拒绝。目前带的团队包括产品、运营、SEO、UI、内容，有段时间技术部门也由我负责，把大部分精力都放在自己不擅长的地方了，提了好多次，每次都要我理解下公司，我先担着。其实我最害怕的是自己的不专业反而害了这个平台。</p><p><br  /></p><p>答：这位朋友，首先我觉得你可能是个好的团队负责人，因为起码你知道自己有些地方「不专业」。要知道，很多团队负责人他们从来不知道自己不专业，他们总以为自己是最专业的，而恰恰是以为的专业害了整个团队无法继续发展。</p><p><br  /></p><p>你或许觉得部分症结在于找不到更多合适的人，比如技术找一个负责人，产品找一个，SEO 找一个… 可是那样，你这个团队要膨胀成多大? 那样怕是一个中型公司的配备了。如果是稍微小一点的团队，其实正是需要团队成员的能力进行互补，尽管有些以前谁都没做过，但如果短期内尝试一下，也能做得来的话，那就不如继续做一下试试看。</p><p><br  /></p><p>我想你的困惑或许在于你只想做自己擅长的事情，一旦太多的事情给你做，你觉得那是你不擅长的东西，出了「舒适区」，其实没什么，不用担心太多。艺多不压身。</p><p><br  /></p><p>我能给你的建议是在自己的团队培养更合适的做某个事情(或许就是你最擅长的事情)的人，激发他们的积极性。然后你集中精力做团队目前解决不了的事情。有些事情，我自己也在摸索，一起前进吧。</p><p><br  /></p><p>最后纠正你一下，是「出身」，不是「出生」，不知道为什么一大堆人总喜欢写成「出生」。</p><p><br  /></p><p>时间比较晚了，先说到这里。关心你们的，老风。</p><p><br  /></p><p><br  /></p><p>题图：随便找的一张。Google 和 Apple 形成「阴阳」，感觉好玄乎的... 够唬人.</p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">有的时候我们费了很大力气不过是在寻找一些无法解决的问题的解决方案.</script>
+	<script id="txt-title" type="txt/text">无解之解</script>
+	<script id="txt-sourceurl" type="txt/text">http://app.dxy.cn/idrug.htm#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000204&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000204&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEicjbFGgjxXL3ZmYcmEUdnYLQA8tkFRhpkC8my8aDLCEQ/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000204&itemidx=1#wechat_redirect",
+						title  = htmlDecode("无解之解"),
+            desc   = htmlDecode("有的时候我们费了很大力气不过是在寻找一些无法解决的问题的解决方案."),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

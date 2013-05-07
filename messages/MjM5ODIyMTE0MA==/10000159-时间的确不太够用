@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>时间的确不太够用</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">时间的确不太够用</h1>
+			<span id="post-date">2013-02-15</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlHtes5RulZxzGJwibpCCq6Qg7q7Kqd5gWRNvF9S2mFUMEA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>问：你每天大约花多少时间写微信?</p><p><br  /></p><p>答：这个问题到现在有不少朋友问过。大致说一下吧。</p><p><br  /></p><p>每天到了我想要写东西的时候我才写。想好了主题之后会比较快，不到 30 分钟可以准备好内容，如果的确不想写，时间会更长一点。然后是排版和寻找合适的配图，这个一般要花费10-20分钟。接着是测试，至少要发到自己的手机上看几次基本的样式是否过得去，然后才会发布。所以，总的时间一般在 30-60 分钟之内搞定，这段时间内还会翻看读者的留言。如果遇到其它问题，比如微信编辑器这几天不好用，就会受到影响。</p><p><br  /></p><p>对于每天的信息一般讲究及时性，所以很少会提前一天或者几天准备好 -- 我知道很多人会这么做，我只是不喜欢这样而已。以后会把这个时间继续压缩。因为我的确还有很多其它的事情要做。</p><p><br  /></p><p>到现在为止，只有我自己在维护，绝对没有代笔。订阅量已经有 3 万了。</p><p><br  /></p><p>问：说起国内对信息的审核，微博可以通过对各种关键词的屏蔽或者监控直接删除的手段，阻止敏感信息的传播。那么随着微信的发展，会不会也会出现各种粗暴的审核制度，到那是像公众号们该何去何从？例如，假如今天朝鲜核辐射是敏感词了，您又想谈谈，该如何取舍？</p><p><br  /></p><p>答：微信内容审查是早晚的事情，这是不用怀疑的。各种公众帐号应该提前有心理准备。即使有审查，但是如果你也想谈论某些话题的话，依然会有表达的手段，有表达的可能性与多样性，就像微博上那样，即使审查如此严格，但踩着边线还是可以发出声音。</p><p><br  /></p><p>将工具进行最大化的利用，而非破坏性的使用。我建议运营微信公众帐号的朋友们都能这样。</p><p><br  /></p><p>------</p><p><br  /></p><p>今天想到的一个事情是，可以用群体协作的方式进行环保运动。比如，春节期间各地网友回乡后在网上公布各地化工厂污染环境的事实. 这个应该会有持续性。</p><p><br  /></p><p>明天大部分朋友就要上班了，「时差」倒过来了没有？早点休息吧。咱们明天见。</p><p><br  /></p><p>题图：小道消息的二维码. 今天偷懒一下，不找特定的配图了.</p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">问：你每天大约花多少时间写微信?答：这个问题到现在有不少朋友问过。大致说一下吧。每天到了我想要写东西的时候我</script>
+	<script id="txt-title" type="txt/text">时间的确不太够用</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000159&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000159&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlHtes5RulZxzGJwibpCCq6Qg7q7Kqd5gWRNvF9S2mFUMEA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000159&itemidx=1#wechat_redirect",
+						title  = htmlDecode("时间的确不太够用"),
+            desc   = htmlDecode("问：你每天大约花多少时间写微信?答：这个问题到现在有不少朋友问过。大致说一下吧。每天到了我想要写东西的时候我"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>
