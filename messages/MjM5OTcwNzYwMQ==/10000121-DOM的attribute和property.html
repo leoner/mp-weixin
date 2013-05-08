@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>DOM的attribute和property</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">DOM的attribute和property</h1>
+			<span id="post-date">2013-04-18</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxibGn44XVCRpIZ1EogicrHS9YFKcexOOKhFP30UVnNpn2w/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今天讲一个JS的小话题，就是DOM节点的attribute和property的区别，这个点看起来很小，其实背后别有洞天。如果面试一个前端，听他讲讲对这个问题的理解，基本能分辨是不是菜鸟。下面的内容请各位细心体会。</p><p><br  /></p><p>页面有一个INPUT输入框：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicy9dxicRPGNoQOfjy5YlwpeVEc9N3XDyuBdjMKIdDzeglQ/0" style="float:none;"  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicy9dxicRPGNoQOfjy5YlwpeVIEXibvpibCjPaibeGVPYfo5MQ/0" style="float:none;"  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicy9dxicRPGNoQOfjy5YlwpeVOQTd7GyC76y331wg7b8TqA/0" style="float:none;"  /></p><p><br  /></p><p>对它取值，两个值都是&#39;1&#39;，这个比较简单，没什么好说的。现在我把输入框的值改成100，然后重新取一遍值：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicy9dxicRPGNoQOfjy5YlwpeVMjfw5AfBUhshUUpXgl4awA/0" style="float:none;"  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicy9dxicRPGNoQOfjy5YlwpeVLPW2VwvGxKfULNTo0OwHJw/0" style="float:none;"  /></p><p><br  /></p><p>为什么两个值不同了？这就是attribute和property在作怪。</p><p><br  /></p><p><strong><span style="color:#c00000;">Attribute</span></strong></p><p><br  /></p><p>这个INPUT节点有很多属性（attribute）：&#39;type&#39;，&#39;id&#39;，&#39;value&#39;，&#39;class&#39;以及自定义的&#39;data-explain&#39;。DOM对象有两个方法getAttribute()和setAttribute() 读写DOM树节点属性（attribute）值。注意这里的getAttribute方法有个潜规则：部分属性（比如INPUT的<strong>value</strong>和<strong>checked</strong>），通过getAttribute取到的是初始值。这解释了修改输入框值为100后，v1取到的还是初始值&#39;1&#39;。</p><p><br  /></p><p><strong><span style="color:#c00000;">Property</span></strong></p><p><br  /></p><p>Javascript获取到的DOM节点对象，比如a，你可以把它看作一个基本JS对象（尽管某些浏览器实现上并不完全是），这个对象包含很多属性（property）：&#39;value&#39;，&#39;className&#39;等，以及一些方法：getAttribute，setAttribute，onclick等。注意对象的&#39;value&#39;属性（property）取值跟着输入框内的当前值一起更新，所以v2的值是&#39;100&#39;。</p><p><br  /></p><p>日常使用，推荐大家尽量用property，这样事情处理起来简单一下，attribute的值永远是字符串，比如：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicy9dxicRPGNoQOfjy5YlwpeV36W7HHl3oTQRhgNdGicYrNg/0" style="float:none;"  /></p><p><br  /></p><p>另外，由于浏览器实现细节的差异，也存在一些坑，比如：在Chrome，Firefox及IE8之后，标签的attribute名是大小写不敏感的，DOM.setAttribute(&#39;myname&#39;,&#39;xxx&#39;)可以通过DOM.getAttribute(&#39;MyName&#39;)来取，另外在XHTML文档模式下，设置&#39;tabIndex&#39;为任意值会将&#39;tabindex&#39;值置为0。</p><p><br  /></p><p>对于attribute和property，jQuery中的实现其实挺纠结的，跟他们相关的三个方法 .attr()、.prop()以及.data()，这三个背后也有渊源。不过这个说开又是另一个话题，大家可以先自己思考，如果非常感兴趣，也可以回复&#39;a&#39;预约我明天给大家八卦这个话题。</p><p><br  /></p><p>文 / 远尘</p><p><br  /></p><p>题图：两难</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">DOM节点的attribute和property的区别，这个点看起来很小，其实背后别有洞天</script>
+	<script id="txt-title" type="txt/text">DOM的attribute和property</script>
+	<script id="txt-sourceurl" type="txt/text">http://www.noahlu.com/blog/javascript-note/dom-attribute-property/#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000121&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000121&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxibGn44XVCRpIZ1EogicrHS9YFKcexOOKhFP30UVnNpn2w/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000121&itemidx=1#wechat_redirect",
+						title  = htmlDecode("DOM的attribute和property"),
+            desc   = htmlDecode("DOM节点的attribute和property的区别，这个点看起来很小，其实背后别有洞天"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

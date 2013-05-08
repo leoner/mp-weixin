@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>我心目中的优秀&nbsp;API</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">我心目中的优秀&nbsp;API</h1>
+			<span id="post-date">2013-03-12</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicyYkictZxjewsN9icsutDjA9PSIZPdlGkSQfnoDhm3mcLKw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>延续大前天的话题，陈皓在微博中提到</p><p><br  /></p><p><span style="color:#7f7f7f;font-size:14px;">【如何设计JS API？】我觉得有两点各个前端工程需要认真考虑：1）我们的一些 API 最好支持批量数据处理，而不是让人一次一次地调用。2）我们需要考虑多个 API 间的关联性，如果别人有可能在调用 API2 之前需要 API1 的结果，那么我们应该把 API1 和 API2 包一下。这会降低使用方的工作量。</span></p><p><br  /></p><p><br  /></p><p><strong><span style="font-size:18px;">支持批量处理</span></strong></p><p><br  /></p><p>陈皓提到的这两点非常具体。支持批量处理，是 API 在设计时需要考虑多个输入。比如 shell 中的 cp 命令：</p><p><br  /></p><p><span style="color:#7f7f7f;">```</span></p><p><span style="color:#7f7f7f;">$ cp *.js target_dir</span></p><p><span style="color:#7f7f7f;">```</span></p><p><br  /></p><p>对于 loader 来说也一样：</p><p><br  /></p><p><span style="color:#7f7f7f;">```js</span></p><p><span style="color:#7f7f7f;">// 加载一个文件</span></p><p><span style="color:#7f7f7f;">seajs.use(&#39;a&#39;, callback)</span></p><p><br  /></p><p><span style="color:#7f7f7f;">// 加载多个文件</span></p><p><span style="color:#7f7f7f;">seajs.use([&#39;a&#39;, &#39;b&#39;], callback)</span></p><p><span style="color:#7f7f7f;">```</span></p><p><br  /></p><p>API 是否支持批量处理，得具体看是什么功能，比如 Node.js 中的读取文件接口：</p><p><br  /></p><p><span style="color:#7f7f7f;">```js</span></p><p><span style="color:#7f7f7f;">fs.readFile(&#39;/etc/passwd&#39;, function (err, data) {</span></p><p><span style="color:#7f7f7f;"> &nbsp;// do something</span></p><p><span style="color:#7f7f7f;">});</span></p><p><span style="color:#7f7f7f;">```</span></p><p><br  /></p><p>这个 readFile 就没必要支持批量读取。</p><p><br  /></p><p>什么样的 API，以及什么时候需要支持批量处理呢？我觉得有以下几个规律：</p><p><br  /></p><p>1. <strong>直接面向普通使用者。</strong>比如 shell 中的好多命令，以及 `seajs.use`、`jQuery(selector)` 等等。这些 API 一般来说不用再封装，是高级 API。</p><p><br  /></p><p>2. <strong>批量处理本身有含义、是常见需求。</strong>比如 readFile 支持批量价值就不大，一次读取多个文件的需求不常见，出现了也很容易基于 readFile 自己去实现。</p><p><br  /></p><p>3. <strong>批量处理时，顺序无关，不存在依赖性。</strong>比如 cp 多个文件时，先处理哪个文件是没关系的。`seajs.use` 加载多个文件时，先加载同一层级的哪个文件也不应该影响最终结果。</p><p><br  /></p><p>能满足以上需求的 API，经常就需要支持批量处理。</p><p><br  /></p><p><br  /></p><p><strong><span style="font-size:18px;">考虑 API 的关联性</span></strong></p><p><br  /></p><p>这个说的其实是依赖，很大程度上属于 user-land 范畴，API 本身经常很难做什么。比如在 shell 上，可以通过管道来解决依赖：</p><p><br  /></p><p><span style="color:#7f7f7f;">```</span></p><p><span style="color:#7f7f7f;">$ cat sea-debug.js | wc -l</span></p><p><span style="color:#7f7f7f;">```</span></p><p><br  /></p><p>上面通过管道先后执行两个命令，可得到 `sea-debug.js` 文件的代码行数。</p><p><br  /></p><p>依赖问题最终都是顺序问题，shell 通过管道将依赖转换成单向顺序来解决，很轻巧方便。</p><p><br  /></p><p>但在浏览器端，异步满天飞，问题往往就没那么简单了。</p><p><br  /></p><p>比如</p><p><br  /></p><p><span style="color:#7f7f7f;">```js</span></p><p><span style="color:#7f7f7f;">seajs.use([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], callback)</span></p><p><span style="color:#7f7f7f;">```</span></p><p><br  /></p><p>如果模块 b 依赖模块 a，模块 c 是独立的。那么我们面临的问题是：</p><p><br  /></p><p>1. seajs 如何知道依赖信息？如何知道模块 b 是依赖模块 a 的？谁来告知？何时告知？</p><p><br  /></p><p>2. 如何实现 a、b、c 三个模块同时并行加载，但执行时是按照依赖顺序来执行的？</p><p><br  /></p><p>涉及异步、涉及依赖，都绕不开以上问题。在 YUI3、Dojo、RequireJS、SeaJS、OzJS 等等类库 / 框架中都需要解决以上问题。</p><p><br  /></p><p>对于依赖信息的获取，典型的处理方式有两种：</p><p><br  /></p><p>1. <strong>提前申明依赖信息</strong>。比如 YUI 里，对于自带模块，会有一个很大的 json 数据来声明各个模块之间的依赖。非自带模块，则需要在使用前先注册一下，注册时申明好依赖。这样，处理起来就简单了。</p><p><br  /></p><p>2. <strong>自我携带依赖信息</strong>。各个模块的依赖，在模块自己的代码中申明，比如</p><p><br  /></p><p><span style="color:#7f7f7f;"> ```js</span></p><p><span style="color:#7f7f7f;"> define(&#39;b&#39;, [&#39;a&#39;], factory)</span></p><p><span style="color:#7f7f7f;"> ```</span></p><p><br  /></p><p>上面的第二个数组参数，表示模块 b 的依赖是模块 a.</p><p><br  /></p><p>有了依赖信息后，就可以转换成顺序问题。依赖先加载，加载并执行后，再加载后续模块。这是最简单的处理方式。</p><p><br  /></p><p>还有一种方式是，因为依赖影响的是执行顺序，因此加载依旧可以并行，通通并行下载好后，在真正执行时，才根据依赖信息按顺序执行。这是 SeaJS 等 loader 的处理方式。</p><p><br  /></p><p>比如对于陈皓的那道面试题，如果用 SeaJS 来解决，可以：</p><p><br  /></p><p><span style="color:#7f7f7f;">```js</span></p><p><span style="color:#7f7f7f;">var API_URL = &#39;http://coolshell.cn/t.php?callback=define&amp;n=&#39;</span></p><p><span style="color:#7f7f7f;">var urls = []</span></p><p><br  /></p><p><span style="color:#7f7f7f;">for(var i = 1; i &lt; 31; i++) {</span></p><p><span style="color:#7f7f7f;"> &nbsp;urls.push(API_URL + i)</span></p><p><span style="color:#7f7f7f;">}</span></p><p><br  /></p><p><span style="color:#7f7f7f;">seajs.use(urls, function() {</span></p><p><span style="color:#7f7f7f;"> &nbsp;for (var i = 1; i &lt; 31; i++) {</span></p><p><span style="color:#7f7f7f;"> &nbsp; &nbsp;console.log(i, arguments[i - 1])</span></p><p><span style="color:#7f7f7f;"> &nbsp;}</span></p><p><span style="color:#7f7f7f;">})</span></p><p><span style="color:#7f7f7f;">```</span></p><p><br  /></p><p>并发请求和顺序输出都解决了。注意这里的依赖仅仅是最后的顺序输出，与普通的依赖是不同的。普通的模块之间的依赖，可以通过模块之间声明依赖关系来解决。</p><p><br  /></p><p>各种 loader 是解决文件加载、文件依赖。如何处理依赖是更宽泛的话题，这里就不多说。</p><p><br  /></p><p><br  /></p><p><strong><span style="font-size:18px;">我心目的优秀 API</span></strong></p><p><br  /></p><p>以上说的，纯粹是从陈皓的微博引发的一些点上的思考，不具有普适性。对大部分前端 API 设计来说，参考价值也很有限。</p><p><br  /></p><p>下面扯扯更宽层面上，我心目中优秀 API 的标准。</p><p><br  /></p><p><br  /></p><p><strong><span style="font-size:18px;">1. 简单</span></strong></p><p><br  /></p><p>我想了很久，依旧想把“简单”摆在第一位。好的 API 必须是简单的。简单不仅仅是看起来简单，简单还意味着背后的实现逻辑是正常人类思路能理解的。比如</p><p><br  /></p><p><span style="color:#7f7f7f;">```</span></p><p><span style="color:#7f7f7f;">document.getElementById(&#39;string&#39;)</span></p><p><span style="color:#7f7f7f;">```</span></p><p><br  /></p><p>这个 API 是个前端都能看懂，并且能大概猜出背后是怎么实现的。虽然很可能猜错，但没关系，关键是你不会觉得神秘难懂。类似的，有很多实物 API：</p><p><br  /></p><p><span style="color:#7f7f7f;">汽车车窗的控制把手。往上提就是关窗，往下摁就是开窗。很符合直觉，大概也能猜出是怎么实现的（当然实际没那么简单，但能让用户感觉很简单）。</span></p><p><br  /></p><p>简单也意味着一致性。比如 JavaScript 里，forEach、map、filter 等所有数组遍历操作，callback 接收的参数都是 item、index、array. 这种一致性可以让你触类旁通，非常舒适。</p><p><br  /></p><p><br  /></p><p><strong><span style="font-size:18px;">2. 完备</span></strong></p><p><br  /></p><p>完备是指，某个类库或框架，对所解决的问题领域和业务需求，要有彻底的深入理解。提供的 API 是一整套的，能处理该问题领域的各种可能性，各种实际需求。</p><p><br  /></p><p><strong>要达到完备性，首先要解决的是定位问题。</strong>任何类库框架都不可能解决所有问题，必须要非常清楚要解决的问题范畴。依旧拿我最爱的 jQuery 来举例。</p><p><br  /></p><p>jQuery 的定位非常清晰： <strong>DOM 操作类库</strong>，包括 DOM 操作、事件、动画和 Ajax。其他的比如 Cookie 操作、Loader 等功能，即便用户需求很旺盛，jQuery 也会节制欲望，不去涉足。</p><p><br  /></p><p>在这个定位下，jQuery 的设计也非常清晰： <strong>找到 DOM 元素，并操作它。</strong>这样，jQuery 的整套 API 变得很优美：</p><p><br  /></p><p><span style="color:#7f7f7f;">```js</span></p><p><span style="color:#7f7f7f;">$(selector).attr(...)</span></p><p><span style="color:#7f7f7f;">$(selector).css(...)</span></p><p><span style="color:#7f7f7f;">$(selector).animate(...)</span></p><p><span style="color:#7f7f7f;">...</span></p><p><span style="color:#7f7f7f;">```</span></p><p><br  /></p><p>优美之处在于，你能想到的常用 DOM 操作等功能，jQuery 都提供了。不怎么常用的，使用 jQuery 的现有 API，也能快速实现。</p><p><br  /></p><p>这就是 API 的完备性，让你不会因为某些功能的实现而抓狂。一切都在那里静静躺着，等着你去发现，等着你去欣赏。</p><p><br  /></p><p>同样，SeaJS 也是抱着这个目的去做。SeaJS 的定位是 Web 端的模块加载器，核心是解决模块定义、依赖管理、模块加载。此外一切问题都不属于 SeaJS 范畴。 <strong>SeaJS 的理想是把自己做“死”</strong>，“死”意味着完备性，意味着站在 loader 的角度，SeaJS 的功能能增无可增，减无可减。</p><p><br  /></p><p>除了简单、完备这两个关键词，我想不到优秀的 API 还需要去做什么。简单能给用户带去欢喜，完备则可以让开发者去挑战新的领域。</p><p><br  /></p><p><br  /></p><p><strong><span style="font-size:18px;">最后</span></strong></p><p><br  /></p><p>有人反馈 WTP 的文章太技术，看不太懂。这个不好意思，这就是一个技术型的公众帐号，偶尔会谈谈产品。如果你不是做技术的，可以退订下，没关系的。</p><p><br  /></p><p>还有人反馈 WTP 上好多广告。这个，真没有哦。的确提到了 SeaJS，以后还会进一步说说 Arale 的一些东西。说这些，更多是因为我熟悉，分析熟悉的东西总会更有底气，也会更有料些。</p><p><br  /></p><p>大家可以回复，说说想看哪些内容，也可以问些具体的问题（不要问怎么学好 JavaScript 等大问题）。好的问题，我会仔细回复。</p><p><br  /></p><p>（完）</p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">每个人心中，都有对优秀的追求。你理想中的&nbsp;TA&nbsp;长啥样、应该具有哪些特质？敞开心扉，来聊聊……</script>
+	<script id="txt-title" type="txt/text">我心目中的优秀&nbsp;API</script>
+	<script id="txt-sourceurl" type="txt/text">https://github.com/lifesinger/lifesinger.github.com/issues/119#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000016&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000016&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicyYkictZxjewsN9icsutDjA9PSIZPdlGkSQfnoDhm3mcLKw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000016&itemidx=1#wechat_redirect",
+						title  = htmlDecode("我心目中的优秀&nbsp;API"),
+            desc   = htmlDecode("每个人心中，都有对优秀的追求。你理想中的&nbsp;TA&nbsp;长啥样、应该具有哪些特质？敞开心扉，来聊聊……"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

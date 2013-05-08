@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>用&nbsp;JavaScript&nbsp;检测&nbsp;CPU&nbsp;占比和内存泄露</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">用&nbsp;JavaScript&nbsp;检测&nbsp;CPU&nbsp;占比和内存泄露</h1>
+			<span id="post-date">2013-03-15</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwajFQTDtxWhXnAQibmwmdwQ8q3KYlLkdQlaqggeXhfbSw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>最近在项目中碰到 IE6-7 下的内存泄露，通过 Drip 能探测出来，问题也解决了。最近小组成员同时有在做前端质量工具，通过性能检测，可以排查出一些耗时较长的代码，但对内存泄露想不到好的自动化探测方式。本着集思广益的初衷，发了条微博：</p><p><br  /></p><p><span style="color:#7f7f7f;font-size:14px;">通过 setTimeout 等方式，可以检测当前页面所在操作系统 CPU 的大体情况。请教万能的微博：有没有什么办法，通过 JavaScript 检测到当前页面所在操作系统的内存使用情况（比如是否持续上涨、存在内存泄露）？</span></p><p><br  /></p><p><br  /></p><p><strong><span style="font-size:18px;">CPU 占比探测</span></strong></p><p><br  /></p><p>通过 setTimeout 的方式探测 CPU 已经不是秘密，去年腾讯的朋友在 Velocity 上分享过，北京有朋友还通过这个原理，几年前就实现了网页游戏中动画等耗时操作的自动调节。原理很简单：</p><p><br  /></p><p><span style="color:#974806;font-size:14px;">```js</span></p><p><span style="color:#974806;font-size:14px;">var data = []</span></p><p><span style="color:#974806;font-size:14px;">var t</span></p><p><br  /></p><p><span style="color:#974806;font-size:14px;">function pulse() {</span></p><p><span style="color:#974806;font-size:14px;"> &nbsp;t &amp;&amp; data.push(Date.now() - t)</span></p><p><span style="color:#974806;font-size:14px;"> &nbsp;t = Date.now()</span></p><p><span style="color:#974806;font-size:14px;"> &nbsp;setTimeout(pulse, 50)</span></p><p><span style="color:#974806;font-size:14px;">}</span></p><p><br  /></p><p><span style="color:#974806;font-size:14px;">pulse()</span></p><p><span style="color:#974806;font-size:14px;">```</span></p><p><br  /></p><p>就是每隔 50ms 打一下点。理想情况下，data 的值应该是</p><p><br  /></p><p><span style="color:#974806;font-size:14px;">```js</span></p><p><span style="color:#974806;font-size:14px;">data = [50, 50, 50, 50, ...]</span></p><p><span style="color:#974806;font-size:14px;">```</span></p><p><br  /></p><p>但实际情况，data 会是</p><p><br  /></p><p><span style="color:#974806;font-size:14px;">```js</span></p><p><span style="color:#974806;font-size:14px;">data = [51, 52, 50, 52, ...]</span></p><p><span style="color:#974806;font-size:14px;">```</span></p><p><br  /></p><p>当 CPU 比较忙时，data 的数据变成</p><p><br  /></p><p><span style="color:#974806;font-size:14px;">```js</span></p><p><span style="color:#974806;font-size:14px;">data = [81, 102, 90, 62, ...]</span></p><p><span style="color:#974806;font-size:14px;">```</span></p><p><br  /></p><p>即 CPU 越忙，data 数据项会越大。这样，记录一系列 data 值，就可以绘制出 CPU 占比趋势图，和通过任务管理器看到的 CPU 趋势图非常接近。</p><p><br  /></p><p>上面只是原理说明，实际情况没这么简单。但很明显，通过这么一个简单的规律，就能实现用纯 JavaScript 来探测 CPU 占比了。</p><p><br  /></p><p><br  /></p><p><strong><span style="font-size:18px;">内存泄露探测</span></strong></p><p><br  /></p><p>回到那条微博，是否也存在某种规律，使得可以用 JavaScript 来间接探测到内存泄露情况？</p><p><br  /></p><p>从微博的回复里还没看到有价值的信息。今天回家时，想到一种思路：</p><p><br  /></p><ol style="list-style-type:decimal;"><li><p><span style="font-size:14px;">如果存在内存泄露，意味着浏览器在 GC 时，没有进行某些操作。</span></p></li><li><p><span style="font-size:14px;">没有进行某些操作，意味着会节省一些 CPU 时间。</span></p></li><li><p><span style="font-size:14px;">CPU 耗时的变化，可以通过合理的打点探测出来。</span></p></li></ol><p><br  /></p><p>似乎有点希望，回到家后，立刻写了点代码验证。但发现干扰因素太多，基线也很难确定。折腾了一个多小时，有些死结，很难突破。</p><p><br  /></p><p>于是停下来写这篇文章，看看大家有没有更好的思路。我们以为不可能的事情多了去，但不可能的事情往往存在可能，思路是无限的。</p><p><br  /></p><p>最后描述下我的<span>具体</span>需求：</p><p><br  /></p><ol style="list-style-type:decimal;"><li><p><span style="font-size:14px;">有一个 a.html 页面，里面有 JS 业务代码，以及单元测试代码。</span></p></li><li><p><span style="font-size:14px;">通过前端测试系统，我们可以把 a.html 自动跑在各个浏览器上，比如 IE6/7/8/9。</span></p></li><li><p><span style="font-size:14px;">现在已经可以自动得到 a.html 在各个浏览器下的单元测试结果，以及一些性能指标。</span></p></li><li><p><span style="font-size:14px;">现在想进一步，想通过单元测试代码，也能探测出当前页面是否存在内存泄露。</span></p></li></ol><p><br  /></p><p>页面存在内存泄露时，典型的现象是，不断刷新当前页面，内存占用不会归位，而会一直往上涨。</p><p><br  /></p><p>集思广益下，看看是否有可能实现内存泄露的自动探测？或者有其他自动化探测方案。如果有朋友有类似经验，请不吝赐教。</p><p><br  /></p><p><strong><span style="font-size:14px;">题图</span></strong><span style="font-size:14px;">：Nothing is impossible, the word itself says &quot;I&#39;m possible&quot;!</span></p><p><br  /></p><p>（完）</p><p><br  /></p><p><span style="font-size:14px;">最后，推荐一条消息，前端的朋友，可以访问下 aliceui.org，这是支付宝最近推出的一套样式解决方案，有些类似 Twitter 的 Bootstrap，但定位更基础些。有兴趣的可前往关注，欢迎指点。</span></p><p><br  /></p><p><span style="font-size:14px;color:#974806;">WTP 关注技术、产品、自由梦，在每个工作日（偶尔休息日）会定期推送一篇原创文字，感谢订阅。</span></p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">没有什么不可能，一切皆有可能……</script>
+	<script id="txt-title" type="txt/text">用&nbsp;JavaScript&nbsp;检测&nbsp;CPU&nbsp;占比和内存泄露</script>
+	<script id="txt-sourceurl" type="txt/text">https://github.com/lifesinger/lifesinger.github.com/issues/122#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000025&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000025&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwajFQTDtxWhXnAQibmwmdwQ8q3KYlLkdQlaqggeXhfbSw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000025&itemidx=1#wechat_redirect",
+						title  = htmlDecode("用&nbsp;JavaScript&nbsp;检测&nbsp;CPU&nbsp;占比和内存泄露"),
+            desc   = htmlDecode("没有什么不可能，一切皆有可能……"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

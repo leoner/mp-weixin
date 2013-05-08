@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>重新认识&nbsp;DRY&nbsp;原则</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">重新认识&nbsp;DRY&nbsp;原则</h1>
+			<span id="post-date">2013-04-25</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwq8MicW7ZVlX5nb3PfEo0EDJQksADrE1BI2W48swKkI5g/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今天在北京，白天晚上估计都没时间，一早起来写 WTP 先。<br  /></p><p><br  /></p><p>DRY 是 「Don&#39;t Repeat Yourself」的缩写，通常理解是：</p><p><br  /></p><p><span style="color:#7F7F7F;">它意味着，当我们在两个或多个地方的时候发现一些相似的代码的时候，我们需要把他们的共性抽象出来形一个唯一的新方法，并且改变现有的地方的代码让他们以一些合适的参数调用这个新的方法。</span></p><p><br  /></p><p>简言之，就是：「不要出现重复代码」。</p><p><br  /></p><p>这看起来天经地义并且充满追求的一条法则，真的放之四海而皆准吗？</p><p><br  /></p><p><br  /></p><p><br  /></p><p><strong>从一个例子说起</strong></p><p><br  /></p><p>作为有追求的程序员，看到以下代码时经常会手痒：</p><p><br  /></p><p>a.js</p><p><span style="color:#974806;">```js</span></p><p><span style="color:#974806;">function mix(s, r) { ... }</span></p><p><br  /></p><p><span style="color:#974806;">exports.funcA = ...</span></p><p><span style="color:#974806;">```</span></p><p><br  /></p><p>b.js</p><p><span style="color:#974806;">```js</span></p><p><span style="color:#974806;">function mix(s, r) { ... }</span></p><p><br  /></p><p><span style="color:#974806;">exports.funcB = ...</span></p><p><span style="color:#974806;">```</span></p><p><br  /></p><p>在模块 a 和模块 b 的代码里，都有一个 mix 方法，明显存在重复。根据 DRY 法则，轻松重构之：</p><p><br  /></p><p>util.js</p><p><span style="color:#974806;">```</span></p><p><span style="color:#974806;">exports.mix = ...</span></p><p><span style="color:#974806;">```</span></p><p><br  /></p><p>a.js</p><p><span style="color:#974806;">```js</span></p><p><span style="color:#974806;">var util = require(&#39;util&#39;)</span></p><p><br  /></p><p><span style="color:#974806;">exports.funcA = ...</span></p><p><span style="color:#974806;">```</span></p><p><br  /></p><p>b.js</p><p><span style="color:#974806;">```js</span></p><p><span style="color:#974806;">var util = require(&#39;util&#39;)</span></p><p><br  /></p><p><span style="color:#974806;">exports.funcB = ...</span></p><p><span style="color:#974806;">```</span></p><p><br  /></p><p>当代码规模比较小时，遵守 DRY，一切看起来很美妙。</p><p><br  /></p><p><br  /></p><p><br  /></p><p><strong>那些优雅而庞大的类库</strong></p><p><br  /></p><p>当软件规模逐步扩大，DRY 往往会成为代码设计中的恶魔，会成为完美主义者的港湾。拿前端类库来说说这事。</p><p><br  /></p><p>熟悉 YUI3 的，对颗粒化应该不陌生。颗粒化的一个重要目标，就是减少代码重复，同时提高可拼装性。但带来的弊端也非常明显，比如 YUI3 的 Calendar 组件，如果想拿出来独立使用，得引入一堆文件：</p><p><br  /></p><p><span style="color:#7F7F7F;">```</span></p><p><span style="color:#7F7F7F;">yui-base (34.78 KB)</span></p><p><span style="color:#7F7F7F;">intl-base (0.49 KB)</span></p><p><span style="color:#7F7F7F;">oop (2.14 KB)</span></p><p><span style="color:#7F7F7F;">event-custom-base (11.92 KB)</span></p><p><span style="color:#7F7F7F;">event-custom-complex (4.16 KB)</span></p><p><span style="color:#7F7F7F;">intl (0.74 KB)</span></p><p><span style="color:#7F7F7F;">lang/calendar (0.00 KB)</span></p><p><span style="color:#7F7F7F;">lang/calendar-base (0.00 KB)</span></p><p><span style="color:#7F7F7F;">attribute-core (4.97 KB)</span></p><p><span style="color:#7F7F7F;">attribute-observable (1.04 KB)</span></p><p><span style="color:#7F7F7F;">attribute-extras (0.72 KB)</span></p><p><span style="color:#7F7F7F;">attribute-base (0.54 KB)</span></p><p><span style="color:#7F7F7F;">attribute-complex (0.26 KB)</span></p><p><span style="color:#7F7F7F;">base-core (4.18 KB)</span></p><p><span style="color:#7F7F7F;">base-observable (1.22 KB)</span></p><p><span style="color:#7F7F7F;">base-base (0.53 KB)</span></p><p><span style="color:#7F7F7F;">pluginhost-base (0.91 KB)</span></p><p><span style="color:#7F7F7F;">pluginhost-config (0.77 KB)</span></p><p><span style="color:#7F7F7F;">base-pluginhost (0.17 KB)</span></p><p><span style="color:#7F7F7F;">classnamemanager (0.34 KB)</span></p><p><span style="color:#7F7F7F;">features (4.90 KB)</span></p><p><span style="color:#7F7F7F;">dom-core (2.58 KB)</span></p><p><span style="color:#7F7F7F;">dom-base (6.16 KB)</span></p><p><span style="color:#7F7F7F;">selector-native (3.37 KB)</span></p><p><span style="color:#7F7F7F;">selector (0.08 KB)</span></p><p><span style="color:#7F7F7F;">node-core (9.52 KB)</span></p><p><span style="color:#7F7F7F;">node-base (6.05 KB)</span></p><p><span style="color:#7F7F7F;">event-base (7.14 KB)</span></p><p><span style="color:#7F7F7F;">event-synthetic (3.63 KB)</span></p><p><span style="color:#7F7F7F;">event-focus (2.03 KB)</span></p><p><span style="color:#7F7F7F;">dom-style (3.14 KB)</span></p><p><span style="color:#7F7F7F;">node-style (0.48 KB)</span></p><p><span style="color:#7F7F7F;">cssgrids (1.37 KB)</span></p><p><span style="color:#7F7F7F;">skin-sam-widget-base (0.00 KB)</span></p><p><span style="color:#7F7F7F;">widget-base (6.13 KB)</span></p><p><span style="color:#7F7F7F;">widget-htmlparser (0.90 KB)</span></p><p><span style="color:#7F7F7F;">widget-skin (0.36 KB)</span></p><p><span style="color:#7F7F7F;">event-delegate (1.88 KB)</span></p><p><span style="color:#7F7F7F;">node-event-delegate (0.26 KB)</span></p><p><span style="color:#7F7F7F;">widget-uievents (1.44 KB)</span></p><p><span style="color:#7F7F7F;">datatype-date-parse (0.24 KB)</span></p><p><span style="color:#7F7F7F;">lang/datatype-date-format (0.00 KB)</span></p><p><span style="color:#7F7F7F;">datatype-date-format (3.46 KB)</span></p><p><span style="color:#7F7F7F;">datatype-date-math (1.35 KB)</span></p><p><span style="color:#7F7F7F;">skin-sam-calendar-base (0.00 KB)</span></p><p><span style="color:#7F7F7F;">calendar-base (15.41 KB)</span></p><p><span style="color:#7F7F7F;">plugin (1.24 KB)</span></p><p><span style="color:#7F7F7F;">node-pluginhost (0.64 KB)</span></p><p><span style="color:#7F7F7F;">dom-screen (4.68 KB)</span></p><p><span style="color:#7F7F7F;">node-screen (1.61 KB)</span></p><p><span style="color:#7F7F7F;">skin-sam-calendarnavigator (0.00 KB)</span></p><p><span style="color:#7F7F7F;">calendarnavigator (3.80 KB)</span></p><p><span style="color:#7F7F7F;">skin-sam-calendar (0.00 KB)</span></p><p><span style="color:#7F7F7F;">calendar (5.53 KB)</span></p><p><span style="color:#7F7F7F;">```</span></p><p><br  /></p><p>共 54 个模块，不信的可以自己去试下：[YUI Configurator](http://yuilibrary.com/yui/configurator/) 。</p><p><br  /></p><p>虽然 YUI 提供了依赖的自动分析，但如此多的依赖，对维护来说，依旧是个恶魔。</p><p><br  /></p><p>DRY 的本意是提高可维护性，为何在以上场景中，看起来却并没有达成初衷？</p><p><br  /></p><p><br  /></p><p><br  /></p><p><strong>DRY 的本义</strong></p><p><br  /></p><p>来看维基百科中的释义：</p><p><br  /></p><p><span style="color:#7F7F7F;">In software engineering, don&#39;t repeat yourself (DRY) is a principle of software development aimed at reducing repetition of information of all kinds, especially useful in multi-tier architectures. The DRY principle is stated as &quot;Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.&quot; The principle has been formulated by Andy Hunt and Dave Thomas in their book The Pragmatic Programmer. </span></p><p><br  /></p><p>大意如下：</p><p><br  /></p><p><span style="color:#7F7F7F;">DRY 是软件开发领域的一条原则，目的是减少各种信息的重复，在多层架构中特别有用。DRY 的含义是：在一个系统中，任何知识点都应该拥有唯一、清晰、可信的表示。</span></p><p><br  /></p><p>我们经常说中文博大精深，其实英文也一样，特别是涉及「原则」、「宗旨」等大词时。在上面的 DRY 的解释中，根本就没具体谈及代码重不重复的问题，更强调的是：</p><p><br  /></p><p><strong>在一个系统中，任何知识点都应该拥有唯一、清晰、可信的表示。</strong></p><p><br  /></p><p>「唯一」并不代表不重复，关键看你重复的是什么，不重复的又是什么。去年在设计 [Arale](http://aralejs.org/) 类库时，写过一篇文章：Arale 背后的一些设计理念，其中谈到「适量重复」：</p><p><br  /></p><p><span style="color:#7F7F7F;">第二个适度法则是适量重复。这是我的切身体会，有悖于传统的软件开发思想，但我觉得在前端界，适量重复比 DRY 更实用。</span></p><p><br  /></p><p><span style="color:#7F7F7F;">是个程序员可能都听过 DRY （Don&#39;t Repeat Yourself），这条法则非常好，在大部分情况下都是对的。</span></p><p><br  /></p><p><span style="color:#7F7F7F;">然而在构建前端类库时，我觉得遵守 DRY 会很危险。</span></p><p><br  /></p><p><span style="color:#7F7F7F;">如果你追求代码的不重复，那么你在写 a 和 b 组件时，会把公用部分抽取为 c，不断重复这个追求，最后就会得到一个非常庞大的依赖结构图，比如 YUI3 就是这样。YUI3 追求颗粒化，表面上看颗粒化可以让自定义打包更灵活更优秀，但实际上，颗粒化的粒度非常关键，像目前 YUI3 的粒度太小，导致的问题是，实际上你若真去把 dom / event / node 等模块打包出来，其实会比 jQuery 大出不少，不光达不到实际的期望效果，还牵三挂四，开发起来并不方便，虽然 combo 服务可以缓解一点。</span></p><p><br  /></p><p><span style="color:#7F7F7F;">对于 DRY 法则，我的理解是，必须要非常小心把握好两点：</span></p><p><br  /></p><p><span style="color:#7F7F7F;">1. 究竟不应该重复的是什么？</span></p><p><span style="color:#7F7F7F;">2. 粒度如何？</span></p><p><br  /></p><p>DRY 中的不重复，真正要考虑的是：</p><p><br  /></p><p>1. <strong>职责问题：每个模块的职责究竟是什么？确定范畴、界限非常重要。要明确每个功能的职责，并在同一个系统中，保持其唯一性。</strong></p><p><br  /></p><p>2. <strong>粒度问题：模块的粒度问题。细粒度还是粗粒度？根据具体场景来做合适的取舍、决策。</strong></p><p><br  /></p><p>把职责和粒度考虑清楚，保证其在同一个系统中不重复，这才是我眼中的 DRY 原则。至于代码是否重复，并不是关键。</p><p><br  /></p><p><br  /></p><p><br  /></p><p><strong>在 Arale 中的尝试</strong></p><p><br  /></p><p>在 Arale 中，我们制定了几条法则：「开放、简单、易用、适度灵活、适量重复」。遵循这几条法则，我们来看 Arale 中的 Calendar 组件：</p><p><br  /></p><p><span style="color:#7F7F7F;">```</span></p><p><span style="color:#7F7F7F;">base.js</span></p><p><span style="color:#7F7F7F;">widget.js</span></p><p><span style="color:#7F7F7F;">overlay.js</span></p><p><span style="color:#7F7F7F;">jquery.js</span></p><p><span style="color:#7F7F7F;">handlebars.js</span></p><p><span style="color:#7F7F7F;">moment.js</span></p><p><span style="color:#7F7F7F;">calendar.js</span></p><p><span style="color:#7F7F7F;">```</span></p><p><br  /></p><p>看起来也不少，但与 YUI3 的 54 个依赖相比，Arale 的更简单清晰、易于维护。</p><p><br  /></p><p>特别注意以上组件中，比如 jquery、handlebars 等文件的代码里，仔细去看的话，其实存在着不少重复代码。包括 Arale 自身的组件 base 和 widget 的代码中，我们也故意留了一些重复代码，而没有去做进一步「追求完美」的提取封装。</p><p><br  /></p><p>这种「追求职责不重复、允许适量代码重复」带来的好处是：</p><p><br  /></p><p>1. &nbsp;<strong>依赖层级更简单清晰。</strong></p><p>2. <strong>内部修改变得更方便。</strong>比如 jquery 里的 each 方法，和 moment 中的 each 方法，可以各自有自己的选择，根据实际场景优化。</p><p><br  /></p><p>这与 Go 语言的设计有很多相似的地方：Go在谷歌：以软件工程为目的的语言设计。</p><p><br  /></p><p><br  /></p><p><strong>小结</strong></p><p><br  /></p><p>肚子有点饿了，我的核心观点是：</p><p><br  /></p><p><strong>DRY 中最重要的，是在具体场景中，去想清楚什么是坚决不能重复的，同时想清楚什么是允许重复的。而非简单粗暴去追求代码的零重复。</strong>（代码的零重复与 0 bug 一样邪恶）</p><p><br  /></p><p>DRY 用在生活中更具诗意： <strong>让每一天，都与你的过往不同。</strong></p><p><br  /></p><p><br  /></p><p>文 / 玉伯</p><p><br  /></p><p>题图：几片自然风干的叶子，清晰、美丽。</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">当软件规模逐步扩大，DRY&nbsp;往往会成为代码设计中的恶魔，会成为完美主义者的港湾。</script>
+	<script id="txt-title" type="txt/text">重新认识&nbsp;DRY&nbsp;原则</script>
+	<script id="txt-sourceurl" type="txt/text">https://github.com/lifesinger/lifesinger.github.com/issues/152#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000139&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000139&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwq8MicW7ZVlX5nb3PfEo0EDJQksADrE1BI2W48swKkI5g/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000139&itemidx=1#wechat_redirect",
+						title  = htmlDecode("重新认识&nbsp;DRY&nbsp;原则"),
+            desc   = htmlDecode("当软件规模逐步扩大，DRY&nbsp;往往会成为代码设计中的恶魔，会成为完美主义者的港湾。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

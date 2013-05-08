@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>时间</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">时间</h1>
+			<span id="post-date">2013-01-07</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcb8ia3MQ1RIwuvEsvPELJDcrJ7LMznAkQ3QoQZWRQxQvTA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>元旦的时候一个好朋友打来电话，感慨了一番，他告诉我，我们这一代，正常过日子，也就剩下10000多天的时间了。我掐指一算，还真是那么回事。时不待我！</p><p>时间这东西，对于普通人来说，似乎都差不多，但是效率却千差万别。而且人过30以后，尤其是有了下一代以后，发现时间就像加粗水管里的水一样哗哗的溜走，我还纳闷以前一直是细水长流啊。有一段时间我就在琢磨，为啥时间越来越快呢？是不是参照时间的原因。就是说你10岁的时候，每过一年是你以前参照时间的十分之一，当时30岁的时候，就变成了1/30，感知上会认为时间越来越快了，后来在豆瓣阅读上看到一本书，人家从量子物理的角度论证了为啥时间越来越快。书名叫做《时间越来越快》，有兴趣的童靴可以去读读。</p><p>反正普通人是搞不清楚时间这个概念了，但是我觉得每个人该痛恨浪费时间，我最近尤甚。现在觉得最浪费时间的就是开会了，Rework里有一章叫会议有毒，很多会议其实是不必要的，有些是可以缩短时间的。会议组织者会想当然的认为每个人会为此进行准备，而事实上是大部分参会者什么都不会准备，带着耳朵去的就算不错了。</p><p><br  /></p><p>那微博微信算不算浪费时间呢？我觉得还可，这部分时间相对是可控的。我媳妇不同意，说你成天在那写微信有啥出息？我说，互联网上有个叫冯大辉的牛娃比我还能得瑟呢！好吧...</p><p><br  /></p><p>今天推送的Mac技巧非常适合大屏幕或多屏幕的用户：</p><p>1、介绍霍矩写的一个小软件，CatchMouse，可以自定义快捷键快速在多个显示器内切换鼠标，非常方便，链接附上：https://itunes.apple.com/cn/app/catchmouse/id439700005?mt=12 </p><p>2、如果你在一个屏幕内打开了多个程序，除了当前激活的软件窗口，你还想看看其他窗口的内容，这时你直接点击其他窗口的话，原来的窗口就可能被遮挡或消失。如何保持原来的窗口一直处于最上层呢？非常简单，拖拽其他窗口的时候按住command键即可，原来的窗口会永远在最上面。</p><p><br  /></p><p>身体稍微恢复了一点，8天工作日过了一半，你们坚持，我先睡了...<br  /></p><p><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">元旦的时候一个好朋友打来电话，感慨了一番，他告诉我，我们这一代，正常过日子，也就剩下10000多天的时间了。</script>
+	<script id="txt-title" type="txt/text">时间</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000016&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000016&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcb8ia3MQ1RIwuvEsvPELJDcrJ7LMznAkQ3QoQZWRQxQvTA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000016&itemidx=1#wechat_redirect",
+						title  = htmlDecode("时间"),
+            desc   = htmlDecode("元旦的时候一个好朋友打来电话，感慨了一番，他告诉我，我们这一代，正常过日子，也就剩下10000多天的时间了。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

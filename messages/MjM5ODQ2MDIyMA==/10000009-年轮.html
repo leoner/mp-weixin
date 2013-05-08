@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>年轮</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">年轮</h1>
+			<span id="post-date">2012-12-30</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcYkCXXb17WwnmVg0W62hb0u109H23vwemCFfGSfLz0ogg/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>身边越来越多的同事变成80后，我们这些70后程序员就知道，自己慢慢变老了。</p><p>我曾经对自己说，如果能够让我重新回到25岁，我愿意倾尽所有去换取。后来我想，等我到了40多岁，可能会想回到35岁吧。所以，珍惜现在就好。另外，任何时候学习都不晚，如果你处于20多岁这个阶段，有目的和计划的学习就更为重要。</p><p>不管你有什么样的人生或事业目标，20多岁时获得的技能和人格特性将会决定着你余生的众多能力（摘自《The Defining Decade: Why Your Twenties Matter--And How to Make the Most of Them Now》）。</p><p><br  /></p><p>作为天生懒惰的人类，并且没有任何利益诉求，每天写一个短篇，坚持还是需要毅力的。你得选张有趣的图片，还要写得有意思，还得有用，说白了是个创造性工作。当你打完球想洗个澡去看美剧的时候，想到还有个东西要写......<br  /></p><p>好吧，如果大家有什么好的推荐或话题，可以贡献出来，我会根据内容选择推送。</p><p><br  /></p><p>今日推送内容：</p><p>1、很多订阅者问如果在Mac中通过远程桌面连接到Windows，这次统一答复一下，微软提供了专门的Remote Desktop Connection for mac，free，下载链接：<span style="color:#222222 ;">http://www.microsoft.com/mac/remote-desktop-client </span></p><p>2、关于Wall</p><p>现在大部分访问互联网几乎都会撞墙，尤其是Google的重度用户，这个事情我们不细谈，虽然我认为这个玩意极大的阻止了中国的各种进程，但在可预见的将来，Wall依然会长期存在。</p><p>Mac下如何翻Wall，也是订阅者问到最多的一个问题。我的方案非常简单，付费VPN，非常稳定，也很便宜（年费60），我推荐一个自己用的供应商，5bird.com（不必宣传），大家可以参考使用。另外，我个人和这个VPN没有任何关系，所以如果你们购买了他们的服务，遇到任何问题直接与服务商联系即可。</p><p>有人问翻Wall有什么效益？你可以上facebook，上twitter，无障碍使用Google服务，在互联网上，你能想到多远就能看到多远，这还不够么？</p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">身边越来越多的同事变成80后，我们这些70后程序员就知道，自己慢慢变老了。我曾经对自己说，如果能够让我重新回</script>
+	<script id="txt-title" type="txt/text">年轮</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000009&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000009&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcYkCXXb17WwnmVg0W62hb0u109H23vwemCFfGSfLz0ogg/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000009&itemidx=1#wechat_redirect",
+						title  = htmlDecode("年轮"),
+            desc   = htmlDecode("身边越来越多的同事变成80后，我们这些70后程序员就知道，自己慢慢变老了。我曾经对自己说，如果能够让我重新回"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>大点声儿，不费电</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">大点声儿，不费电</h1>
+			<span id="post-date">2013-01-23</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGBbHYszPcJteLPDD3Rk7NYj8iaOIFlZK1ktuc20Yk8qCw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p><span style="line-height:1.5;">这几天互联网行业的一个话题就是 Github 被封的事情，昨天李开复老师也疾呼：「封锁GitHub毫无道理，只会导致国内程序员和国际脱轨，失去竞争力和前瞻性」。这样的话无疑会引起共鸣的，该条微博被转发数万次。</span><br  /></p><p><br  /></p><p>看起来，大家的声音有了一点效果，今天下午，Github 在部分地区已经可以正常访问了。我们的声音再大一点，还是有人会听到的。 属于我们的东西，我们要自己争取，不能等别人施舍。大点声儿，不费电。</p><p><br  /></p><p>对于这次 GitHub 为何被封，也有人说可能是因为有人在 GitHub Pages 上托管了敏感内容而导致的。</p><p><br  /></p><p>如果上述是事实，这里我想跟大家探讨一个问题：以前 Twitter / Blogger 等产品的被封其实也都是有人不停在上面发布敏感内容进行一定程度的「污染」。国内大概有一千个用户左右(我自己的估计)，这些用户几乎是到哪里哪里就会被封(我们不去讨论他们在那些网站上发布的内容政治倾向性正确与否，正义与否)。大家怎么看这个事情? 支持他们海外「远距离」战斗还是呼吁他们回到国内战场来「近身」搏斗?</p><p><br  /></p><p>你的观点是什么? </p><p><br  /></p><p>今日消息：腾讯移动事业群已确认解散，2月1日将正式发文通告。<br  /></p><p><br  /></p><p>大互联网公司是否有必要搞一个单独的无线/移动部门? 我个人的建议是似乎没这个必要。以支付宝为例子，以前是分了拆，拆了分。就是一个折腾。对外产出的产品依然只有一个支付宝客户端，还做出来啥了呢? 没有人能记住一家公司有什么部分，重要的是做出来什么产品。</p><p><br  /></p><p>消息之二：有人说 PPTV 资金链吃紧，取消年终奖。侧面了解了一下，的确有不少员工已经跑出来了。</p><p><br  /></p><p>这个冬天有点冷。PPTV 有一阵子内容还是不错的，最近作为忠实用户的我都已经不怎么用了，更多是用搜狐视频客户端了。</p><p><br  /></p><p>题图：就本次 GitHub 被封，微博网友创作的漫画。图片上的水银应该就是来自作者。</p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">看起来，大家的声音有了一点效果，今天下午，Github&nbsp;在部分地区已经可以正常访问了。我们的声音再大一点，还是有人会听到的.&nbsp;大点声儿，不费电。</script>
+	<script id="txt-title" type="txt/text">大点声儿，不费电</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000082&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000082&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlGBbHYszPcJteLPDD3Rk7NYj8iaOIFlZK1ktuc20Yk8qCw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000082&itemidx=1#wechat_redirect",
+						title  = htmlDecode("大点声儿，不费电"),
+            desc   = htmlDecode("看起来，大家的声音有了一点效果，今天下午，Github&nbsp;在部分地区已经可以正常访问了。我们的声音再大一点，还是有人会听到的.&nbsp;大点声儿，不费电。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

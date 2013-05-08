@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>人应竭尽所能，再听天由命</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">人应竭尽所能，再听天由命</h1>
+			<span id="post-date">2013-02-18</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcYO2lTiamANyrd8B1ibwYG40VNJRRcgjjHtPzRzM9SaNeDg/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>很多人已经上了三天班了，我则休完了春节最后一天假期，明天正式上班。</p><p><br  /></p><p>盘点一下自己的春节，发现还是比较充实的。</p><p>1、和老爸老妈、老哥一家过了个暖暖和和没有PM2.5的春节。</p><p>2、读了两本技术类书籍的部分章节。</p><p>3、读了一本人文类的书籍——《本能：为什么我们管不住自己》，很有意思，从基因角度解释了人为什么管不住自己和相关应对策略。类似内容在《暗时间》里也有描述。另外，看到本能二字就脑补莎朗斯通大婶的可以去面壁了。</p><p>4、居然写了9篇Mac技巧系列，我原以为最多只能写一两篇的，看来习惯的力量不可小觑。</p><p>5、琐事和娱乐若干。</p><p><br  /></p><p>差不多就这么多吧，春节这种假期，多陪陪家人比什么都重要。大家有什么可分享的也可以发给我。</p><p><br  /></p><p>今天从时光网（mtime.com）上看到汤姆·克鲁斯的独家采访，阿汤哥出道30年依然保持了高水准的影视作品，近天命之年连续出演了碟中谍4和侠探杰克，他看起来依然像30年前一样帅酷敏捷，在大银幕上攀登、追逐、跳跃、搏斗，一个几乎获得了一个演员能够获得的一切名利的超级巨星还在影视的道路上孜孜以求，这只能说他深爱着电影和表演艺术。</p><p>采访中提到的一句话，英文原文是：I think a man does what he can, until his destiny is revealed（人应竭尽所能，再听天由命）。这是《最后的武士》中的经典台词，我非常喜欢，在长假最后一天，送给大家。</p><p><br  /></p><p>今天为大家推荐一款国产程序猿完成的Mac App——Miao，目前Mac下最好的微博客户端，收费软件25元。</p><p>相关链接：</p><p>https://itunes.apple.com/cn/app/miao-for-weibo/id572434156?l=en&amp;mt=12</p><p>或</p><p>https://beyondcow.com/miao/</p><p><br  /></p><p>另外，我希望大家不要提到收费软件就皱眉，花个十块八块破不了产，人家写程序也是要吃饭的。</p><p><br  /></p><p>祝做个好梦！</p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">很多人已经上了三天班了，我则休完了春节最后一天假期，明天正式上班。盘点一下自己的春节，发现还是比较充实的。1</script>
+	<script id="txt-title" type="txt/text">人应竭尽所能，再听天由命</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000124&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000124&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcYO2lTiamANyrd8B1ibwYG40VNJRRcgjjHtPzRzM9SaNeDg/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000124&itemidx=1#wechat_redirect",
+						title  = htmlDecode("人应竭尽所能，再听天由命"),
+            desc   = htmlDecode("很多人已经上了三天班了，我则休完了春节最后一天假期，明天正式上班。盘点一下自己的春节，发现还是比较充实的。1"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

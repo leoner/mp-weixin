@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>阴霾</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">阴霾</h1>
+			<span id="post-date">2013-01-13</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcanBiaibPzdBrZ5cSbW1EN7LibmAibIuYibD2RAKXwmiaFObzwg/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p><span style="font-family:stheiti;font-size:medium;">最近北京的天气让人没有心情干任何事情，在家读读书还算是不错的选择。对于天气已经无力吐槽，我希望蒙古草原的风尽快来帝都一扫阴霾。</span></p><p><span style="font-family:stheiti;font-size:medium;">今天推送的Mac技巧：</span></p><p><span style="font-family:stheiti;font-size:medium;">1、如果你想离开电脑一段时间，又不想让电脑进入睡眠状态，有个简单的命令可以帮助你做到这一点。在终端中输入：pmset noidle，即可。只要该命令一直运行，Mac就不会进入睡眠状态。关掉终端或ctrl+c可以取消该命令。</span></p><p><span style="font-family:stheiti;font-size:medium;">pmset是OS X提供的命令行管理电源的工具，其功能远不止于此。</span></p><p><span style="font-family:stheiti;font-size:medium;">pmset -g，查看当前电源的使用方案</span></p><p><span style="font-family:stheiti;font-size:medium;">sudo pmset -b displaysleep 5，设置电池供电时，显示器5分钟内进入睡眠</span></p><p><span style="font-family:stheiti;font-size:medium;">sudo pmset schedule wake &quot;02/01/13 20:00:00&quot;，设置电脑在2013年2月1日 晚8点唤醒电脑</span></p><p><span style="font-family:stheiti;font-size:medium;">......</span></p><p><span style="font-family:stheiti;font-size:medium;">感兴趣的可以使用man pmset查看详细信息。</span></p><p><span style="font-family:stheiti;font-size:medium;">2、Mac提供了非常简单易用的Internet共享功能，可以做为一个轻量级的家庭无线路由使用。只要你的Mac能够上网，那么phone和pad等设备就都可以通过wifi共享Mac的网络，实现无线上网。具体的设置非常简单，打开系统偏好设置-共享-互联网共享，选择共享源（网卡或AirPort），并设置wifi的名称密码安全级别等属性，最后勾选左侧列表的“互联网共享”，根据提示操作即可。</span></p><p><span style="font-family:stheiti;font-size:medium;">这是一个我曾经认为大部分用户都知道的功能，后来发现几乎很少人使用或会用。</span></p><p><span style="font-family:stheiti;font-size:medium;"><br  /></span></p><p><span style="font-family:stheiti;font-size:medium;">加微信公共平台“Mac技巧”为好友，打开微信-通讯录-添加朋友，搜号码，然后输入“mac”，即可找到Mac技巧 </span></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">最近北京的天气让人没有心情干任何事情，在家读读书还算是不错的选择。</script>
+	<script id="txt-title" type="txt/text">阴霾</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000032&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000032&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcanBiaibPzdBrZ5cSbW1EN7LibmAibIuYibD2RAKXwmiaFObzwg/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000032&itemidx=1#wechat_redirect",
+						title  = htmlDecode("阴霾"),
+            desc   = htmlDecode("最近北京的天气让人没有心情干任何事情，在家读读书还算是不错的选择。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

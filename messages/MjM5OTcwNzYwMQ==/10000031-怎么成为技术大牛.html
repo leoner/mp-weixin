@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>怎么成为技术大牛</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">怎么成为技术大牛</h1>
+			<span id="post-date">2013-03-17</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLiczSv7yRnu48kib5jv2dEefAnGvwZ060bqkibM8YvBUptJyg/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>微博和知乎上不时有人问，通常我会忽略掉。这类问题很容易回答，也很难回答。</p><p><br  /></p><p>很容易回答，是因为见过太多牛人，细思他们的成功，无外乎勤奋、坚持。某人比你优秀，往往是因为他比你勤奋。</p><p><br  /></p><p>很难回答，是因为要做到勤奋很难，要坚持更难。这需要自律，需要习惯。知易行难。</p><p><br  /></p><p>以上话题很大，市面上的书籍汗牛充栋，推荐《高效人士的七个习惯》。这类书籍，不能读完了事，关键之处在于，要真正去做。</p><p><br  /></p><p>如何做到？个人比较推崇佛学里的做法。可以先亲近善知识，然后找到合适的导师，在一定环境下去修为。佛学里讲究皈依三宝，法宝是善知识，佛宝是导师，僧宝说的是环境。这道理和我们上学是一样的。为什么不能在家自学？因为自学太难，对绝大部分人都不适合。好的学校三宝俱足，能相对容易培养出好的人才。</p><p><br  /></p><p>有了互联网，对技术人员来说，三宝很容易俱足。带上甄别的眼睛，网络上充满着善知识。比如哈佛等大学的公开课，比如很多优秀的技术书籍，还有各种推荐书单，只要用心，你就能发现。</p><p><br  /></p><p>通过互联网，也将各个公司的技术高手直接变成了我们的导师。比如有很多优秀的开源社区，只要你懂得合理提问，就会有技术大拿很热心地帮助你。</p><p><br  /></p><p>我们都是码农，也可以戏称为码僧，这样僧宝也就俱足了。你遇到的问题、困惑等等，可以访问 StackOverflow 等寺庙，拿出来跟码僧们一起交流，一起取经。码僧们联合起来，就可以改变世界。</p><p><br  /></p><p>除了互联网，在现实工作中，也可以尽量创造条件去具备三宝。去一个你认可的团队，去接近你心中的大牛，只要迈出第一步，就不会太难。只要多那么一点点勇气和决断。</p><p><br  /></p><p>就说这么多。我离心中的大牛也还差着好几个山头，得埋头赶路了。</p><p><br  /></p><p>（完）</p><p><br  /></p><p><span style="font-size:14px;color:#7F7F7F;">感谢订阅 WTP（Web 技术与产品交流）。WTP 关注技术、产品、自由梦，在每个工作日（偶尔休息日）会定期推送一篇原创文字。</span></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">微博和知乎上不时有人问，通常我会忽略掉。这类问题很容易回答，也很难回答……</script>
+	<script id="txt-title" type="txt/text">怎么成为技术大牛</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000031&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000031&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLiczSv7yRnu48kib5jv2dEefAnGvwZ060bqkibM8YvBUptJyg/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000031&itemidx=1#wechat_redirect",
+						title  = htmlDecode("怎么成为技术大牛"),
+            desc   = htmlDecode("微博和知乎上不时有人问，通常我会忽略掉。这类问题很容易回答，也很难回答……"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

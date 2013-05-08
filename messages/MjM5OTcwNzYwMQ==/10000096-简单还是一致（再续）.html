@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>简单还是一致（再续）</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">简单还是一致（再续）</h1>
+			<span id="post-date">2013-04-12</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwjp9QiaCJ4tF0vvV4nnicRrHuw05lA7gM5WHSs5CWL3WdQ/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>拔赤发完「[简单还是一致（续）](https://github.com/lifesinger/lifesinger.github.com/issues/140)」一文后，一直想回复一篇，今天得空，回下。<br  /></p><p><br  /></p><p><br  /></p><p><strong>抛错时机</strong></p><p><br  /></p><p><span style="color:#974806;">```js</span></p><p><span style="color:#974806;">seajs.use(&#39;a&#39;, function(A) {</span></p><p><span style="color:#974806;"> &nbsp;A.doSth();</span></p><p><span style="color:#974806;"> &nbsp;console.log(&#39;a&#39;);</span></p><p><span style="color:#974806;">});</span></p><p><br  /></p><p><span style="color:#974806;">// some logic...</span></p><p><br  /></p><p><span style="color:#974806;">seajs.use(&#39;b&#39;, function(B) {</span></p><p><span style="color:#974806;"> &nbsp;B.doSth();</span></p><p><span style="color:#974806;"> &nbsp;console.log(&#39;b&#39;);</span></p><p><span style="color:#974806;">});</span></p><p><span style="color:#974806;">```</span></p><p><br  /></p><p>上面这段代码，在正常使用情况下，当 a 的 callback 里发生了错误，不会影响 b 的 callback 执行。因为正常情况下，a.js 和 b.js 并不会提前同步加载好，`seajs.use` 依旧是异步行为。和拔赤的预期是一样的。</p><p><br  /></p><p>假设出于某种考虑，提前加载了 a.js 和 b.js，比如：</p><p><br  /></p><p><span style="color:#974806;">```html</span></p><p><span style="color:#974806;">&lt;script src=&quot;a.js&quot;&gt;&lt;/script&gt;</span></p><p><span style="color:#974806;">&lt;script src=&quot;b.js&quot;&gt;&lt;/script&gt;</span></p><p><span style="color:#974806;">&lt;script&gt;</span></p><p><span style="color:#974806;">seajs.use(&#39;a&#39;, function(A) {</span></p><p><span style="color:#974806;"> &nbsp;A.doSth();</span></p><p><span style="color:#974806;"> &nbsp;console.log(&#39;a&#39;);</span></p><p><span style="color:#974806;">});</span></p><p><br  /></p><p><span style="color:#974806;">// some logic...</span></p><p><br  /></p><p><span style="color:#974806;">seajs.use(&#39;b&#39;, function(B) {</span></p><p><span style="color:#974806;"> &nbsp;B.doSth();</span></p><p><span style="color:#974806;"> &nbsp;console.log(&#39;b&#39;);</span></p><p><span style="color:#974806;">});</span></p><p><span style="color:#974806;">&lt;/script&gt;</span></p><p><span style="color:#974806;">```</span></p><p><br  /></p><p>上面这种情况下，`seajs.use` 的 callback 才是同步执行的，这时 a 的 callback 倘若出错，会影响 b 的 callback 执行。</p><p><br  /></p><p>但实际上，拔赤提到的那种分模块开发，绝大部分情况下是：</p><p><br  /></p><p><span style="color:#974806;">```html</span></p><p><span style="color:#974806;">&lt;script&gt;</span></p><p><span style="color:#974806;">seajs.use(&#39;a&#39;, function(A) {</span></p><p><span style="color:#974806;"> &nbsp;A.doSth();</span></p><p><span style="color:#974806;"> &nbsp;console.log(&#39;a&#39;);</span></p><p><span style="color:#974806;">});</span></p><p><span style="color:#974806;">// some logic...</span></p><p><span style="color:#974806;">&lt;/script&gt;</span></p><p><br  /></p><p><span style="color:#974806;">&lt;/script&gt;</span></p><p><span style="color:#974806;">seajs.use(&#39;b&#39;, function(B) {</span></p><p><span style="color:#974806;"> &nbsp;B.doSth();</span></p><p><span style="color:#974806;"> &nbsp;console.log(&#39;b&#39;);</span></p><p><span style="color:#974806;">});</span></p><p><span style="color:#974806;">&lt;/script&gt;</span></p><p><span style="color:#974806;">```</span></p><p><br  /></p><p>上面这种使用方式下，即便是同步执行，a 的 callback 执行错误，也不会影响 b 的 callback 执行。</p><p><br  /></p><p>也就是说，拔赤的担心，反而是一种理论派的担心，实际开发过程中，根本不用管 `seajs.use` &nbsp; &nbsp; &nbsp;的 callback 执行是同步还是异步，使用者本就不应该关注这个内部机制。</p><p><br  /></p><p>这就和 Sub-Pub 事件机制一样，最朴实简单的事件机制是，天女散花式，可以理解为所有订阅者同时并发收到消息，而不要去理会是先进先出，还是先进后出。一个事件机制里，订阅者应该互相隔离，不依赖顺序，不依赖内部机制。</p><p><br  /></p><p>即便是同步执行情况，又把多个 `use` 写在了同一个 `script` 标签里，这时抛错个人觉得也是合理的。同一个 `script` 下，可以认为是同一段业务逻辑，当前面已经出错了，再执行后面已经意义不大，停下来不执行，抛出错误，反而简单，更容易发现和定位问题。特别是对稳定性要求很高的产品来说，及早抛错往往是更明智的选择。</p><p><br  /></p><p><br  /></p><p><br  /></p><p><strong>顺序</strong></p><p><br  /></p><p><span style="color:#974806;">```js</span></p><p><span style="color:#974806;">seajs.use([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], callback)</span></p><p><span style="color:#974806;">```</span></p><p><br  /></p><p>这个，拔赤理解错了哦。`use` 多个模块，是并发下载的，全部下载完成后，才执行 callback 函数。</p><p><br  /></p><p>a、b、c 之间如果有依赖，在模块定义里自己去指定就好，不需要 loader 层关系。</p><p><br  /></p><p>拔赤提到的 `sequential` 等参数设计，是把简单的问题搞得复杂了。loader 应该关注什么，什么应该交给 module 自身确定，职责的边界等等，这些问题，越明显越简单越好。</p><p><br  /></p><p>以上是顺带提下，下面说说今天最想说的。</p><p><br  /></p><p><br  /></p><p><br  /></p><p><strong>懂业务的框架</strong></p><p><br  /></p><p>拔赤这段话：</p><p><br  /></p><p><span style="color:#7f7f7f;">这时，seajs就和旧有的类库有所不同，seajs提供“方法”和“思路”，而jquery、yui、mootools等则提供“工具”。两种思路直接决定了类库所面向的“问题集合”。因此，seajs需要“学习”，而jquery更多的则是需要“查阅”。</span></p><p><br  /></p><p>seajs 其实是提供工具，是剪刀、锤子一样的工具，职责非常单一，能做什么，不做什么，很明确。这跟 jquery 是一样的。</p><p><br  /></p><p><span style="color:#7f7f7f;">对于具体的场景来说，“一致”的约定难免单薄，相比之下，“工具”则更易于被大众接受。理论最终是要和业务结合，这也是为什么一个“懂”业务的框架看起来不美的原因。“懂业务”带来的复杂性和“强约定”带来的优雅的编程体验，两者之间，你会选择哪个？</span></p><p><br  /></p><p>真正懂业务的框架是美的。看起来不美的业务框架，往往是因为抽象层次还不够，还未能真正抓住问题的本质，未能真正把业务中的各种纠缠梳理清楚。比如 Backbone 挺美的，AngularJS 也挺优雅，他们的背后，都是繁复的业务，各种各种业务，但是合理的抽象，不断的重构前行，让这些直接从业务中诞生的框架，依旧保持了优雅美丽。</p><p><br  /></p><p>最后，吐个槽。前端界的大部分讨论，都会比较肤浅的停留在表层。比如拔赤的文章，其实我很高兴看到这么一篇对 seajs 带点批判的文章，真的很高兴很高兴，我相信我当初给 OzJS 提交一些建议时，豆瓣的哥们虽然忙，但内心也是感激我的。可是，这种本来就非常少的交流背后，可以看出，拔赤对 seajs 基本还处于不了解状态，我对 ozjs 的了解，也还远远不够。在这种状态下，很多分析，都相当乏力，能给彼此带来的促进很有限。</p><p><br  /></p><p>一样的，也能看到不少对 jQuery、对 Backbone、对 xxx 的吐槽。在国内，我经常看见的情况是，这些吐槽的背后，并没有真的深入过，比如只看过 Backbone 的源码，跑过几个 demo 后，就开始吐槽了，说 Backbone 这不好那不好。这种吐槽，真心无力。个人觉得真正的吐槽，应该是在深入使用过之后，才有发言权。</p><p><br  /></p><p>就说这些吧。周末快乐。</p><p><br  /></p><p><br  /></p><p>（完）文 / 玉伯</p><p><br  /></p><p>题图：好姑娘跟好框架一样，简单而优雅。</p><p><br  /></p><p>---</p><p><br  /></p><p>欢迎订阅 WTP（Web 技术与产品交流）微信公众帐号。WTP 关注技术、产品、自由梦，在每个工作日（偶尔休息日）会定期推送一篇原创文字。</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">真正懂业务的框架，是简单、优雅的。</script>
+	<script id="txt-title" type="txt/text">简单还是一致（再续）</script>
+	<script id="txt-sourceurl" type="txt/text">https://github.com/lifesinger/lifesinger.github.com/issues/146#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000096&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000096&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwjp9QiaCJ4tF0vvV4nnicRrHuw05lA7gM5WHSs5CWL3WdQ/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000096&itemidx=1#wechat_redirect",
+						title  = htmlDecode("简单还是一致（再续）"),
+            desc   = htmlDecode("真正懂业务的框架，是简单、优雅的。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

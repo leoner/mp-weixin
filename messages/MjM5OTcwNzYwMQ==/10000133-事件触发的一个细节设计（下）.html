@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>事件触发的一个细节设计（下）</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">事件触发的一个细节设计（下）</h1>
+			<span id="post-date">2013-04-23</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwicfGQeluek7qspzJY2mHa9CE8fcesMzYo5nJOsOZ19MQ/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>昨天的文章发出后，收到了不少经过认真思考的回复，非常感谢这份参与精神。很希望国内的技术讨论氛围，会在 WTP 频道中越来越好。<br  /></p><p><br  /></p><p><br  /></p><p><strong>两种策略的分歧</strong></p><p><br  /></p><p>同一个事件的 handlers 在触发过程中，当执行某个 handler 发生异常时，昨天提到有两个处理策略：继续执行和停止执行。</p><p><br  /></p><p>目前支持继续执行的类库框架有：MooTools、Prototype、Dojo</p><p><br  /></p><p>目前支持停止执行的类库框架有：YUI3、jQuery、Backbone</p><p><br  /></p><p>这个列表不能说明什么，但值得注意的是，这个问题在 2009 年时，JavaScript 大神 Dean Edwards 就在 Callbacks vs Events 一文中提出过，并且给出了一个非常 Geek 的解决方案。</p><p><br  /></p><p>我印象中，Prototype 等类库，就是在 Dean Edwards 指出这个问题后，将策略修改成了继续执行。</p><p><br  /></p><p>然而，目前更流行的几个类库 jQuery、YUI3 包括新秀 Backbone 等，却依旧坚持停止执行。并非是他们不知道，而是这几个类库的作者，选择了停止执行策略。</p><p><br  /></p><p>这两种策略的主要分歧在于：</p><p><br  /></p><p>1. 继续执行策略觉得，继续执行是对 handlers 之间无依赖的更好保障。如果停止执行，就破坏了无依赖性，使得后面 handlers 的执行依赖前面 handlers 的无异常性。</p><p><br  /></p><p>2. 停止执行策略觉得，发生异常时，已经超出了无依赖性的讨论范畴。在类库里面 `try catch` 或通过其他方式处理都不是最佳解决方式，这应该交给用户去解决，属于 user-land 范畴。</p><p><br  /></p><p>Backbone 作者 Brad Dunbar 的观点如下：</p><p><br  /></p><p><span style="color:#7f7f7f;">While I understand your concern, suppressing errors inside event handlers is a much worse behavior than skipping the rest of the handlers. When something fails, you want to know immediately, not continue as though nothing happened.</span></p><p><br  /></p><p>大意是说：</p><p><br  /></p><p><span style="color:#7f7f7f;">与停止执行相比，在事件处理器中抑制错误是一种更糟糕的行为。当某些事情不对时，就应该立刻知道，而不是装着什么也没发生一样继续执行。</span></p><p><br  /></p><p>jQuery 开发者也有类似的观点：</p><p><br  /></p><p><span style="color:#7f7f7f;">In order to continue subsequent callbacks, jQuery would have to catch the error, which is not a good solution. If an error is acceptable, a try/catch can be implemented by the user.</span></p><p><br  /></p><p>大意是：</p><p><br  /></p><p><span style="color:#7f7f7f;">为了继续执行回调，jQuery 需要捕获错误，这并不是一个好的解决方案。如果某个错误是可以容忍的，那么应该由用户通过 `try / catch` 去实现。</span></p><p><br  /></p><p><br  /></p><p><strong>放在场景中思考</strong></p><p><br  /></p><p>但为什么浏览器的默认行为是继续执行呢？</p><p><br  /></p><p>我的想法是，得分场景来说：展现型页面和功能型页面。</p><p><br  /></p><p>对于展现型页面，比如淘宝首页，页面某一个区域出问题时，最好不要影响其他区域的展现。因为一般来说，各个区域之间不会有依赖。感觉这也是浏览器设计之初，采取继续执行策略的初衷。这个初衷还体现在，当某个 script 块的代码发生异常时，不会影响其他独立 script 块的执行。</p><p><br  /></p><p>对于功能型页面来说，比如 Gmail，当页面某一个区域出问题时，经常意味着底层数据或网络出了问题，这时最好的处理方式是，都停下来，统一给出错误或重试提示，而不是继续进行操作。因为操作已经不可预期，很可能造成不必要甚至错误的操作，比如发出一封错误的邮件等等。</p><p><br  /></p><p><br  /></p><p><strong>无依赖很难</strong></p><p><br  /></p><p>Backbone 的使用场景应该是功能型页面，因此非常坚持采用停止执行策略。类似 YUI3 也是如此。jQuery 更多是觉得这应该是用户范畴的事，类库不应该处理。</p><p><br  /></p><p>举个例子，对于支付宝来说，由于支付操作涉及用户金额，有可能存在以下可能性：</p><p><br  /></p><p><span style="color:#7f7f7f;">1. handler A 检查校验码，有可能通过，有可能不通过。通过时，会设置某个校验标识为 true 。</span></p><p><br  /></p><p><span style="color:#7f7f7f;">2. handler B 提交支付请求，提交前会检查是否通过校验。</span></p><p><br  /></p><p><span style="color:#7f7f7f;">3. 当 handler A 出错时，校验标识有可能是旧值，也有可能被设置成错误值。</span></p><p><br  /></p><p><span style="color:#7f7f7f;">4. handler B 并不依赖 handler A，但依赖校验标识。当 handler A 出错时，校验标识无论是什么值，都已经不可靠，即便是校验通过，也不应该提交支付请求。</span></p><p><br  /></p><p>这就是说，对于功能型页面来说，一旦有代码错误（不一定是 handler 引发的），就应该尽可能做到停止代码执行，并告知用户出了问题。</p><p><br  /></p><p>这就如一锅汤，一旦滴进了一滴毒药，只要发现有一个人中毒了，最明智的做法就是立刻不再继续把汤盛给其他人，否则毒死一批人，罪孽就大了。</p><p><br  /></p><p>问题的核心是，要判断滴进汤里的是毒药，还是仅仅是一粒沙子。对展现型页面来说，经常是沙子，无伤大雅，但对功能型页面来说，我情愿假设都是毒药，应立刻告知所有人并停止喝汤。</p><p><br  /></p><p>这个例子的背后，还能让我们看到无依赖的 handlers 之间并不一定无依赖。由于代码运行在同一个环境下，有可能共享同一份数据。对于前端代码来说，明显共享的是同一份 DOM 树。这样，当某个 handler 出了问题后，很可能共享的数据、DOM 树已经不可靠。继续执行其他 handlers，很可能已经是在一个不可靠的环境中去运行代码。后续代码已经不可控，特别是对于复杂系统来说。</p><p><br  /></p><p>对于复杂系统，`try / catch` 并不能保障无依赖性。因为环境的复杂性，继续执行反而可能带来后续的不可控性。</p><p><br  /></p><p><br  /></p><p><strong>范畴很重要</strong></p><p><br  /></p><p>Backbone 和 jQuery 社区中，这个问题其实被反复提出过，Arale 中也被提出过。但我始终觉得，在基础类库中去 `try / catch` 并不是最佳解决方案。不光不是最佳方案，更重要的是，这件事，不应该属于类库去解决的，而应该是用户需要去考虑的。</p><p><br  /></p><p>比如，如果用户担心某个 handler 有可能会出问题，那么这个 handler 在可能出问题的地方，本就应该自行 `try / catch`，由用户去负责。对于复杂系统，对于不放心的 handlers，可以通过工厂模式自动封装。比如很多游戏的代码里，会做类似的错误异常统一处理。但具体应该对哪些 handlers 封装异常，由具体游戏的开发者决定。</p><p><br  /></p><p>还有一个有意思的是，少就是多。类库做得越少（保持完整性），用户能做的反而越多。假设类库封装了 handler 的异常，那么对于那些想采取停止执行策略的场景来说，就很不好实现了。反之，则用户自行封装就好。</p><p><br  /></p><p>Sea.js 从 1.x 升级到 2.0，最核心的一个思考就是缩减范畴，不断思考 Sea.js 应该做什么，不应该做什么，砍掉了大量功能，增加了少量功能，目前看起来还是挺不错的。但即便经过半年的升级后，Sea.js 2.0 里，目前依旧发现有少量功能不应该提供，打算在接下来的版本里进一步去掉。</p><p><br  /></p><p>少即是多，确定边界对类库框架来说非常非常重要。</p><p><br  /></p><p><br  /></p><p><strong>小结</strong></p><p><br  /></p><p>对于展现型页面来说，采用浏览器的继续执行策略，个人觉得是合理的。</p><p><br  /></p><p>对于功能型页面来说，特别是涉及复杂系统时，基础类库中应该尽量少做一些事情，把更多的决定权交给用户。</p><p><br  /></p><p>也许无法说服你，其实也不需要达成某个最终结论。不同应用中，这两种策略都有合适的使用场景。</p><p><br  /></p><p><br  /></p><p>（文 / 玉伯）</p><p><br  /></p><p>题图：挺有意思的一幅图哦，你可以返回顶部去看。</p><p><br  /></p><p>题外话：昨天不少人全部答对了那个小作业，答对的可以留一个地址给我，我送大家一些淘公仔，小的那种。</p><p><br  /></p><p>小调查：想调查一下大家目前的一些情况。如果你还在读书，请回复『高三』、『大四』之类的。如果你已经参加工作，请回复工作已经多少年了，回复数字就好，比如『2』、『9』。期待大家的回复，我会根据回复情况，来调整一下 WTP 推送的内容。</p><p><br  /></p><p>预告：这周会有沉鱼 fool2fish 的漫画，我期待好久了，嘿嘿。</p><p><br  /></p><p>---</p><p><br  /></p><p>感谢订阅 WTP（Web 技术与产品交流）微信公众帐号。WTP 关注技术、产品、自由梦，在每个工作日（偶尔休息日）会定期推送一篇原创文字。</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">我不是在吵架，我是在跟你解释为什么我是对的。前面这句话是错的。</script>
+	<script id="txt-title" type="txt/text">事件触发的一个细节设计（下）</script>
+	<script id="txt-sourceurl" type="txt/text">https://github.com/lifesinger/lifesinger.github.com/issues/151#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000133&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000133&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwicfGQeluek7qspzJY2mHa9CE8fcesMzYo5nJOsOZ19MQ/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000133&itemidx=1#wechat_redirect",
+						title  = htmlDecode("事件触发的一个细节设计（下）"),
+            desc   = htmlDecode("我不是在吵架，我是在跟你解释为什么我是对的。前面这句话是错的。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

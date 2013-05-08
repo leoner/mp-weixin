@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>简单还是一致（续）</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">简单还是一致（续）</h1>
+			<span id="post-date">2013-04-08</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxaicUOkpplBqoAJPveA438SgNP4jzSia0wC7x7iathG33CA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p><span style="color:#7F7F7F;font-size:18px;">前不久发了一篇文章：《简单还是一致》，引起了不少热议。淘宝前端工程师拔赤就此总结了一篇文章，非常值得思辩。全文如下。</span><br  /></p><p><br  /></p><p><span style="font-size:18px;">---</span></p><p><br  /></p><p><strong><span style="font-size:18px;">一段代码的两种理解（1）</span></strong></p><p><br  /></p><p><span style="font-size:18px;">看这段代码：</span></p><p><br  /></p><p><span style="font-size:18px;color:#974806;">```js</span></p><p><span style="font-size:18px;color:#974806;">seajs.use(&#39;a&#39;, function(A) {</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;A.doSth();</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;console.log(&#39;a&#39;);</span></p><p><span style="font-size:18px;color:#974806;">});</span></p><p><br  /></p><p><span style="font-size:18px;color:#974806;">// some logic...</span></p><p><br  /></p><p><span style="font-size:18px;color:#974806;">seajs.use(&#39;b&#39;, function(B) {</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;B.doSth();</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;console.log(&#39;b&#39;);</span></p><p><span style="font-size:18px;color:#974806;">});</span></p><p><span style="font-size:18px;color:#974806;">```</span></p><p><br  /></p><p><span style="font-size:18px;">问题来了，我们想象这段代码出现在淘宝首页，淘宝首页的结构是被分割为很多个“区块”，每个“区块”由不同业务线中的同学开发维护，他们之间互不知晓，最终首页是被“拼凑”而成的。那么这个例子中，若A的代码报错，会不会影响B的代码？</span></p><p><br  /></p><p><span style="font-size:18px;">按照玉伯的设计，因为同步执行回调，当然会影响。怎么办？淘宝首页架构师要call正在休假的A让他去改`A.doSth()`的逻辑以适应seajs的简单性吗？</span></p><p><br  /></p><p><span style="font-size:18px;">本来是一个小功能出问题，导致整个页面瘫痪掉，这种架构当然有问题。</span></p><p><br  /></p><p><span style="font-size:18px;">这段代码真实的语义应当是：</span></p><p><br  /></p><p><span style="font-size:18px;color:#974806;">```js</span></p><p><span style="font-size:18px;color:#974806;">seajs.use(&#39;a&#39;, function(A) {</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;A.doSth();</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;console.log(&#39;a&#39;);</span></p><p><span style="font-size:18px;color:#974806;">}, {</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;async: true // 异步执行callback</span></p><p><span style="font-size:18px;color:#974806;">})</span></p><p><br  /></p><p><span style="font-size:18px;color:#974806;">// some logic...</span></p><p><br  /></p><p><span style="font-size:18px;color:#974806;">seajs.use(&#39;b&#39;, function(B) {</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;B.doSth();</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;console.log(&#39;b&#39;);</span></p><p><span style="font-size:18px;color:#974806;">}, {</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;async: false // 同步执行callback</span></p><p><span style="font-size:18px;color:#974806;">})</span></p><p><span style="font-size:18px;color:#974806;">```</span></p><p><br  /></p><p><span style="font-size:18px;">seajs的“一致性”隐藏了这个重要的配置。</span></p><p><br  /></p><p><br  /></p><p><br  /></p><p><strong><span style="font-size:20px;">一段代码的两种理解（2）</span></strong></p><p><br  /></p><p><span style="font-size:18px;">看这段代码：</span></p><p><br  /></p><p><span style="font-size:18px;color:#974806;">```js</span></p><p><span style="font-size:18px;color:#974806;">seajs.use(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, callback)</span></p><p><span style="font-size:18px;color:#974806;">```</span></p><p><br  /></p><p><span style="font-size:18px;">这段代码有两种理解</span></p><p><br  /></p><p><span style="font-size:18px;">1、我想依次执行`a.js`，`b.js`，`c.js`，这时a、b、c之间有依赖。</span></p><p><span style="font-size:18px;"><br  /></span></p><p><span style="font-size:18px;">2、我想尽快执行`a.js`、`b.js`、`c.js`的代码，三者无依赖。</span></p><p><br  /></p><p><span style="font-size:18px;">对于第一种情况，三段代码的加载顺序无要紧，只要三者顺序执行即可，这和浏览器中写入script标签一样。</span></p><p><br  /></p><p><span style="font-size:18px;">对于第二种情况，因为有“约定”三者无依赖，每段js代码加载完成后立即执行。</span></p><p><br  /></p><p><span style="font-size:18px;">`a.js`、`b.js`、`c.js`之间到底有无依赖，在这段代码中是看不出来的。其实上段代码的真实语义其实等同于</span></p><p><br  /></p><p><span style="font-size:18px;color:#974806;">```js</span></p><p><span style="font-size:18px;color:#974806;">seajs.use(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, callback, {</span></p><p><span style="font-size:18px;color:#974806;"> &nbsp;sequential: false // 不要顺序执行a,b,c</span></p><p><span style="font-size:18px;color:#974806;">});</span></p><p><span style="font-size:18px;color:#974806;">```</span></p><p><br  /></p><p><span style="font-size:18px;">问题又来了，seajs默认三者之间无依赖。如果真有呢？</span></p><p><br  /></p><p><span style="font-size:18px;">同样，seajs的“一致性”隐藏了这个配置信息。</span></p><p><br  /></p><p><br  /></p><p><br  /></p><p><strong><span style="font-size:20px;">小结</span></strong></p><p><span class="Apple-tab-span" style="white-space:pre"></span></p><p><span style="font-size:18px;"><br  /></span></p><p><span style="font-size:18px;">其实，代码所蕴含的信息，不会因为代码量减少而减少。代码过于简洁，就需要额外的“规约”来传达这些重要信息。</span></p><p><br  /></p><p><span style="font-size:18px;">“黄金法则”中提到的“简单性”就是指约定，约定共识，做事才会简单。其中提到的“完整性”是指的底层机制的健壮，说的直白一点就是面向场景的设计。</span></p><p><br  /></p><p><span style="font-size:18px;">这时，seajs就和旧有的类库有所不同，seajs提供“方法”和“思路”，而jquery、yui、mootools等则提供“工具”。两种思路直接决定了类库所面向的“问题集合”。因此，seajs需要“学习”，而jquery更多的则是需要“查阅”。</span></p><p><br  /></p><p><span style="font-size:18px;">对于具体的场景来说，“一致”的约定难免单薄，相比之下，“工具”则更易于被大众接受。理论最终是要和业务结合，这也是为什么一个“懂”业务的框架看起来不美的原因。“懂业务”带来的复杂性和“强约定”带来的优雅的编程体验，两者之间，你会选择哪个？</span></p><p><br  /></p><p><br  /></p><p><span style="font-size:18px;">（完） &nbsp;文 / 拔赤</span></p><p><br  /></p><p><span style="font-size:18px;">题图：很漂亮的三片叶子。对于叶子，你喜欢简单，还是一致？抑或复杂？</span></p><p><br  /></p><p><span style="font-size:18px;">PS：这个问题看似很小，其实蛮有意思的。涉及异常处理、API 设计等等。明天我写一篇续续，再来仔细谈谈。</span></p><p><br  /></p><p><span style="font-size:18px;">---</span></p><p><br  /></p><p><span style="font-size:18px;">感谢订阅 WTP（Web 技术与产品交流）微信公众帐号。WTP 关注技术、产品、自由梦，在每个工作日（偶尔休息日）会定期推送一篇原创文字。</span></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">前不久发了一篇文章：《简单还是一致》，引起了不少热议。淘宝前端工程师拔赤就此总结了一篇文章，非常值得思辩。</script>
+	<script id="txt-title" type="txt/text">简单还是一致（续）</script>
+	<script id="txt-sourceurl" type="txt/text">https://github.com/lifesinger/lifesinger.github.com/issues/140#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000084&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000084&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxaicUOkpplBqoAJPveA438SgNP4jzSia0wC7x7iathG33CA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000084&itemidx=1#wechat_redirect",
+						title  = htmlDecode("简单还是一致（续）"),
+            desc   = htmlDecode("前不久发了一篇文章：《简单还是一致》，引起了不少热议。淘宝前端工程师拔赤就此总结了一篇文章，非常值得思辩。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

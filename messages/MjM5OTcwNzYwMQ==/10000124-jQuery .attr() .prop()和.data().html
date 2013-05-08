@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>jQuery&nbsp;.attr()&nbsp;.prop()和.data()</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">jQuery&nbsp;.attr()&nbsp;.prop()和.data()</h1>
+			<span id="post-date">2013-04-19</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicyF6TDaIIWe643YTSkVVsFrf40gvw4lzpic0QBibC1m4ZBw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>昨天微信被大家回复的&#39;a&#39;刷屏了，那今天就接着说jQuery（后面简称jq）的实现差异及渊源。另外昨天的文章发出去之后，很多细心的同学发现了文章里面的单词拼写错误，这个挺抱歉的，其实每篇文章发出来前，至少会检查3遍，是我没检查好。不过让我思考一个问题，为了防止我打英文打快了手脑不同步，attribute和property能不能翻译成中文？想了很久，两个的中文翻译都是「属性」，有同学建议把property翻译成「特性」，这也不妥，其实保留英文大家更容易看明白，那索性就不翻译了。下面进入正题。</p><p><br  /></p><p>首先看看三个方法的解释：</p><p><br  /></p><p>.attr()，此方法从jq1.0开始一直存在，官方文档写的作用是读/写DOM的attribute值，其实1.6之前有时候是attribute，有时候又是property。</p><p><br  /></p><p>.prop()，此方法jq1.6引入，读/写DOM的property。</p><p><br  /></p><p>.data()，此方法在jq1.2.3引入，作用是把任意的值读取/存储到DOM元素对应的jq对象上。</p><p><br  /></p><p>先说.attr()和.prop()，在jq1.6版之前，没有.prop()方法，而.attr()混淆了attribute和property的概念（不清楚他们有什么区别的话，请参考昨天的话题），导致使用时不小心就会出现bug，如果不读jq源码，还真说不清楚.attr()操作的是attribute还是property。</p><p><br  /></p><p>至于jq为什么这样设计，众说纷纭。有人说jq开发团队自己也没搞清楚attribute和property的区别，也有人说这是过度设计，jq认为用户没必要了解attribute和property的区别，干脆封装到一起了。不管原因是什么，jq这个设计确实不好。</p><p><br  /></p><p>2011年5月份，jq在新版本1.6版中引入新的API .prop()方法，不过升级过程挺痛苦，1.6版对比1.5.2版在.attr()的引入上没有做好向下兼容，一些人升级jq到1.6之后，发现自己的代码挂了。紧接着jq发布1.6.1版解决了兼容问题。</p><p><br  /></p><p>对于加入 .prop() 方法，jq的解释是：首先，给一些DOM对象属性property（比如nodeName，selectedIndex）的获取提供了更简洁的方案，情况前后的对比：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicyF6TDaIIWe643YTSkVVsFr3AcsxPK5G7ILPriahsCObibA/0" style="float:none;"  /><br  /></p><p><br  /></p><p>另外还有一个原因是.prop()的效率好于.attr()。</p><p><br  /></p><p>下面说说.data()，我们知道HTML 5里面DOM标签可以加以一些data-xxx的属性，你可以把.data()看作是存取data-xxx这样DOM附加信息的方法。当然，.data()存取的内容不仅是字符串，还可以包含数组和对象。从jq1.4.3起，HTML5 的data-xxx属性会自动被添加到jq的data对象里，比如有下列代码：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicyF6TDaIIWe643YTSkVVsFrF5cqfia4tK3hicFUPZnMt0ag/0" style="float:none;"  /></p><p><br  /></p><p>下面的等式都成立：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicyF6TDaIIWe643YTSkVVsFrOxaiciaZmMk7ppkzDJYbZe6g/0" style="float:none;"  /></p><p><br  /></p><p>尽管.data()用来存数据挺方便，它也是有过不堪回首的过去，请看：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicyF6TDaIIWe643YTSkVVsFrqlm9lP1qYhxrb5VZshvD6g/0" style="float:none;"  /></p><p><br  /></p><p>jQuery 1.8之前的版本输出&#39;number&#39;，1.8版本之后输出为&#39;string&#39;。1.8版之前，.data()会把值进行转换处理，其实我们这里想要的是&#39;1.4000&#39;并不是1.4。</p><p><br  /></p><p>从.data()的实际用途来看，跟.prop()似乎很像，都可以给DOM对象附加上一些自定义的值。我只能说，他们定位不同，看看他们的各自的方法名，再想想什么场景用什么方法吧。</p><p><br  /></p><p>最后，从性能上对比，.prop() &gt; .data() &gt; .attr()，不同浏览器不同版本.data()和.attr()的性能关系有差异，不过.prop()总是最优的。</p><p><br  /></p><p>文 / 远尘</p><p><br  /></p><p><span>上面的文章欢迎大家找拼写错误，找到一个我支付￥5，谁先发现给谁。</span><br  /></p><p><br  /></p><p>题图： jQuery</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">jQuery对.attr()、.prop()和.data()的实现有何差异，渊源又是如何？请看下文</script>
+	<script id="txt-title" type="txt/text">jQuery&nbsp;.attr()&nbsp;.prop()和.data()</script>
+	<script id="txt-sourceurl" type="txt/text">http://www.noahlu.com/blog/javascript-note/jquery-attr-prop-data/#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000124&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000124&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicyF6TDaIIWe643YTSkVVsFrf40gvw4lzpic0QBibC1m4ZBw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000124&itemidx=1#wechat_redirect",
+						title  = htmlDecode("jQuery&nbsp;.attr()&nbsp;.prop()和.data()"),
+            desc   = htmlDecode("jQuery对.attr()、.prop()和.data()的实现有何差异，渊源又是如何？请看下文"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

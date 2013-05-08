@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>聊聊&nbsp;JSONP&nbsp;的&nbsp;P</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">聊聊&nbsp;JSONP&nbsp;的&nbsp;P</h1>
+			<span id="post-date">2013-03-11</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicz65sqjoXLiaTJNy9M2Bm1EgwYrR6B5sFMwQUHSpNeBltw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>前天的文章《放开你的思路》，微信和微博上得到了不少回复，陈皓也提到可以进一步探讨 JS API 的设计。API 的设计是一个很大的话题，今天延续前天的文章，仅聊聊 JSONP 的设计。</p><p><br  /></p><p>JSONP 是 JSON With Padding 的缩写。一个典型的 JSONP 请求如下</p><p><br  /></p><p><span style="color:#e36c09;">&lt;script src=&quot;http://server.example.com/users/abc?callback=parseResponse&quot;&gt;&lt;/script&gt;</span></p><p><br  /></p><p>返回值为</p><p><br  /></p><p><span style="color:#e36c09;">parseResponse({&quot;name&quot;: &quot;Foo&quot;, &quot;id&quot;: 1234, &quot;rank&quot;: 7});</span></p><p><br  /></p><p>其中 parseResponse 是由 callback 参数指定的，也就是 JSONP 中的 P（adding）。这个 P 可不简单，第一个想到这么用的人，绝对是个大牛。因为有了这个 P，解决了好些难题：</p><p><br  /></p><p>1. <strong>回调问题</strong>。只要发出 script 请求，自动等待 callback 回调就好，并且精准得能秒杀 `onload` 等方案。</p><p><br  /></p><p>2. <strong>跨域问题</strong>。因为浏览器的同源策略，跨域一直是前端的难题。跨域与安全息息相关，JSONP 没有破坏安全性，同时却具备了全面跨域能力。巧妙而实用。</p><p><br  /></p><p>3. <strong>协作问题</strong>。后端专注与数据处理与输出，前端专注与数据展现。除了 JSON 数据本身的格式约定，其他约定仅仅需要一个 P 就好。</p><p><br  /></p><p>好了，再说下去，估计很多人会不乐意了。JSONP 的劣势也很明显：</p><p><br  /></p><p>1. <strong>无中间状态</strong>。不像 XHR（XMLHttpRequest） 那样，有丰富的 status 、readyState 等属性，可以很精准地知道各种状态。</p><p><br  /></p><p>2. <strong>只能 GET</strong>。不像 XHR 那样，可以全方位支持 GET、POST、PUT、DELETE。</p><p><br  /></p><p>3. <strong>只能异步</strong>。XHR 是可以同步的，估计很多人没用过，同步其实是 XHR 的默认行为（省略 open 的第三个参数就代表同步）。</p><p><br  /></p><p>本文不聊其他的，专注聊聊那个 P。</p><p><br  /></p><p>回到开头那个例子：</p><p><br  /></p><p><span style="color:#e36c09;">http://server.example.com/users/abc?callback=parseResponse</span></p><p><br  /></p><p>parseResponse 是一个全局函数。当页面上很多 JSONP 请求时，就有可能出现很多全局函数。虽然全局变量并不一定是恶魔，但不好好管理的全局变量真的有可能成为恶魔。管理的方案之一是给 P 引入命名空间：</p><p><br  /></p><p><span style="color:#e36c09;">http://server.example.com/users/abc?callback=JSONP.parseResponse</span></p><p><br  /></p><p>这样，所有 JSONP 的回调处理函数就都有了根，可以避免与其他函数的潜在冲突。</p><p><br  /></p><p>可是，这还得绞尽脑汁给 JSONP.xxx 命名，经常大家会想到一块，比如 xxx 经常会不谋而合：</p><p><br  /></p><p><span style="color:#e36c09;">callback</span></p><p><span style="color:#e36c09;">handle</span></p><p><span style="color:#e36c09;">parseData</span></p><p><span style="color:#e36c09;">_Callback</span></p><p><span style="color:#e36c09;">jsonp</span></p><p><br  /></p><p>这种不谋而合，虽然代表着英雄所见略同式的欣慰，但更多的是：我靠，你怎么也取这个名字？</p><p><br  /></p><p>这可怎么解决呢？</p><p><br  /></p><p>来试试 jQuery 类库。jQuery 的优秀绝对不仅仅是给你一个 $ 符号，jQuery 在很多方面考虑得非常周到：</p><p><br  /></p><p><span style="color:#e36c09;">$.getJSON(&quot;http://server.example.com/users/abc?callback=?&quot;,</span></p><p><span style="color:#e36c09;"> &nbsp;function(data) {</span></p><p><span style="color:#e36c09;"> &nbsp; &nbsp;console.log(data.name); // =&gt; Foo</span></p><p><span style="color:#e36c09;"> &nbsp;});</span></p><p><br  /></p><p>很神奇的，只需要指定下 <span style="color:#e36c09;">callback=?</span> 就好，再也不用为命名犯愁了。原理是 jQuery 帮你随机命名了一个当前页面唯一的全局 callback 函数，并且与 success 调用串接了起来。这样，就可以像使用 XHR 一样直接在回调中拿到 data 数据。</p><p><br  /></p><p>jQuery 再好，也抵挡不住 winter 等神人的不喜欢。这时，我们可以用各种 loader 来实现，比如：</p><p><br  /></p><p><span style="color:#e36c09;">seajs.use(&quot;http://server.example.com/users/abc?callback=define&quot;,</span></p><p><span style="color:#e36c09;"> &nbsp;function(data) {</span></p><p><span style="color:#e36c09;"> &nbsp; &nbsp;console.log(data.name); // =&gt; Foo</span></p><p><span style="color:#e36c09;"> &nbsp;});</span></p><p><br  /></p><p>通过 RequireJS、SeaJS、OzJS 等 XMD loader，我们也不再需要为回调函数名烦恼，只要给 callback 传入 define 就好。</p><p><br  /></p><p>如果你有全站使用 loader 方案，更进一步，可以约定没有传 callback 参数时，默认就是 define. 这意味着对于静态 JSON 数据来说，可以静态化：</p><p><br  /></p><p><span style="color:#e36c09;">seajs.use(&quot;http://server.example.com/users/abc.js&quot;,</span></p><p><span style="color:#e36c09;"> &nbsp;function(data) {</span></p><p><span style="color:#e36c09;"> &nbsp; &nbsp;console.log(data.name); // =&gt; Foo</span></p><p><span style="color:#e36c09;"> &nbsp;});</span></p><p><br  /></p><p>这样，服务端的 JSONP 数据直接可以是静态文件：</p><p><br  /></p><p><span style="color:#e36c09;">define({&quot;name&quot;: &quot;Foo&quot;, &quot;id&quot;: 1234, &quot;rank&quot;: 7});</span></p><p><br  /></p><p>这带来的好处看起来很小，实际上很有用。因为这意味着数据可以提前处理好，可以提前缓存，甚至可以静态化存储到 CDN 上，可以缓存到用户浏览器上。静态化的好处，谁用谁知道。</p><p><br  /></p><p>用 define 固定住 callback 名，配合浏览器端的 loader，我们可以传输各种数据：</p><p><br  /></p><p><span style="color:#e36c09;">define([ ... ]); // 数组格式，比如搜索提示数据</span></p><p><span style="color:#e36c09;">define(&quot;....&quot;); // 直接字符串，比如模板</span></p><p><br  /></p><p>这个方案，鄙人很无耻，还申请过一个专利，叫 JSONM 协议，M 是 Module（模块）。不过以上用法不在专利保护内容里，大家可以放心大胆用。</p><p><br  /></p><p>P 还可以摇身一变，从 JSONP 变成 XHR，比如</p><p><br  /></p><p><span style="color:#e36c09;">http://server.example.com/users/abc?type=xhr</span></p><p><br  /></p><p>通过 type 参数，服务端就会直接返回 JSON 数据，这样就可用在 XHR 调用中。Google 的 API 中有类似的设计，很灵活。</p><p><br  /></p><p>JSONP 的这个 P，到此就谈完了。除了这个 P，更有挑战的是 JSON 数据本身的设计。这里面学问大了去，等有时间再细说。</p><p><br  /></p><p>有任何想法，欢迎回复，欢迎讨论。</p><p><br  /></p><p>（完）</p><p><br  /></p><p><br  /></p><p>欢迎订阅 WTP（Web 技术与产品交流）微信公众帐号。WTP 在每个工作日（偶尔休息日）会定期推送一篇原创文字。</p><p><br  /></p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">JSONP&nbsp;是前端常用的跨域和数据获取方式。JSONP&nbsp;中的&nbsp;P&nbsp;究竟是啥意思呢？本文来聊聊这个简单又不简单的&nbsp;P……</script>
+	<script id="txt-title" type="txt/text">聊聊&nbsp;JSONP&nbsp;的&nbsp;P</script>
+	<script id="txt-sourceurl" type="txt/text">https://github.com/lifesinger/lifesinger.github.com/issues/118#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000012&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000012&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicz65sqjoXLiaTJNy9M2Bm1EgwYrR6B5sFMwQUHSpNeBltw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000012&itemidx=1#wechat_redirect",
+						title  = htmlDecode("聊聊&nbsp;JSONP&nbsp;的&nbsp;P"),
+            desc   = htmlDecode("JSONP&nbsp;是前端常用的跨域和数据获取方式。JSONP&nbsp;中的&nbsp;P&nbsp;究竟是啥意思呢？本文来聊聊这个简单又不简单的&nbsp;P……"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

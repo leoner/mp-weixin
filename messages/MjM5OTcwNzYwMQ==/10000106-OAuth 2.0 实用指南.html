@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>OAuth&nbsp;2.0&nbsp;实用指南</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">OAuth&nbsp;2.0&nbsp;实用指南</h1>
+			<span id="post-date">2013-04-15</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwCrzgibP8tQKdu4ZblibibyCcl6ibr3egWSAMg3HtIPHOicsg/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>昨天的文章推出去之后收到了很多回复要求发这一篇技术范的，很高兴的是，看到多数同学的回复里面OAuth和OpenID的大小写都写正确了：）</p><p><br  /></p><p>由于昨天很多同学强烈要求，补充一下OAuth 2.0的历史渊源：OAuth 2.0的草案原本在2010年就会定稿，由于存在分歧，又经过三年的不断变更，当时草案的首席编辑伊兰（昨天提到写博客喷OAuth 2.0的人）渐渐发现OAuth 2.0已经被改得面目全非：复杂不说还没用，不完整也不安全。</p><p><br  /></p><p>OAuth 2.0不再是协议，更像是一个框架，它允许实现进行比较自由的扩展，伊兰同学认为这会导致OAuth被实现得五花八门难以控制，安全牛人会把OAuth 2.0实现的很安全，而让一般人实现恐怕会漏洞百出。接着有人爆料伊兰对草案的编辑权有过于强烈的控制欲，这才是他感到不爽的根本原因，伊兰反驳说这完全是误解。有点宫斗的感觉了。</p><p><br  /></p><p>OAuth 2.0标准编辑背后激烈斗争的同时，Facebook和Google已经将他们基于OAuth 2.0的授权认证体系实现出来了，他们的实现看起来足够完善，正好给业界树立了正确的典范，这一点伊兰也表示过赞同。</p><p><br  /></p><p>2012年10月，OAuth 2.0进入RFC<strong>建议标准</strong>阶段，其他相关的协议也在编写中，现在大多数授权都采用或者建议升级到OAuth 2.0。</p><p><br  /></p><p>下面开始说点细节。</p><p><br  /></p><p><strong><span style="color:#C00000;">应用注册</span></strong></p><p><br  /></p><p>在使用使用平台的OAuth 2.0授权前，第三方应用必须到平台上进行注册，注册过程中可能需要填写的内容有：<strong>应用类型</strong>，<strong>授权成功回调地址</strong>，以及其他平台需要的资料（应用名称、网址、介绍、LOGO图片等）。OAuth 2.0标准主要围绕三类应用：Web应用、基于客户端的应用、原生应用。</p><p><br  /></p><p>应用注册完成会得到一个应用标识码和一个密钥，在国内几大平台的实现中，识别码一般叫 <strong>App Key</strong>，密钥叫 <strong>App Secret，</strong>这两样类似于用户名、密码。</p><p><br  /></p><p>OAuth 2.0 RFC中提到的授权方式有四种：<strong>授权码（Authorization Code）</strong>、<strong>隐式授权（Implicit Grant）</strong>、<strong>用户口令（Resource Owner Password Credentials）</strong>、<strong>应用口令（Client Credentials）</strong>，跟1.0相比更丰富了（也可以说更复杂了），体现了OAuth 2.0解决更多设备和场景授权的思考。下面会对这四种方式逐一介绍，请大家记住一点，这四种方式最终的目的都是要获得 <strong>Access Token</strong>，应用拿到这个Token就可以直接请求资源了。</p><p><br  /></p><p><strong><span style="color:#C00000;">用户口令授权流程（Resource Owner Password Credentials）</span></strong></p><p><br  /></p><p>用户直接把自己的用户名密码交给第三方应用来进行授权，这只针对大型、可靠的应用，普通开发者基本不用考虑，这里不做介绍了。</p><p><br  /></p><p><strong><span style="color:#C00000;">应用口令授权流程（Client Credentials）</span></strong></p><p><br  /></p><p>平台允许应用通过自己申请的App Key和App Secret获取资源，而能获取到的资源有限制，要么是应用自己创建的，要么是不需要权限的开放资源。这种方式比较简单这里也不做介绍。</p><p><br  /></p><p><strong><span style="color:#C00000;">授权码授权流程（Authorization Code）</span></strong></p><p><br  /></p><p>又称为 <strong>Server-side Flow</strong>，需要应用有Server端配合。为了便于理解，这里以淘宝开发平台OAuth 2.0授权为例，并且每个步骤都有截图，截图来自我做的一个Demo页面，Demo地址可以在「原文」中找到。</p><p><br  /></p><p>首先，引导用户到淘宝授权页面。要确保请求URL中必须设置三个参数：client_id（App Key），redirect_uri（授权回调页面），response_type（&#39;code&#39;）。这三个参数如下：</p><p><br  /></p><p><span style="color:#a5a5a5;">https://oauth.taobao.com/authorize?client_id=21464690&amp;redirect_uri=http://www.noahlu.com/oauth/auth_code.php&amp;response_type=code</span></p><p><br  /></p><p>特别说明一点OAuth 2.0文档中请求授权页面时，redirect_uri参数并不是必选的，但是几乎所有平台实现时都要求此参数必选，这是出于安全考虑。</p><p><br  /></p><p>上面URL请求到的授权页面如下：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwCrzgibP8tQKdu4ZblibibyCc7ZrZEMVyA6Ildtz1YUclicw/0" style="float:none;"  /></p><p><br  /></p><p>注意页面顶部有应用和授权说明，用户在这个淘宝的页面输入账号密码登录并授权后，页面跳转到redirect_uri参数中指定的回调地址：</p><p><br  /></p><p><span style="color:#a5a5a5;">http://www.noahlu.com/oauth/auth_code.php?code=jjBjAsnOI5kAp640FjFKeGhC1114627</span></p><p><br  /></p><p>注意到这个URL里有一个code参数，其值即为授权码。接下来就可以请求 <strong>Access Token</strong>，请求时需要发送一个POST请求（一般由应用后台Server来发这个请求），请求必须带5个参数：client_id，client_secret（App Secret），grant_type（&#39;authorization_code&#39;），code（刚刚获得的授权码）以及redirect_uri：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwCrzgibP8tQKdu4ZblibibyCcspY0hByg4l0qbn7uIkjEwQ/0" style="float:none;"  /></p><p><br  /></p><p>POST请求返回一陀JSON格式的数据：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwCrzgibP8tQKdu4ZblibibyCcv7mVoaCwX78jqyYX6nekcg/0" style="float:none;"  /></p><p><br  /></p><p>其中标红的就是Access Token，拿到它说明授权成功，这里的其他参数不再做详细介绍，有兴趣的同学可以到「原文」中看参考文献。</p><p><br  /></p><p>说明一点，Access Token是如此的重要，以至于没人会像上图例子中那样把它在页面打印出来，在授权码流程中是后台来处理和保存的。</p><p><br  /></p><p><strong>隐式授权流程（Implicit Grant）</strong></p><p><br  /></p><p>上面花这么大力气讲授权码流程，只要你看懂了它，那隐式授权流程就很容易理解了。隐式授权又称为 <strong>Client-side Flow</strong>，不需要Server端，是浏览器插件授权的首选。其实隐式授权相当于授权码流程的简化版，还是以淘宝为例：</p><p><br  /></p><p>先请求淘宝授权页面，有两个参数必选：client_id 和response_type</p><p><br  /></p><p><span style="color:#a5a5a5;">https://oauth.taobao.com/authorize?client_id=21448925&amp;state=taobao&amp;response_type=token</span></p><p><br  /></p><p>用户授权后，跳转到淘宝中间页面：</p><p><br  /></p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwCrzgibP8tQKdu4ZblibibyCcItZnbeIVGxuY1OpdTKt9Bw/0" style="float:none;"  /></p><p><br  /></p><p>从URL中可以获取参数Access Token。</p><p><br  /></p><p>说明一下，OAuth 2.0标准中，redirect_uri时可选的。而不同平台实现略有不同：<strong>淘宝开发平台</strong>redirect_uri可以留空，留空的时，授权完成会跳转到一个淘宝的中间页面，页面url带access_token参数。<strong>百度开发平台</strong>不能留空，但可以设置为&#39;oob&#39;，当值为&#39;oob&#39;时，授权完成跳转到百度中间页面，跟淘宝类似。<strong>新浪微薄开发平台</strong>你可以手动设置应用的redirect_uri为微薄的中间页面。不得不说新浪微薄实现的太偷懒了。</p><p><br  /></p><p>至于安全方面，OAuth 2.0本身确实有先天不足，它的安全保障依赖TLS安全网络传输以及平台的具体实现。前面说的各大平台都有在实现中添加较强的约束，比如把授权请求中的redirect_uri作为必选，这能够很好的保证重要信息传递给正确的人，目前看来还没存在重大漏洞，大多数人观点还是看好OAuth 2.0，毕竟她还在不断发展。</p><p><br  /></p><p>文 / 远尘</p><p><br  /></p><p>授权Demo地址请在最后的「原文」中找到，也可以直接输入www.noahlu.com/oauth。</p><p><br  /></p><p>为了让篇技术文更直观易懂，花了不少时间做DEMO和截图，所以大家可以回复告诉一声你是否已经了解了主要的两种授权流程，还有其他问题欢迎回复提出。</p><p><br  /></p><p>题图：网络安全</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">OAuth可以让你不透露账户密码给第三方的情况下，授权给第三方共享你的信息。</script>
+	<script id="txt-title" type="txt/text">OAuth&nbsp;2.0&nbsp;实用指南</script>
+	<script id="txt-sourceurl" type="txt/text">http://www.noahlu.com/blog/website-design/oauth2/#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000106&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000106&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicwCrzgibP8tQKdu4ZblibibyCcl6ibr3egWSAMg3HtIPHOicsg/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000106&itemidx=1#wechat_redirect",
+						title  = htmlDecode("OAuth&nbsp;2.0&nbsp;实用指南"),
+            desc   = htmlDecode("OAuth可以让你不透露账户密码给第三方的情况下，授权给第三方共享你的信息。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

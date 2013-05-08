@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>思考的极限</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">思考的极限</h1>
+			<span id="post-date">2013-03-10</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcbbxrFZibjTlfwf8ExRxDgZ4mopwpvZ5cZibXGZHMauEc6Q/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;">昨天收到了很多反馈，其中95%的订阅者非常宽容，估计属于Mac技巧的铁杆一类，意思就是您爱怎么写怎么写，隔天也好，短篇也好，我们都看。有5%的用户建议天天更新。当然还有沉默的大多数，不置一词，我就理解成怎么写都行吧。</p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;"><span style="font-size:18.6px;">最近写Mac技巧似乎有点陷入迷途，每天选个主题总想写深写透，希望能为大家带来一些思考，一万个订阅者还是有点压力的。这样的话就搞得我很疲劳，占用时间也比较多。结合大家的建议，我想还是尽可能做到每日更新，言之有物则长，无话可说则短。可能只有随笔，也可能只有技术，就这样吧，太纠结不好。</span><br  /></p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;"><br  /></p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;">每天写点东西事实上对我个人同样有很多好处，工作了十几年想清楚了很多事，但是没有写下来就很难系统的思考，沉淀的东西也可能会随风而去，这点也是促使我坚持下去的原因之一。</p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;"><span style="font-size:18.6px;">每个人的思考都有局限性，每个人都会把自己思考的极限当做实际的极限，即使那些智者没有这么做的，但似乎也无发思考更多。所以拓展个人思考的范畴就显得非常重要，大家有些好的想法或主题，也可以发过来共享交流。</span><br  /></p><p style="font-size:18.6px;font-family:monaco;min-height:26px;margin-top:0px;margin-bottom:8.3px;"><br  /></p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;">今天推送的<span style="font-size:18.6px;font-family:monaco;">Mac</span>技巧：</p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;"><br  /></p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;">昨天介绍了通过open -n /Applications/XXX.app的方式打开多实例程序，有人在微博上问如何选中一个文件或程序，通过右键菜单打开新实例，而不是每次都去命令行操作。</p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;">我们可以通过Automator+Applescript实现这个功能。</p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;">打开Automator，选择创建服务，在左侧选择“运行AppleScript”，双击打开程序窗口，在(* Your script goes here *)处输入如下代码：</p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;"><span class="Apple-tab-span" style="white-space:pre"></span></p><p><code><span style="color:#4bacc6;font-size:10px;">tell application &quot;Finder&quot; &nbsp; &nbsp; </span></code></p><p><code><span style="color:#4bacc6;font-size:10px;"> &nbsp; &nbsp;try &nbsp; &nbsp; &nbsp; &nbsp; </span></code></p><p><code><span style="color:#4bacc6;font-size:10px;"> &nbsp; &nbsp; &nbsp; &nbsp;set filename to POSIX path of (selection as text)</span></code></p><p><code><span style="color:#4bacc6;font-size:10px;"> &nbsp; &nbsp; &nbsp; &nbsp;set fileType to (do shell script &quot;file -b &quot; &amp; filename)</span></code></p><p><code><span style="color:#4bacc6;font-size:10px;"> &nbsp; &nbsp; &nbsp; &nbsp;if (fileType does not end with &quot;directory&quot;) or (filename ends with &quot;app&quot;) then</span></code></p><p><code><span style="color:#4bacc6;font-size:10px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;do shell script &quot;open -n &quot; &amp; filename</span></code></p><p><code><span style="color:#4bacc6;font-size:10px;"> &nbsp; &nbsp; &nbsp; &nbsp;end if</span></code></p><p><code><span style="color:#4bacc6;font-size:10px;"> &nbsp; &nbsp;end try </span></code></p><p><code><span style="color:#4bacc6;font-size:10px;">end tell</span></code></p><p><code><span style="color:#4bacc6;font-size:10px;"><br  /></span></code></p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;">在程序上方的选择框设定“文件和文件夹”、“任何应用程序”，然后保存，起个你喜欢的名字，比如叫“以新实例运行”。退出Automator。</p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;">选中文件或程序，右键-服务-以新实例运行，即可实现类似open -n的方式。</p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;">明天给大家解释下代码含义。</p><p style="font-size:18.6px;font-family:monaco;min-height:26px;margin-top:0px;margin-bottom:8.3px;"><br  /></p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;">和朋友聊天，说自古以来人们都在探求答案却永远找不到结果的三个终极问题是：我是谁、从哪里来、到哪里去。一个朋友说，容易，我叫唐僧，从东土大唐而来，到西天取经。另一个朋友说，我也有三个问题，早晨吃什么，中午吃什么，晚上吃什么。</p><p style="font-size:18.6px ;margin-top:0px;margin-bottom:8.3px;"><span style="font-size:18.6px;font-family:monaco;"><br  /></span>请问各位看官，你们的三个终极问题是神马？思考一下</p><p><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">昨天收到了很多反馈，其中95%的订阅者非常宽容，估计属于Mac技巧的铁杆一类，意思就是您爱怎么写怎么写，隔天</script>
+	<script id="txt-title" type="txt/text">思考的极限</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000186&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000186&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcbbxrFZibjTlfwf8ExRxDgZ4mopwpvZ5cZibXGZHMauEc6Q/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000186&itemidx=1#wechat_redirect",
+						title  = htmlDecode("思考的极限"),
+            desc   = htmlDecode("昨天收到了很多反馈，其中95%的订阅者非常宽容，估计属于Mac技巧的铁杆一类，意思就是您爱怎么写怎么写，隔天"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

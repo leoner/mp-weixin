@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>上市不上市</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">上市不上市</h1>
+			<span id="post-date">2013-01-31</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcbRURItcfmuHY88MdrTliaumibw8va46MqqicZbbHRoRWCWQ/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今天凌晨Facebook 发布了2012 年 Q4 财报，Facebook总算恢复了些元气，收入比去年同期增长了40%，但净利润比去年同期下滑了79%。目前Facebook的市值大约为670亿美金，其股价经过近半年的反弹，依然远远低于IPO之前各类分析家和金融机构预测的千亿企业。对于Facebook这样充满活力处于上升期有大把现金的企业来说，IPO应该只是其成长的一个必经之路，经得起折腾。但是对国内大中小企业来说，打破头上市这事，就值得问一句，到底上市不上市？</p><p><br  /></p><p>2012年中国股市惨不忍睹，各大中小上市公司业绩好的估计手指头都数的过来，上市的目的本来是资本运作和规范化管理，遗憾的是，最后的结果是往往是套现、被套和跑路。</p><p><br  /></p><p>申请了IPO未过会的，也大都没什么好果子吃。很多发展势头不错的公司，为了上市牺牲了很多正常发展所需要的东西，一旦上市失败则离心离德，高管出走，员工散落，公司变得非常脆弱，一蹶不振也未可知。写到这儿想起两个事情，一个是某个做企业软件平台的公司创业板上市失败，高管出走，员工离职，业务受很大影响。另一个是一位在深圳软件公司做CTO的朋友，上市未果，非常失望，准备重返北京开始新起点。</p><p>所以，上市不上市，真是个问题，尤其是在中国这样诡异的市场环境下。</p><p><br  /></p><p>今天推送的Mac技巧由 @唐巧_boy 投稿（唐巧童靴现在粉笔网创业，资深Mac用户）：</p><p>1、推荐一款免费的Finder增强工具：XtraFinder，这个插件具备和TotalFinder类似的功能，支持tab、文件夹置顶、多窗口、剪切、全局热键等功能，重要的是这是一个完全免费的自由软件，而TotalFinder要18刀。</p><p>下载网址：http://www.trankynam.com/xtrafinder/</p><p>2、我们平时会把iPhone接到macbook上充电，事实上把macbook合上待机时，仍然可以为iPhone供电，大家可以试一下。如果你出游时会带上你的mac，别忘了这也是一块大的移动电池。</p><p><br  /></p><p>加微信公共平台“Mac技巧”为好友，打开微信-通讯录-添加朋友，搜号码，然后输入“Mac技巧”即可。</p><p>另外，欢迎投稿，讲Mac，聊技术，谈谈你开心或不开心的事，有趣就成。</p><p><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">今天凌晨Facebook&nbsp;发布了2012&nbsp;年&nbsp;Q4&nbsp;财报，Facebook总算恢复了些元气，收入比去年同期增</script>
+	<script id="txt-title" type="txt/text">上市不上市</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000083&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000083&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcbRURItcfmuHY88MdrTliaumibw8va46MqqicZbbHRoRWCWQ/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000083&itemidx=1#wechat_redirect",
+						title  = htmlDecode("上市不上市"),
+            desc   = htmlDecode("今天凌晨Facebook&nbsp;发布了2012&nbsp;年&nbsp;Q4&nbsp;财报，Facebook总算恢复了些元气，收入比去年同期增"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

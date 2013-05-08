@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>OAuth的前世今生</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">OAuth的前世今生</h1>
+			<span id="post-date">2013-04-16</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicysTWgYxnRKgvrmACyFAXrlj6HOA8PAuCECsIJzRlr02A/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>要说清楚OAuth的由来，不得不先说OpenID。</p><p><br  /></p><p>OpenID是为了解决用户登录而产生的解决方案。设想一个场景，你想下载一个小文档，网站提示你需要登录才能下载，如果你不是会员，你会想为了下个文件去注册是否值得，因为注册过程真的挺烦。OpenID怎么来解决这个问题呢？很简单，你如果已经有OpenID账户，并且这个网站支持OpenID，那你直接用你的OpenID账户登录就行。</p><p><br  /></p><p>OpenID账号是一个URL地址，输入后会跳转到OpenID服务商那里进行登录，然后再跳转回第三方网站。OpenID很好的解决了账户安全问题，你的账户密码不会被暴露给第三方。</p><p><br  /></p><p>注册OpenID同样非常简单，Google、Yahoo、Flickr、Facebook都提供OpenID账户，并且还有专门的网站提供OpenID注册服务，理论上任何网站都可以让你注册OpenID账户，这正是OpenID的去中心化特点。</p><p><br  /></p><p>2006年12月，Blaine Cook（Twitter首席架构师）准备让Twitter也支持OpenID的登录。他还希望能够让第三方应用方便的调用授权API，同时又不用暴露用户的账户密码，而OpenID似乎不太适用于API的调用。他想找要一个开放的标准。随后，Blaine召集了包括OpenID创始人在内的一拨人，对OpenID和类似的协议功能和设计局限性进行了探讨，发现有必要为授权API的调用开发一套新的标准，他们准备将这个标准命名为「OpenAuth」（显然是受到「OpenID」的启发）。</p><p><br  /></p><p>不料，就在Openauth的Google Group创建几天后，AOL发布了一个协议，也叫OpenAuth，用来让第三方应用登录AOL。原本的OpenAuth被迫改名，备选的名字有「oath」（誓言），正好一语双关。不过为了能注册到域名，最终取名为「OAuth」（正确读音是「oh-auth」）。</p><p><br  /></p><p>OAuth协议重点在于让第三方应用获取对资源的授权，而OpenID在于让用户安全快捷的登录第三方网站。OAuth授权的方式跟OpenID类似，举例来说：人人网要获取你的QQ好友列表，会引导你到QQ的网站进行授权，授权完成再跳转会人人网，获得授权的人人网就能读取你的QQ好友并导入到自己的数据库了。</p><p><br  /></p><p>2007年12月，OAuth Core 1.0协议说明文档定稿。2009年4月Twitter基于Oauth 1.0实现了「使用Twitter登录」功能。2010年4月，OAuth 1.0协议作为参考性RFC发布。</p><p><br  /></p><p>当然，OAuth 1.0也存在一些问题，比如他任务第三方应用能够保护自己的应用密钥的，这就让基于浏览器的应用，比如浏览器插件很难使用他。因此，OAuth 2.0应运而生，OAuth 2.0关注客户端开发者的简易性，同时为Web应用，桌面应用和手机，和起居室设备提供专门的认证流程。</p><p><br  /></p><p>由于认为OAuth 2.0违背了OAuth最初的安全性和互通性的出发点，2012年7月，OAuth 1.0 的主要作者Eran Hammer愤然发博声称「OAuth 2.0协议简直是自寻死路」，并退出OAuth协议编委会、撤销OAuth协议上自己的署名。事情闹到这份上，背后肯定有不少八卦，这个大家感兴趣可以自己去发掘。</p><p><br  /></p><p>无论如何，都已经无法阻止OAuth 2.0的前进。2012年10月，OAuth 2.0作为RFC的建议稳定版发布。随后世面上多数平台逐渐开始支持OAuth2.0。目前为止，OAuth 2.0已是主流，1.0渐渐淡出视野。</p><p><br  /></p><p>（文 / 远尘）</p><p><br  /></p><p>本来准备发一篇介绍OAuth 2.0授权认证流程的科普文，不过WTP智囊团表示过于技术。所以今天发了这篇八卦OAuth的文章。不过大家如果想看技术范的，可以回复告诉我，如果回复得多我就发出来。</p><p><br  /></p><p>题图：OAuth Logo</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">国内外多数开发平台都支持OAuth对第三方进行授权，这个OAuth究竟为何物呢？怎么产生的？听我一一为你分解。</script>
+	<script id="txt-title" type="txt/text">OAuth的前世今生</script>
+	<script id="txt-sourceurl" type="txt/text">http://www.noahlu.com/blog/it-news/oauth-history/#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000113&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000113&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicysTWgYxnRKgvrmACyFAXrlj6HOA8PAuCECsIJzRlr02A/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000113&itemidx=1#wechat_redirect",
+						title  = htmlDecode("OAuth的前世今生"),
+            desc   = htmlDecode("国内外多数开发平台都支持OAuth对第三方进行授权，这个OAuth究竟为何物呢？怎么产生的？听我一一为你分解。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

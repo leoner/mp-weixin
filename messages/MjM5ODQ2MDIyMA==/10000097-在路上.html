@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>在路上</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">在路上</h1>
+			<span id="post-date">2013-02-06</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcZPyZGhibwTlERytTOBD5mJ9YgH8u7fdL1gLzL43VmKuew/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今天是春节前最后一个工作日，相对于去年同一天的忙乱，这次还是比较从容的，年前的工作债务年后的产品规划都做得差不多了，以至于下午和两个兄弟谈了很久的个人学习问题。以前我就说过，不同阶段感悟自不相同，你的经验教训能否传承其实和你几乎没什么关系，关键在于听众。所以我们能做到说者无心即可，是否听者有意，那就随缘了。</p><p>今年遇到的挑战和团队的变更都比较大，对我来说是相当艰难的一年，还好挺过来了。2013年怎么样，只能明年的这个时候来评说了。<br  /></p><p><br  /></p><p>我的2012，可以用以下几句话概括：<br  /></p><p>1、写了26篇博客，其中涉及两个系列，一个是VIM，一个是Objective-C，都是未完待续。只要你想，坑总是有的。<br  /></p><p>2、了解了一门新语言Go，重新捡起了Python。<br  /></p><p>3、读了多少本书记不清了，有的读完了有的没读完。开始更多的电子阅读。<br  /></p><p>4、英语水平有长进，得益于背单词看美剧和开车听英语。只要你说，甭管多烂老外都懂。<br  /></p><p>5、企业开发平台GAP升级至4.0，为企业移动和私有云做好准备。<br  /></p><p>6、试运行两个小网站，2013年会有更多投入。<br  /></p><p>7、年末推出微信公共平台：Mac技巧，至今推送51条微信。<br  /></p><p><br  /></p><p>人到中年基本对大富大贵没什么想法，唯有不断提升自己并做好有趣的事情才会安心。有时候我想这是否就是人从生到死的终极意义？<br  /></p><p><br  /></p><p>今天给大家推荐一个Mac小技巧：删除程序。<br  /></p><p>删除Mac上的程序有很多种，比如直接去应用程序文件夹下删除、用CleanApp删除等等，今天介绍一个最好玩的。<br  /></p><p>打开launchpad，按住option键，就会看到所有的程序图标都会像iOS图标那样晃动起来，点击图标左上角的叉，即可删除程序，操作和iOS一样。<br  /></p><p><br  /></p><p>另外昨天介绍的AirDrop功能不够严谨，多台机器并不需要接入网络，都打开wifi即可进行文件传输。当然机器的距离不能太远。<br  /></p><p><br  /></p><p>今天已经有很多人到家了，还有更多人在路上，希望大家在新的一年里，学到自己该学到的，得到自己该得到的，轻装上阵，不断奔跑！<br  /></p><p><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">今天是春节前最后一个工作日，相对于去年同一天的忙乱，这次还是比较从容的，年前的工作债务年后的产品规划都做得差</script>
+	<script id="txt-title" type="txt/text">在路上</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000097&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000097&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcZPyZGhibwTlERytTOBD5mJ9YgH8u7fdL1gLzL43VmKuew/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000097&itemidx=1#wechat_redirect",
+						title  = htmlDecode("在路上"),
+            desc   = htmlDecode("今天是春节前最后一个工作日，相对于去年同一天的忙乱，这次还是比较从容的，年前的工作债务年后的产品规划都做得差"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

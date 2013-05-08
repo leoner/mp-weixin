@@ -1,0 +1,162 @@
+<!DOCTYPE html><html> <head> <title>十年不老</title><meta http-equiv=Content-Type content="text/html;charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no"> <link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/><style>  #nickname{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;max-width: 90%;  }  ol,ul{list-style-position:inside;  }</style></head> <body id="activity-detail">   <div class="page-bizinfo"><div class="header"><h1 id="activity-name">十年不老</h1><span id="post-date">2012-12-25</span></div></div><div class="page-content"><div class="media" id="media"><img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcYtsCC8IFTjph6VsjxYibVWfZw1N2NshTicicf6MRFSwibF9w/0" onerror="this.parentNode.removeChild(this)"/></div><div class="text"><p>今天在好几个场景下谈到了程序员的年龄问题。十年到底老不老，程序员三十以后，说英雄谁是英雄？<br  /></p><p>2000年左右我们二十多岁，那是个中午踢场球还能编程到凌晨两点的年龄，身边几乎没有三十多岁的程序员。于是我们忧伤的想，30岁以后该干什么呢？结果到了30多岁，很多同龄人依然奋斗在编程第一线，享受技术带来的喜悦。</p><p>我个人由于各种原因，很早就开始做技术管理、产品设计等工作，但从未离开编程一线，直到现在。十年后我想我的代码质量会更高吧...</p><p>如果你是技术天才，一直编程就好了。如果你不是，但热爱技术，那么在编程之余要锻炼自己的设计能力、演讲能力、技术管理能力。如果编程只是你谋生的工具，那么不用等三十现在就转行吧...</p><p><br  /></p><p>今天推送的内容：</p><p>1、程序切换<br  /></p><p>在OS X中程序切换可以通过+tab进行，+tab进行顺序切换，+shift+tab进行逆序切换，功能类似Win7的alt+tab。</p><p>OS X还提供了同组程序的切换，比如你打开了多个预览程序阅读pdf，你想在这些pdf之间切换阅读，这时候就可以使用+`（esc下面的键）进行同组程序切换。</p><p>2、远程拷贝</p><p>OS X提供基于ssh的远程拷贝命令scp，这个命令大部分linux和unix系统都会提供，使用该命令可以非常方便的在两台机器之间安全的复制文件，具体命令：<br  /></p><p>scp ./testfile.txt &nbsp;username@10.10.10.22:/tmp<br  /></p><p>回车后会要求你输入username的密码，只会就当前目录下的testfile.txt复制到另一台机器的tmp目录下。</p><p>scp username@<span style="letter-spacing:1px;line-height:24px;">10.10.10.22:/tmp/<span style="letter-spacing:1px;line-height:24px;">testfile.txt</span></span> &nbsp;./</p><p>从远端复制到本地</p><p><br  /></p><p>祝天下程序员圣诞快乐</p></div></div><script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script><script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script><script id="txt-desc" type="txt/text">今天在好几个场景下谈到了程序员的年龄问题。十年到底老不老，程序员三十以后，说英雄谁是英雄？2000年左右我们</script><script id="txt-title" type="txt/text">十年不老</script><script id="txt-sourceurl" type="txt/text"></script>    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+function viewSource(){
+var UA = navigator.userAgent.toLowerCase();
+var isIem = function(){
+if(/IEMobile/i.test(UA)) return true;
+else return false;
+}
+if(isIem()){
+jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+return ;
+}
+jQuery.ajax({
+url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          async:false,
+type:'POST',
+timeout :2000,
+data :{url:getStrFromTxtDom('sourceurl')},
+complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+}); 
+return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000001&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000001&itemidx=1#wechat_redirect", 1));
+(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcYtsCC8IFTjph6VsjxYibVWfZw1N2NshTicicf6MRFSwibF9w/0",
+      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000001&itemidx=1#wechat_redirect",
+title  = htmlDecode("十年不老"),
+            desc   = htmlDecode("今天在好几个场景下谈到了程序员的年龄问题。十年到底老不老，程序员三十以后，说英雄谁是英雄？2000年左右我们"),
+            fakeid = "",
+            desc = desc || link;
+
+
+
+// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+WeixinJSBridge.invoke('sendAppMessage',{
+  "appid"      : appId,
+  "img_url"    : imgUrl,
+  "img_width"  : "640",
+  "img_height" : "640",
+  "link"       : share_scene(link, 1),
+  "desc"       : desc,
+  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+});
+// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+WeixinJSBridge.invoke('shareTimeline',{
+  "img_url"    : imgUrl,
+  "img_width"  : "640",
+  "img_height" : "640",
+  "link"       : share_scene(link, 2),
+  "desc"       : desc,
+  "title"      : title
+  }, function(res) {
+                        });
+            
+});
+
+// 分享到微博;
+var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+WeixinJSBridge.invoke('shareWeibo',{
+  "content" : title + share_scene(link, 3),
+  "url"     : share_scene(link, 3) 
+  }, function(res) {report(link, fakeid, 3);
+  });
+});
+// 隐藏右上角的选项菜单入口;
+//WeixinJSBridge.call('hideOptionMenu');
+};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+})();
+</script></body></html>

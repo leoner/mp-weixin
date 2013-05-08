@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>电信运营商是中国最大的黑客</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">电信运营商是中国最大的黑客</h1>
+			<span id="post-date">2013-01-14</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEnLQmyzgvBO5znTicUiabhbeNP095sqolS2VYMB13UoYXA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>{写了一大堆内容，莫名其妙的没了。不知道原因，甚是郁闷。凭借记忆重新写}</p><p><br  /></p><p>最近家里的电信光纤宽带频繁弹广告，估计是到了年底的缘故，广告也疯狂。</p><p><br  /></p><p>要我说，电信运营商是中国最大的黑客。为什么这么说呢？因为电信想给你浏览器上弹个广告就弹个广告，想给你 DNS 劫持就来个劫持，你访问网址打不开随时变成 114 搜索，这是绝对的黑客手法嘛。</p><p><br  /></p><p>今天无意间看到所谓的「网络定向直投系统」（也称 iPUSH )，是由中国电信开发的划时代网络技术，可以以各种格式定时定点将广告推送到网络在线用户端的浏览主页面。 通过这个传播平台,不论电信用户在浏览器地址栏中输入任何网址进行浏览，网络定向直投系统均可将广告主动送达用户，不依赖于某个固定的网站。</p><p><br  /></p><p>网络定向直投系统「原理」：基于宽带接入网，通过对用户上网行为的分析，在用户上网时、或正在上网的过程中，系统主动、定向、策略性、个性化的向用户推送广告宣传信息。 方式：根据用户当前浏览的网站或匹配对应的关键字，向用户推送图片、Flash、视频等多媒体交互式广告内容。有朋友告诉我，这套玩意儿「通过对电信核心线路的过滤，把目标 HTTP 包整个给替换掉，换成他们自己的页面」，总之电信运营商为了牟利，上的全是黑客级手段。</p><p><br  /></p><p>再比如，有不少订户跟我反馈说收小道消息微信的时候会弹出广告，问题是，我从来没在微信内容嵌入广告（技术上个人用户也做不到），问过微信团队，他们自然也没做过。那么是谁干的呢？不是这些运营商是谁呢？是他妈的谁呢?</p><p><br  /></p><p>今日小道：有人说百度未来三年的 KPI 对百度网盘的用户数非常看重，明年目标是一亿。如此说来，百度一直缺少的用户帐户系统终于即将建成了。醉翁之意不在酒阿。当然，这只是我个人的观点。</p><p><br  /></p><p>题图：黑客帝国</p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">写了一大堆内容，莫名其妙的没了。不知道原因，甚是郁闷。凭借记忆重新写。<br/><br/>看不到正文内容的话请到&nbsp;hutu.me</script>
+	<script id="txt-title" type="txt/text">电信运营商是中国最大的黑客</script>
+	<script id="txt-sourceurl" type="txt/text">http://dbanotes.net/security/iframekiller_anti_iframe_clicjacking.html#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000055&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000055&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEnLQmyzgvBO5znTicUiabhbeNP095sqolS2VYMB13UoYXA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000055&itemidx=1#wechat_redirect",
+						title  = htmlDecode("电信运营商是中国最大的黑客"),
+            desc   = htmlDecode("写了一大堆内容，莫名其妙的没了。不知道原因，甚是郁闷。凭借记忆重新写。<br/><br/>看不到正文内容的话请到&nbsp;hutu.me"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

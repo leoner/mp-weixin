@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>写作即思考</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">写作即思考</h1>
+			<span id="post-date">2013-01-28</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcam7vFGY3Q0kuBoAXia2BULAfPTdlP8ToBsKO1JEdG6QEA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>在我刚进入IT技术领域的时候，曾经有个比我大一点的牛娃对我说，如果你不能把你的想法用文字清晰的表达出来，那只能说明你没想清楚。这句话虽然不一定100%正确，比如很多牛人并不需要写很多文档，也能做出优秀的软件，但我始终认为，那只是他们没有写而已，非不能也，而不为也。</p><p><br  /></p><p>为什么能全民微博而不能全民博客？因为写文章费心费力，发微博则随心所欲，实在没得写了还能转转。能够坚持写作的程序员少之又少，但写东西对程序员非常有好处。写作其实就代表思考，你需要言之有物，需要架构需要梳理，要有开端有结尾有结论有主题，在写作过程中出现新的思想火花是常有的事。</p><p>就我个人的经历而言，优秀的写作者不仅能让事情变的容易理解，而且能够换位思考，沟通顺畅思维敏捷。与这样的程序员交流是赏心悦目的。遇到问题时他会抽丝剥茧，告诉你问题的前因后果，由表及里，并且把能够反映问题的各种信息等都提供给你，包括他自己尝试解决问题的措施和结果。</p><p><br  /></p><p>今天推送的Mac技巧主要是关于邮箱的：</p><p>1、智能邮箱</p><p>邮箱账户的创建相信一般的用户都可以正常操作，不知道你是否使用过OS X中Mail的智能邮箱功能呢？</p><p>打开邮件程序，点击邮箱-新建智能邮箱，在弹出的窗口中选择你的过滤条件，过滤条件非常灵活，可以定义与或关系，增加多个过滤条件，设置完成后保存即可，你会发现左侧栏多了一个智能邮箱，点击即可根据你设置的过滤条件找到那些符合条件的邮件。</p><p>2、隐藏的VIP</p><p>如果你的系统是10.8.2，那么你就会发现邮件程序中多了一个隐藏的VIP功能。随便找封邮件，把鼠标放在发件人或收件人的邮件地址上，会出现一个蓝色的选择框，点击其中的白色箭头，在下拉菜单中点击“添加到VIP”，你就会发现左边栏多了一个VIP分栏，点击加入的VIP用户，可以直接查看他们发送的邮件。</p><p><br  /></p><p>分享和表达总是好事，如果你想写一篇惊世骇俗之作，那么可能一辈子都不会动笔。尽管去写，写的烂写的慢都不是问题，坚持就好。</p><p><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">在我刚进入IT技术领域的时候，曾经有个比我大一点的牛娃对我说，如果你不能把你的想法用文字清晰的表达出来，那只</script>
+	<script id="txt-title" type="txt/text">写作即思考</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000073&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000073&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcam7vFGY3Q0kuBoAXia2BULAfPTdlP8ToBsKO1JEdG6QEA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000073&itemidx=1#wechat_redirect",
+						title  = htmlDecode("写作即思考"),
+            desc   = htmlDecode("在我刚进入IT技术领域的时候，曾经有个比我大一点的牛娃对我说，如果你不能把你的想法用文字清晰的表达出来，那只"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>我的地盘我做主</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">我的地盘我做主</h1>
+			<span id="post-date">2013-01-24</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEibnrXu3rJXObXqo9TBTWdmYibMLINfJa5JZP14CJ3MUzA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>总有人莫名其妙的发一些第三方消息给我，这是在做测试还是干什么？我直接都拉入黑名单了。我的地盘我做主了。期待微信早点增加删除实时消息的功能。</p><p><br  /></p><p>有人告诉我说，前几天李彦宏年会上提到的百度那位坐遍北京公交车的同学，逐条线路坐公交是上学时候就开始坚持做到事情，兴趣使然。这样说的话还是挺合理的。<br  /></p><p><br  /></p><p>测一下智商，请听题：「@主持人鲁瑾 说：人口研究学者刘忠良发现，2010年第六次人口普查数据对比2000年五普数据,1951至1995年出生的人不仅一个没死,还多出了564万。」 这段话是否有问题? 至少我看了微博上的一些反馈还是乐不可支的。不会是有些人智商真有问题吧？<br  /></p><p><br  /></p><p>今日小道：有公司解散无线事业部，就有公司成立无线事业部。当当网计划将现在负责无线的团队独立拆分成无线事业部。你说这都折腾的啥呀<span style="color:#222222 ;">？</span></p><p><span style="color:#222222 ;"><br  /></span></p><p><span style="color:#222222 ;">小道之二：其实腾讯内部在唱吧刚出来的时候也做了一个类似的产品，</span>QQ麦霸，估计是觉得唱吧这个产品只能热一时，<span style="letter-spacing:1px;line-height:24px;">QQ麦霸做完之后居然押后没发布，成全了唱吧。否则的话，估计唱吧也被腾讯打掉了。</span></p><p><span style="color:#222222 ;"><br  /></span></p><p>小道之三：有人爆料说 China HR 即将裁员，总部和华北区的400多员工将将裁掉一半多，剩余200人与 MyJob 一百多人合并一起办公。裁员包括孕妇。最终被收购的价格是 3000 万美元。</p><p><br  /></p><p>环球怪兽(Monster Worldwide) 在 China HR 上可真是血本无归，赔的不少。跨国公司在中国玩互联网还真就是玩不转？到底是为什么呢？</p><p><br  /></p><p>题图：黑客帝国之辛普森一家版.</p><p><br  /></p><p>小道盒子的用户，使用中有问题的话，请微信添加: Superoute 这是个专门客服.</p><p><br  /></p><p>查看小道消息历史<span style="line-height:1.5;"></span><span style="line-height:1.5;">信息，请访问</span></p><p><span style="line-height:1.5;"> http://hutu.me </span></p><p><br  /></p><p>现实中做不到的，就让梦去完成。</p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">总有人莫名其妙的发一些第三方消息给我，这是在做测试还是干什么？我直接都拉入黑名单了。我的地盘我做主了。有人告</script>
+	<script id="txt-title" type="txt/text">我的地盘我做主</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000084&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000084&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/ow5rEn8QGlEibnrXu3rJXObXqo9TBTWdmYibMLINfJa5JZP14CJ3MUzA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODIyMTE0MA==&appmsgid=10000084&itemidx=1#wechat_redirect",
+						title  = htmlDecode("我的地盘我做主"),
+            desc   = htmlDecode("总有人莫名其妙的发一些第三方消息给我，这是在做测试还是干什么？我直接都拉入黑名单了。我的地盘我做主了。有人告"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

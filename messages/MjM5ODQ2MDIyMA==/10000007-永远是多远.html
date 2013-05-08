@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>永远是多远</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">永远是多远</h1>
+			<span id="post-date">2012-12-28</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcahX2iaae6VAibLJ1wDQbo2u5IV3jcDsK4V8Wweeq9uB8KQ/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>每周五是我们固定的羽毛球时间，这个习惯我已经坚持了5年。虽说富贵在天，但是把一项有乐趣的运动当做自己的健身项目，总归是让人开心的。还能坚持多久，我不知道，肯定不会是永远。就像这个#Mac技巧#的公共平台一样，我希望自己能走的更远一些，但总有一天会停下来吧...</p><p><br  /></p><p>今天推送的内容：</p><p>1、订阅者推荐：Go2Shell，我们通过Finder浏览文件的时候，常常需要在浏览的文件目录中打开终端进行操作，Go2Shell就能自动做到这一点。</p><p>从App Store下载这个免费软件（https://itunes.apple.com/us/app/go2shell/id445770608?mt=12）。下载完成后从应用程序文件夹把Go2Shell拖到Finder工具栏上，然后随便进入一个目录，点击Go2Shell图标，即可打开终端进入该目录。 </p><p>Go2Shell支持原生终端、iTerm2和xterm，比我之前用过的&gt;cd to ...app方便。在终端输入open -a Go2Shell --args config即可进入配置界面，选择你喜欢的终端。</p><p><br  /></p><p>2、Safari的阅读器。</p><p>Safari的阅读器是苹果的浏览器创新之一，在Safari之前，没有其他浏览器提供这样的功能。当Safari发现结构优良的网页文档时，就会在地址栏右侧显示“阅读器”，点击就可以进入简洁的阅读模式，通过shift+command+r也可以进入。</p><p>阅读器已经提供了良好的网页阅读体验，对于分页文档甚至能够自动翻页阅读，但是我们还可以更进一步。比如我就觉得阅读器太窄了，事业不够宽阔。有类似需求的童靴就可以通过safari的扩展插件CustomReader进行个性化定义。</p><p>从http://canisbos.com/customreader（须翻墙，如不能翻墙请反馈）下载CustomReader，双击可安装。安装之后到任何一个支持阅读器的网页，按下<span style="letter-spacing:1px;line-height:24px;">shift+command+r</span>激活阅读器，再用ctrl+r调出配置页面，就可以配置你自己独享的个性化阅读器了。</p><p><br  /></p><p>在洗车后的第二天，北京就下雪了，最近这一周空气质量不太好，雪后的空气让人向往。</p><p><br  /></p><p>祝大家周末愉快！</p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">每周五是我们固定的羽毛球时间，这个习惯我已经坚持了5年，虽说富贵在天，但是把一项有乐趣的运动当做自己的健身项目，总归是让人开心的。</script>
+	<script id="txt-title" type="txt/text">永远是多远</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000007&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000007&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcahX2iaae6VAibLJ1wDQbo2u5IV3jcDsK4V8Wweeq9uB8KQ/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000007&itemidx=1#wechat_redirect",
+						title  = htmlDecode("永远是多远"),
+            desc   = htmlDecode("每周五是我们固定的羽毛球时间，这个习惯我已经坚持了5年，虽说富贵在天，但是把一项有乐趣的运动当做自己的健身项目，总归是让人开心的。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

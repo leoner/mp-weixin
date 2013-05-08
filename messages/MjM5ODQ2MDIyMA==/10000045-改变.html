@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>改变</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">改变</h1>
+			<span id="post-date">2013-01-17</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcbgicFEibNxIbdh1sfqJEnlR6icvia9SRb1icUWO9yAeiaLV2icw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今晚去参加了CSDN组织的新年聚会，刚刚到家，开始写这篇的时候已经晚10点多了，为了坚持，还是写吧。</p><p><br  /></p><p>看过一部电影叫《城中大盗》，本·阿弗莱克自导自演，描述了一个被法制遗忘的老城中，很多青年继承的光荣传统就是：打劫银行。除了打劫他们不知道干什么。</p><p>阿弗莱克是其中一个悍匪，最终由于种种原因，他改变了自己的生活，走向了不同的人生轨迹。我很喜欢这部片子，尤其是阿弗莱克想改变生活时对他的女友说的一段话：“You know, people get up everyday, do the same thing, they tell themselves they change their life one day, they never do. I gonna change my life.”（你知道吗，人们每天起床，做着同样的事情，他们告诉自己，有一天要改变生活，但他们从来不付诸行动。我想改变自己的生活。）这段话我很喜欢，对我个人触动也很大。</p><p><br  /></p><p>想要改变自己的生活，从现在开始。这种改变是电影中的隐喻，不是让你立刻辞掉工作去创业，或者扔掉一切做个背包客，而是为了你5年或者10年后的生活去改变。</p><p><br  /></p><p>现在的生活很大程度决定了我们10年后的生活，仅此而已。<br  /></p><p><br  /></p><p>今天推送的Mac技巧：</p><p>1、我们经常会在桌面上堆满文件夹和文件，有时候会很方便，有时候会觉得很乱。其实我们可以通过以下命令来决定什么时候显示，什么时候隐藏：</p><p>chflags hidden ~/Desktop/* &nbsp; &nbsp; &nbsp; //隐藏桌面内容<br  /></p><p>chflags nohidden ~/Desktop/* &nbsp; //显示桌面内容<br  /></p><p>如果觉得输入麻烦，用TextExpander或Alfred设置成snippet即可。</p><p>2、OS X设置了一些快捷键用来快速打开显示器、MissionControl、键盘、声音等系统设置，具体是什么呢？你只要按住option，轮番把键盘最上方的那排键试一下就知道了，一般人我不告诉他。</p><p><br  /></p><p>昨天那条微信发了之后，再次有一批人发来贺电，告诉我他们也是来听扯淡的，至于Mac技巧，好吧，有时也看。这些人里有用Mac好多年的，也有没Mac的，这让我觉得，以后即使没技巧了，这个频道也能维持下去，扯扯见闻、谈谈感受，说说技术，似乎能一直扯下去......</p><p><br  /></p><p>大家如果有好的话题，也可以发我给，合适的话，我帮助署名推送。</p><p><br  /></p><p>加微信公共平台“Mac技巧”为好友，打开微信-通讯录-添加朋友，搜号码，然后输入“mac”，即可找到Mac技巧<br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">看过一部电影叫《城中大盗》，本·阿弗莱克自导自演，描述了一个被法制遗忘的老城中，很多青年继承的光荣传统就是：</script>
+	<script id="txt-title" type="txt/text">改变</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000045&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000045&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcbgicFEibNxIbdh1sfqJEnlR6icvia9SRb1icUWO9yAeiaLV2icw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000045&itemidx=1#wechat_redirect",
+						title  = htmlDecode("改变"),
+            desc   = htmlDecode("看过一部电影叫《城中大盗》，本·阿弗莱克自导自演，描述了一个被法制遗忘的老城中，很多青年继承的光荣传统就是："),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

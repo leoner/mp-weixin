@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>世上没什么事是容易的，即使有，也属于别人</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">世上没什么事是容易的，即使有，也属于别人</h1>
+			<span id="post-date">2013-03-24</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcYBbEysc8FmpPehosBn8bMSkmiaMGu7bn9mmvLwobpdNSw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">昨天的文章引发了很多创业读者的反馈，大家纷纷表示创业难，难于上青天。还有些刚刚进入社会的童靴，觉得做这事难，干那事苦，说怎么才能找到一个轻松的、感兴趣的、挣钱多的、工作时间弹性的、不加班的工作呢？</p><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">好吧，不得不告诉这些童靴一个残酷的事实，木有这样的工作，有的话我早去了。工作苦点累点不算什么，尤其是对年轻人，我知道很多创业公司的资金没问题，有用户有流量，但突然这公司就没了，为什么？业务不增长了，用户开始流失了，而且找不到策略应对这样的流失。这就像是一群热血青年走在平坦的康庄大道上，一切都那么美好，天蓝云白，红日青草，突然发现路的尽头是个无法逾越的鸿沟，这才是让人心碎的悲哀！</p><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">经过很多年我才知道，世上没什么事是容易的，即使有，也属于别人。</p><hr style="font-family:avenir, sans-serif;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:solid;border-top-color:#cccccc;height:1px;margin:1em 0px;padding:0px;color:#333333;font-size:18px;"  /><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">今天在Github上放了一个Alfred的workflow，叫做Play Mdeia，基于Python和mdfind构建，大概30几行代码，非常简单，给大家介绍下：<br  />Alfred是OS X最常用的一款增强型工具软件，充分利用了OS X的这些特性，帮助用户通过快捷键完成各种常用操作，属于Mac必备软件。 近期Alfred发布了V2，对原有特性进行了增强和完善，并推出了全新的workflow功能，提供了极为简洁的接口和各种Action，帮助用户定制自己所需功能。</p><h1 style="font-family:avenir, sans-serif;border:0px;font-size:1em;margin:12px 0px 10px;padding:0px;outline:0px;color:#333333;"><span style="font-size:20px;">Introduction</span></h1><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">Play Mdeia是为Alfred开发的一款workflow，主要功能就是快速定位Mac中的音视频文件，并通过合适的播放器播放。<br  />这个workflow的需求来自于我个人的使用习惯。我是重度Podcast和iTune U用户，在iTunes App Store上订阅了大量的公开课视频，包括WWDC上近年的视频，有时候我需要快速找到某个主题，打开查看，但是在iTunes里查找非常麻烦，要操作很多步骤才行。<br  />Alfred本身提供的播放iTunes的功能，也没法满足这个需求，比如你打开Alfred 2的iTunes Mini Player，想查找iTunes U里的内容是查不到的。而直接使用Alfred的find功能会查出一堆不相关的内容，比如你想查看一个和image处理的视频，结果可能找出了一堆图片、包含image的文件夹、pdf等等。</p><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">所以只好写一个，这是Play Mdeia的由来，如果您有类似需求，也可以用。</p><h1 style="font-family:avenir, sans-serif;border:0px;font-size:1em;margin:12px 0px 10px;padding:0px;outline:0px;color:#333333;"><span style="font-size:20px;">Development</span></h1><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">Alfred 2的workflow提供了多种实现方式，比如shell、php、perl、python、ruby和applescript，最近使用python比较多，所以使用Python 2.7结合OS X的mdfind命令实现了音视频文件检索的功能。</p><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">mdfind是spotlight的命令行实现，功能强大，可以定制各种复杂查询，快速检索，例如这里用到的命令：</p><pre><code>mdfind &quot;kMDItemFSName == &#39;*xcode*&#39;c &amp;&amp; ( kMDItemKind == &#39;MP3*&#39; || kMDItemKind == &#39;QuickTime*&#39; || kMDItemKind == &#39;Video Media&#39; ) &quot; </code></pre><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">这个命令的含义是检索包含xcode文件名的音视频文件，不区分大小写。</p><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">检索完成后通过python组织成Alfred 2能识别的xml格式即可。</p><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">然后就是使用Alfred 2提供的Actions完成脚本功能、打开文件、打开文件所在Finder等等，一个插件就完成了。</p><h1 style="font-family:avenir, sans-serif;border:0px;font-size:1em;margin:12px 0px 10px;padding:0px;outline:0px;color:#333333;"><span style="font-size:20px;">Requirements</span></h1><ul style="font-family:avenir, sans-serif;border:0px;font-size:18px;margin:0.9em 0px;padding:0px 0px 0px 1em;outline:0px;color:#333333;"><li style="border:0px;margin:0px 0px 0.3em 1.2em;padding:0px;outline:0px;"><p>Python2.7 （OS X 10.8默认的Python版本）</p></li><li style="border:0px;margin:0px 0px 0.3em 1.2em;padding:0px;outline:0px;"><p>Alfred 2（付费版）</p></li></ul><h1 style="font-family:avenir, sans-serif;border:0px;font-size:1em;margin:12px 0px 10px;padding:0px;outline:0px;color:#333333;"><span style="font-size:20px;">Installation</span></h1><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">下载Play Media.alfredworkflow，双击导入Alfred 2即可。</p><h1 style="font-family:avenir, sans-serif;border:0px;font-size:1em;margin:12px 0px 10px;padding:0px;outline:0px;color:#333333;"><span style="font-size:20px;">How to use</span></h1><ul style="font-family:avenir, sans-serif;border:0px;font-size:18px;margin:0.9em 0px;padding:0px 0px 0px 1em;outline:0px;color:#333333;"><li style="border:0px;margin:0px 0px 0.3em 1.2em;padding:0px;outline:0px;"><p>通过option+space呼出Alfred，输入saga image，就可以看到文件名包含image的音视频，如图所示：<br  /></p></li><li style="border:0px;margin:0px 0px 0.3em 1.2em;padding:0px;outline:0px;"><p>用上下方向键选中需要的文件，回车可以直接打开。对于mkv和wmv等iTunes不能播放的音视频文件，会直接使用系统默认程序打开，比如你安装的射手影音或MPlayerX，其他则采用iTunes打开。</p></li><li style="border:0px;margin:0px 0px 0.3em 1.2em;padding:0px;outline:0px;"><p>用上下方向键选中需要的文件，按住command然后再回车，可以在Finder中打开文件所在的文件夹。</p></li></ul><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">有需要的童靴点击{原文}可以到Github上下载这个workflow。</p><p style="font-family:avenir, sans-serif;border:0px;font-size:18px;padding:0px;outline:0px;color:#333333;margin-top:12px;margin-bottom:10px;">今天推送的时间是：20：42</p><p><br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">昨天的文章引发了很多创业读者的反馈，大家纷纷表示创业难，难于上青天。还有些刚刚进入社会的童靴，觉得做这事难，</script>
+	<script id="txt-title" type="txt/text">世上没什么事是容易的，即使有，也属于别人</script>
+	<script id="txt-sourceurl" type="txt/text">https://github.com/jackychi/PlayMedia#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000233&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000233&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcYBbEysc8FmpPehosBn8bMSkmiaMGu7bn9mmvLwobpdNSw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000233&itemidx=1#wechat_redirect",
+						title  = htmlDecode("世上没什么事是容易的，即使有，也属于别人"),
+            desc   = htmlDecode("昨天的文章引发了很多创业读者的反馈，大家纷纷表示创业难，难于上青天。还有些刚刚进入社会的童靴，觉得做这事难，"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

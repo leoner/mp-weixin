@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>Zen&nbsp;Coding&nbsp;禅境编程</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">Zen&nbsp;Coding&nbsp;禅境编程</h1>
+			<span id="post-date">2013-04-03</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLiczlLfOcfB3ic3JibMbM69NLBQzPpzSYcLz68feLkXOPnDlw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p><span style="font-size:18px;">今天的文章由支付宝前端基础技术组 @远尘 同学带来，关于 Zen Coding 这一经典的编码方式，相信使用 vim 的同学对它都十分熟悉，本文带大家了解 Zen Coding 这半年来的更新和变化。</span></p><p><br  /></p><p><span style="font-size:18px;">---</span></p><p><br  /></p><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">Zen &nbsp;Coding 是知名的前端编码辅助工具，可以极大简化HTML/CSS 代码输入，简单的说 Zen &nbsp;Coding 就是一个强大、智能的自动补全工具。出于品牌管理的考虑，Zen &nbsp;Coding 这个名字已成往事，2012 年末作者把它改名为 Emmet。其实我挺喜欢她原先大气上档次的名字，所以冒着标题党的危险，用 Zen &nbsp;coding 做标题，其实下面主要讲的是 Emmet 。</span></p><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">尽管 Emmet（蚂蚁）名字略显屌丝，不过相比更新之前的 Zen Coding，支持的编辑器更多了，包括：Sublime Text，TextMate， &nbsp;Eclipse，Coda，NotePad++，CodeMirror等，甚至一些在线代码服务也支持：JSFiddle、JS &nbsp;Bin 等。功能也增强了很多，提供了对 HTML5 和 CSS3 的支持，下面列举一些进行说明：</span></p><h2 style="margin:0px;padding:0px;color:#404040;line-height:36px;font-size:24px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#cccccc;"><span style="font-size:18px;">HTML缩写语法</span></h2><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">输入 </span><code><span style="font-size:18px;">!</span></code><span style="font-size:18px;"> 或者 </span><code><span style="font-size:18px;">html:5</span></code><span style="font-size:18px;"> 再按 Tab 可以输出 HTML 基本结构：</span></p><pre><span style="color:#953734;font-size:14px;">&lt;!doctype html&gt;<br  />&lt;html lang=&quot;en&quot;&gt;<br  /> &nbsp; &nbsp;&lt;head&gt;<br  /> &nbsp; &nbsp; &nbsp; &nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;<br  /> &nbsp; &nbsp; &nbsp; &nbsp;&lt;title&gt;Document&lt;/title&gt;<br  /> &nbsp; &nbsp;&lt;/head&gt;<br  /> &nbsp; &nbsp;&lt;body&gt;<br  /><br  /> &nbsp; &nbsp;&lt;/body&gt;<br  />&lt;/html&gt;</span></pre><p><br  /><span style="font-size:18px;"></span></p><p><span style="font-size:18px;">上面输出的是 HTML5 的文本类型申明，如果想要输出 HTML4 文本类型申明可以输入 </span><code><span style="font-size:18px;">html:4s</span></code><span style="font-size:18px;"> 或者 </span><code><span style="font-size:18px;">html:4t</span></code><span style="font-size:18px;"> 。</span></p><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">基本的标签缩写和展开形式如下：</span></p><pre><span style="color:#953734;font-size:14px;"><span style="font-size:14px;color:#548dd4;">a <span style="font-size:14px;color:#0c0c0c;">-&gt;</span></span> &lt;a href=&quot;&quot;&gt;&lt;/a&gt;<br  /><br  /><span style="font-size:14px;color:#548dd4;">div.class <span style="font-size:14px;color:#0c0c0c;">-&gt;</span></span> &lt;div class=&quot;class&quot;&gt;&lt;/div&gt;<br  /><br  /><span style="font-size:14px;color:#548dd4;">div#id <span style="font-size:14px;color:#0c0c0c;">-&gt;</span></span> &lt;div id=&quot;id&quot;&gt;&lt;/div&gt; <br  /><br  /><span style="font-size:14px;color:#548dd4;">div&gt;p <span style="font-size:14px;color:#0c0c0c;">-&gt;</span></span> &lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;<br  /><br  /><span style="font-size:14px;color:#548dd4;">div+p<span style="font-size:14px;color:#0c0c0c;"> -&gt;</span> </span>&lt;div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;</span><br  /></pre><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">Emmet 能够智能的补全标签名，如果输入省略了标签名，默认使用 div，除非上下文标签有关联的情况，比如在 </span><code><span style="font-size:18px;">ul</span></code><span style="font-size:18px;"> 中会自动采用 </span><code><span style="font-size:18px;">li</span></code><span style="font-size:18px;">：</span></p><p><code><span style="color:#953734;font-size:14px;"><span style="font-size:14px;color:#548dd4;">.class</span> <span style="font-size:14px;color:#0c0c0c;">-&gt;</span> &lt;div class=&quot;class&quot;&gt;&lt;/div&gt; &nbsp;</span></code></p><p><code><span style="color:#953734;font-size:14px;"><span style="font-size:14px;color:#548dd4;">ul&gt;.class</span><span style="font-size:14px;color:#0c0c0c;"> -&gt;</span> &lt;ul&gt;&lt;li class=&quot;class&quot;&gt;&lt;/li&gt;&lt;/ul&gt; </span></code></p><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">除了这些，Emmet 考虑到了一些复杂的标签结构，因此提供了非常丰富的缩写方式，比如：</span></p><p style="margin:15px 0px;padding:0px;"><strong><span style="font-size:18px;">标签属性</span></strong></p><pre><code><span style="font-size:14px;color:#953734;"><span style="font-size:14px;color:#548dd4;">a[href]</span> <span style="font-size:14px;color:#0c0c0c;">-&gt;</span> &lt;a href=&quot;&quot;&gt;&lt;/a&gt; </span></code></pre><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">一些标签属性还有进一步的缩写：</span></p><p><code><span style="font-size:14px;"><span style="font-size:14px;color:#953734;"><span style="font-size:14px;color:#548dd4;">a:link</span> <span style="font-size:14px;color:#0c0c0c;">-&gt;</span> &lt;a href=&quot;http://&quot;&gt;&lt;/a&gt; <br  /><br  /><span style="font-size:14px;color:#548dd4;">input:c</span> <span style="font-size:14px;color:#0c0c0c;">-&gt;</span> &lt;input type=&quot;checkbox&quot; name=&quot;&quot; id=&quot;&quot; /&gt; </span><br  /></span></code></p><p style="margin:15px 0px;padding:0px;"><strong><span style="font-size:18px;">组合</span></strong></p><pre><code><span style="font-size:14px;color:#953734;"><span style="font-size:14px;color:#548dd4;">(div&gt;p)+(div&gt;span)</span><br  /><br  /> <span style="font-size:14px;color:#0c0c0c;">-&gt;</span><br  /><br  />&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;<br  />&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt; <br  /><br  /></span></code></pre><p style="margin:15px 0px;padding:0px;"><strong><span style="font-size:18px;">标签计数</span></strong></p><pre><code><span style="font-size:14px;color:#953734;"><span style="font-size:14px;color:#548dd4;">ul&gt;li*2</span> <span style="font-size:14px;color:#0c0c0c;">-&gt; </span><br  /><br  />&lt;ul&gt;<br  /> &nbsp; &nbsp;&lt;li&gt;&lt;/li&gt;<br  /> &nbsp; &nbsp;&lt;li&gt;&lt;/li&gt;<br  />&lt;/ul&gt;<br  /><br  /><span style="font-size:14px;color:#548dd4;">ul&gt;li.item$*2</span> <span style="font-size:14px;color:#0c0c0c;">-&gt;</span><br  /><br  />&lt;ul&gt;<br  /> &nbsp; &nbsp;&lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;<br  /> &nbsp; &nbsp;&lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;<br  />&lt;/ul&gt;</span><br  /></code></pre><p style="margin:15px 0px;padding:0px;"><strong><span style="font-size:18px;">注释及条件注释</span></strong></p><pre><span style="font-size:14px;color:#953734;"><span style="font-size:14px;color:#548dd4;">c<span style="font-size:14px;color:#000000;"> -&gt; </span></span><br  /><br  />&lt;!-- &nbsp;--&gt;<br  /><br  /><span style="font-size:14px;color:#548dd4;">cc:ie6 <span style="font-size:14px;color:#000000;">-&gt;</span></span><br  /><br  />&lt;!--[if lte IE 6]&gt; &lt;![endif]--&gt;</span><br  /></pre><h2 style="margin:0px;padding:0px;color:#404040;line-height:36px;font-size:24px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#cccccc;"><span style="font-size:18px;">CSS缩写语法</span></h2><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">跟 HTML 的补全相比，CSS 的补全更强大。Emmet 会识别不完整的 CSS 属性，自动选择最匹配的结果来展开，比如 </span><code><span style="font-size:18px;">ov:h</span></code><span style="font-size:18px;"> 或者 </span><code><span style="font-size:18px;">overf:h</span></code><span style="font-size:18px;"> 都会展开成 </span><code><span style="font-size:18px;">overflow:hidden</span></code><span style="font-size:18px;"> 。</span></p><p style="margin:15px 0px;padding:0px;"><strong><span style="font-size:18px;">属性</span></strong></p><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">CSS 的缩写官方有说明，基本是属性名缩写，比如：</span></p><pre><span style="color:#953734;font-size:14px;"><span style="font-size:14px;color:#548dd4;">pos:s</span> <span style="font-size:14px;color:#000000;">-&gt;</span> position:static;<br  /><br  /><span style="font-size:14px;color:#548dd4;">mr</span> <span style="font-size:14px;color:#000000;">-&gt;</span> margin-right:;<br  /></span></pre><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">CSS 属性非常多，包括 CSS3 的属性都能通过类似的缩写来展开，记不住官方文档里的缩写也不要紧，前面说了她的智能匹配特性，凭感觉写就好，你的想法Emmet基本都能猜到的。</span></p><p style="margin:15px 0px;padding:0px;"><strong><span style="font-size:18px;">属性前缀</span></strong></p><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">CSS3 的很多属性都包含浏览器厂商前缀，写起来异常蛋疼，不过没关系，用 Emmet 写 CSS3 属性会自动添加前缀，比如输入 </span><code><span style="font-size:18px;">trs</span></code><span style="font-size:18px;"> 会展开为：</span></p><pre><span style="font-size:14px;color:#953734;">-webkit-transition: prop time;<br  />-moz-transition: prop time;<br  />-ms-transition: prop time;<br  />-o-transition: prop time;<br  />transition: prop time;</span><br  /></pre><p style="margin:15px 0px;padding:0px;"><strong><span style="font-size:18px;">属性值</span></strong><span style="font-size:18px;"> Emmet 支持自动扩展属性值单位，比如 </span><code><span style="font-size:18px;">w100</span></code><span style="font-size:18px;"> 展开以后是 </span><code><span style="font-size:18px;">width: 100px;</span></code><span style="font-size:18px;"> ，当然不仅仅支持像素，还支持 % 和 em：</span></p><pre><span style="font-size:14px;color:#953734;"><span style="font-size:14px;color:#548dd4;">w10</span> <span style="font-size:14px;color:#000000;">-&gt;</span> width:10px;<br  /><br  /><span style="font-size:14px;color:#548dd4;">w10p </span><span style="font-size:14px;color:#000000;">-&gt;</span> width:10%;<br  /><br  /><span style="font-size:14px;color:#548dd4;">w1.5e</span> <span style="font-size:14px;color:#000000;">-&gt;</span> width:1.5em</span><br  /></pre><p style="margin:15px 0px;padding:0px;"><span style="font-size:18px;">看到这里想必你已跃跃欲试，如本文开头所说，Emmet 的编辑器插件已经覆盖到 Mac 和 Windows 下的几款主流编辑器，不妨今天就装一个试试。</span></p><p><span style="font-size:18px;">（完）</span></p><p><br  /></p><p>文/远尘</p><p>最后，祝大家假期游玩快乐，按时平安顺利回来加班。<br  /></p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">今天的文章由支付宝前端基础技术组&nbsp;@远尘&nbsp;同学带来，关于&nbsp;Zen&nbsp;Coding&nbsp;这一经典的编码方式，相信使用&nbsp;vim&nbsp;的同学对它都十分熟悉，本文带大家了解&nbsp;Zen&nbsp;Coding&nbsp;这半年来的更新和变化。</script>
+	<script id="txt-title" type="txt/text">Zen&nbsp;Coding&nbsp;禅境编程</script>
+	<script id="txt-sourceurl" type="txt/text">http://www.noahlu.com/blog/website-design/zen-coding-%E7%A6%85%E5%A2%83%E7%BC%96%E7%A8%8B/#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000079&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000079&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLiczlLfOcfB3ic3JibMbM69NLBQzPpzSYcLz68feLkXOPnDlw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000079&itemidx=1#wechat_redirect",
+						title  = htmlDecode("Zen&nbsp;Coding&nbsp;禅境编程"),
+            desc   = htmlDecode("今天的文章由支付宝前端基础技术组&nbsp;@远尘&nbsp;同学带来，关于&nbsp;Zen&nbsp;Coding&nbsp;这一经典的编码方式，相信使用&nbsp;vim&nbsp;的同学对它都十分熟悉，本文带大家了解&nbsp;Zen&nbsp;Coding&nbsp;这半年来的更新和变化。"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

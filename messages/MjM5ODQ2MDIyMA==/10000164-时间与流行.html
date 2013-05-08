@@ -1,0 +1,162 @@
+<!DOCTYPE html><html> <head> <title>时间与流行</title><meta http-equiv=Content-Type content="text/html;charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no"> <link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/><style>  #nickname{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;max-width: 90%;  }  ol,ul{list-style-position:inside;  }</style></head> <body id="activity-detail">   <div class="page-bizinfo"><div class="header"><h1 id="activity-name">时间与流行</h1><span id="post-date">2013-03-03</span></div></div><div class="page-content"><div class="media" id="media"><img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcbGAWsOJrld5eiaJWJB3YZwaib9yQWIAX7wKfSfRc8mcVibw/0" onerror="this.parentNode.removeChild(this)"/></div><div class="text"><p>一种编程语言想要变得流行，最后一关就是要经受时间的考验——《黑客与画家》<br  /></p><p><br  /></p><p>时间有时候是很无情的，很多流行的东西，随着时间的流逝将变得面目全非。美貌与时尚如此，技术同样要经历岁月的洗礼。进入21世纪以来，技术热点不断变更，每次的技术更迭，就像流水冲刷河床一样，虚无的流走，沉淀下来的才是有价值的东西，我们要做的就是那些能沉淀下来的东西，这需要去判断和选择。</p><p><br  /></p><p>进入21世纪，从静态语言到动态语言、面向对象编程到函数式编程、从模型驱动设计到领域驱动设计、从SOA到云计算、从BI到大数据、从BS到移动互联，无论技术热点如何变化，站着挣钱的永远是那些踏踏实实做产品和技术的。2009年SOA火热的时候，每家软件公司和互联网公司都号称自己面向服务了，甚至IBM、BEA等公司为SOA确定了SCA和SDO规范，但3年以后，无人再提SOA，无非就是用开放的技术实现原来的EAI么...</p><p><br  /></p><p>有位在校大学生问，“我们下学期要学习数据库，以后想从事大数据方向，不知道从什么方面学习大数据”。我的建议是，不要被现在大数据的噱头忽悠了，等你两年后毕业出来，可能已经没人提大数据这回事了。如果真的对数据感兴趣，踏踏实实把关系数据库学好，有时间的话再学一门编程语言，掌握数据结构，再有余力学习一些数据挖掘和推荐算法等知识，这就行了，相信我，你没那么多时间！</p><p><br  /></p><p>所以，正在流行的东西并不一定值得投入，流行感冒倒是流行，您就别追了......</p><p><br  /></p><p><br  /></p><p>今日推送的Mac技巧：</p><p><br  /></p><p>#如何分别设置Mac的鼠标和触控板的滚动方向</p><p>很多人习惯鼠标使用相反的滚动方向，而触控板类似iPad那样的自然滚动，问如何设置，当时我的回答是不知道，因为目前OS X的系统设置里，鼠标和触控板的设置是统一的。今天发现了一个免费的软件Scroll Reverser，可以实现鼠标和触控板的分别设置。</p><p>下载地址：http://www.macupdate.com/app/mac/37872/scroll-reverser</p><p><br  /></p><p>启动后程序显示在顶部菜单栏，设置简单明了，有需要的同学感受一下吧。</p><p><br  /></p><p>昨晚我正在微群里讨论知识管理的问题，谈到了Evernote，诡异的是没过几分钟Evernote就提示要重置密码，当时心想被黑了，我的个人资料库啊......结果发现被黑的是Evernote不是我好失落...... 目前云端服务遍布全球，但是云端的安全仍然堪忧，企业云应用发展非常缓慢和这一点也不无干系。</p><p>感兴趣的可以关注Hacker News上的评论，http://news.ycombinator.com/item?id=5309866</p><p><br  /></p></div></div><script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script><script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script><script id="txt-desc" type="txt/text">一种编程语言想要变得流行，最后一关就是要经受时间的考验——《黑客与画家》时间有时候是很无情的，很多流行的东西</script><script id="txt-title" type="txt/text">时间与流行</script><script id="txt-sourceurl" type="txt/text"></script>    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+function viewSource(){
+var UA = navigator.userAgent.toLowerCase();
+var isIem = function(){
+if(/IEMobile/i.test(UA)) return true;
+else return false;
+}
+if(isIem()){
+jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+return ;
+}
+jQuery.ajax({
+url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          async:false,
+type:'POST',
+timeout :2000,
+data :{url:getStrFromTxtDom('sourceurl')},
+complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+}); 
+return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000164&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000164&itemidx=1#wechat_redirect", 1));
+(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcbGAWsOJrld5eiaJWJB3YZwaib9yQWIAX7wKfSfRc8mcVibw/0",
+      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000164&itemidx=1#wechat_redirect",
+title  = htmlDecode("时间与流行"),
+            desc   = htmlDecode("一种编程语言想要变得流行，最后一关就是要经受时间的考验——《黑客与画家》时间有时候是很无情的，很多流行的东西"),
+            fakeid = "",
+            desc = desc || link;
+
+
+
+// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+WeixinJSBridge.invoke('sendAppMessage',{
+  "appid"      : appId,
+  "img_url"    : imgUrl,
+  "img_width"  : "640",
+  "img_height" : "640",
+  "link"       : share_scene(link, 1),
+  "desc"       : desc,
+  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+});
+// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+WeixinJSBridge.invoke('shareTimeline',{
+  "img_url"    : imgUrl,
+  "img_width"  : "640",
+  "img_height" : "640",
+  "link"       : share_scene(link, 2),
+  "desc"       : desc,
+  "title"      : title
+  }, function(res) {
+                        });
+            
+});
+
+// 分享到微博;
+var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+WeixinJSBridge.invoke('shareWeibo',{
+  "content" : title + share_scene(link, 3),
+  "url"     : share_scene(link, 3) 
+  }, function(res) {report(link, fakeid, 3);
+  });
+});
+// 隐藏右上角的选项菜单入口;
+//WeixinJSBridge.call('hideOptionMenu');
+};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+})();
+</script></body></html>

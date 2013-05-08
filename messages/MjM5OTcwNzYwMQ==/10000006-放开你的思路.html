@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>放开你的思路</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">放开你的思路</h1>
+			<span id="post-date">2013-03-09</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxyoIibGHQKe3DbI5xkmmJ5PGjibrB0mkbcCPW6gpaLianUw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><h1 style="  ; ; ; ; ; ; ; ; ; ; ; ; ; "><span style="  ; ; ; ; ; ; ; ; ; ; ">前些天，陈皓在微博上抛出了异步请求的一个问题：</span></h1><blockquote style=" border-left-width:0.4em;border-left-style:solid;border-left-color:#dddddd;margin:15px 0px;padding:0px 15px;color:#777777; ; ; ; ; ; ; ; ; ; "><p style="margin-bottom:0.8em;">coolshell 网站提供了 10 进制转 16 进制的 JSONP 服务，即<br  />请求 http://coolshell.cn/t.php?n=10&amp;callback=xxx<br  /> 返回 xxx(&#39;0xa&#39;);</p><p style="margin-bottom:0.8em;">问题： <br  />使用 JavaScript 调用上面的 API 输出 1 - 30 的 16 进制表示<br  />（最好按顺序打印）</p></blockquote><h2 style="  ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ">我的直觉方案</h2><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">首先封装下 JSONP 的调用接口：</p><p><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxyoIibGHQKe3DbI5xkmmJ5PLFxic7fHHxXIc11TrB65JCQ/0" style="float:none;"  /></p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">然后，对于陈皓提出的问题，一个循环就能解决：</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; "><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxyoIibGHQKe3DbI5xkmmJ5PZ3qcT2Aib4mv43jhJ3rgoyQ/0" style="float:none;"  /></p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">好像很简单。<br  /></p><h2 style="  ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ">可是，大家在讨论什么</h2><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">这条微博很火，涌现出各种方案。比如</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; "><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxyoIibGHQKe3DbI5xkmmJ5PgTFwq7STCYcU4PibbjQV3JA/0" style="float:none;"  /><br  /></p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">详见陈皓的总结：http://coolshell.cn/t.html</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">性能加超时法另当别论，这是另一个话题。前面的递归法、数组法、Async 法等等，看得直让让我纳闷。这是在玩什么呢？</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">仔细探究了一番源码后，发现罪魁祸首是那两个命名怪异的方法：<code style=" font-size:12px;line-height:normal;font-family:menlo, monospace;background-color:#fee9cc ; ; ; ; ; ">xss_rpc_call</code> 和 <code style=" font-size:12px;line-height:normal;font-family:menlo, monospace;background-color:#fee9cc ; ; ; ; ; ">xss_rpc_call2</code>。看其中一个：</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; "><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxyoIibGHQKe3DbI5xkmmJ5PESbe6tGvPDTd3iaFf6LibFxg/0"  /><br  /></p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">为了排版，上面的代码稍有修改。其中 <code style="font-size:12px;line-height:normal;font-family:menlo, monospace;background-color:#FEE9CC;padding:1px 3px;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;border-bottom-left-radius:3px;">xss_ajax</code> 类似 <code style="font-size:12px;line-height:normal;font-family:menlo, monospace;background-color:#FEE9CC;padding:1px 3px;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;border-bottom-left-radius:3px;">getScript</code> 方法。</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">还记得前面的 decimal2Hex 方法不？来对比看下：</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; "><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxyoIibGHQKe3DbI5xkmmJ5PpMvicOZgloyVJ1F9AwlPr7A/0"  /><br  /></p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">除了面试官故弄玄虚的 <code style="font-size:12px;line-height:normal;font-family:menlo, monospace;background-color:#FEE9CC;padding:1px 3px;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;border-bottom-left-radius:3px;">setTimeout</code>，以上两个方法的核心区别是给 <code style="font-size:12px;line-height:normal;font-family:menlo, monospace;background-color:#FEE9CC;padding:1px 3px;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;border-bottom-left-radius:3px;">window</code> 添加的全局回调函数有差异。<code style="font-size:12px;line-height:normal;font-family:menlo, monospace;background-color:#FEE9CC;padding:1px 3px;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;border-bottom-left-radius:3px;">decimal2Hex</code> 里，直接 <code style="font-size:12px;line-height:normal;font-family:menlo, monospace;background-color:#FEE9CC;padding:1px 3px;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;border-bottom-left-radius:3px;">callback(n, result)</code>，这就避免了闭包陷进。</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">进一步看源码，可以看出大家对题目中的</p><blockquote style=" border-left-width:0.4em;border-left-style:solid;border-left-color:#dddddd;margin:15px 0px;padding:0px 15px;color:#777777; ; ; ; ; ; ; ; ; ; "><p style="margin-bottom:0.8em;">最好按顺序打印</p></blockquote><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">非常在乎。大部分方案是在解决这个问题。</p><h2 style="  ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ">顺序输出</h2><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">顺序输出，最好的解决方式是，打电话给陈皓，让 JSONP 接口更强大，比如：</p><blockquote style=" border-left-width:0.4em;border-left-style:solid;border-left-color:#dddddd;margin:15px 0px;padding:0px 15px;color:#777777; ; ; ; ; ; ; ; ; ; "><p style="margin-bottom:0.8em;">http://coolshell.cn/t.php?min=1&amp;max=30&amp;callback=xxx</p></blockquote><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">如果真要在浏览器端解决，可以简单修改 <code style=" font-size:12px;line-height:normal;font-family:menlo, monospace;background-color:#fee9cc ; ; ; ; ; ">print</code> 方法，到最后再统一显示：</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; "><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxyoIibGHQKe3DbI5xkmmJ5PvEU1f1wsv5eia8yPKPTURug/0"  /><br  /></p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">类似问题，在 npm 等命令行工具里，都是忽略掉，谁先到达谁先显示。还可以进一步优化成尽快显示，但对于陈皓这个面试题来说，真心没必要。如果在其他场景中有需要，很可能有其他更好的解决方案。</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">上面是引子，下面是我觉得有意思的。</p><h2 style="  ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ">放开你的思路</h2><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">在微博的所有解决方案中，好像没看到修改 <code style=" font-size:12px;line-height:normal;font-family:menlo, monospace;background-color:#fee9cc ; ; ; ; ; ">xss_rpc_call2</code> 的。陈皓只是限定不能修改服务端接口，并没限定 JS 代码。</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">无论是面试题，还是工作中遇到的真实问题，我们往往会局限在舒适区。比如对于页面性能优化，后端会从后端的角度去思考，前端会从前端的角度去分析。这种分工细化，可以将页面性能优化得不错，但却很难达到优秀，很难产生出类似 Facebook BigPipe 式的创新类优化。</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">陈皓说，你无权修改我的 API。</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">很多人又很听话了，开始乖乖地在这种假设的限制下去想解决方案。可是，为什么无权修改呢？在工作中，类似的话太多了：</p><blockquote style=" border-left-width:0.4em;border-left-style:solid;border-left-color:#dddddd;margin:15px 0px;padding:0px 15px;color:#777777; ; ; ; ; ; ; ; ; ; "><p style="margin-bottom:0.8em;">PD 说：这个需求一定要实现，不能去掉。 <br  />设计说：这个按钮必须这样，不能修改。 <br  />PM 说：周五必须上线，不能延期。 <br  />...</p></blockquote><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">可是 TMD，作为直接为代码负责的你，为什么不能说：</p><blockquote style=" border-left-width:0.4em;border-left-style:solid;border-left-color:#dddddd;margin:15px 0px;padding:0px 15px;color:#777777; ; ; ; ; ; ; ; ; ; "><p style="margin-bottom:0.8em;">你无权剥夺我合理拒绝的权力。</p></blockquote><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">这个话题点到为止。在《程序员的职业素养》里专门有章节阐述此话题，推荐大家购买阅读并实践之。如果你学不会说“不”，如果你不懂得拒绝，你就永远无法成为专业程序员。</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">有任何不同看法，欢迎讨论。</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">（完）</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; ">这是 WTP（Web 技术与产品交流）微信公众帐号的第一篇文章。WTP 在每个工作日（偶尔休息日）会定期给大家推送一篇原创文字。请搜索 WTP 关键字，或扫描二维码订阅：</p><p style=" line-height:25px; ; ; ; ; ; ; ; ; ; ; "><img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxyoIibGHQKe3DbI5xkmmJ5PTzd9GAjY4iccvDYBQR0jwaA/0"  /></p><p><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">无论是面试题，还是工作中遇到的真实问题，我们往往会局限在舒适区。比如对于页面性能优化，后端会从后端的角度去思考，前端会从前端的角度去分析。这种分工细化，可以将页面性能优化得不错，但却很难达到优秀……</script>
+	<script id="txt-title" type="txt/text">放开你的思路</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000006&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000006&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLicxyoIibGHQKe3DbI5xkmmJ5PGjibrB0mkbcCPW6gpaLianUw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000006&itemidx=1#wechat_redirect",
+						title  = htmlDecode("放开你的思路"),
+            desc   = htmlDecode("无论是面试题，还是工作中遇到的真实问题，我们往往会局限在舒适区。比如对于页面性能优化，后端会从后端的角度去思考，前端会从前端的角度去分析。这种分工细化，可以将页面性能优化得不错，但却很难达到优秀……"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

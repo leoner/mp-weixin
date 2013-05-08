@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>文字排印与标记语言</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">文字排印与标记语言</h1>
+			<span id="post-date">2013-03-27</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLiczIADtxq9NeftYV5k50D0xeyjEyAkibqUFsqwFdYpXozCA/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>今天的文章来自支付宝交互技术部前端工程师南伯。南伯是个天才般的少年，写代码对他来说是种享受。南伯兴趣广泛，从旅游、绘画、钢琴，到文学、排版、摄影等等，兴趣盎然，且都略有研究。下面是文字排印与 Markdown 标记语言的一篇文章，欢迎阅读。<br  /></p><p><br  /></p><p>---</p><p><br  /></p><p><strong><span style="font-size:24px;">文字排印与标记语言</span></strong></p><p><br  /></p><p>文 / 南伯</p><p><br  /></p><p><br  /></p><p>许多年前，我也曾想过将来要做一个文字工作者，结果现在从事了互联网行业。这次单从互联网从业人员的角度谈文字排印。</p><p><br  /></p><p>提到「标记语言」，不免会让不知情者以为高深，其实很简单，正如某言「无技术含量」。然而真正要做好，亦非易事。糟糕的排版随处可见，例如在一段文字中突兀出现很大几个字，又或者一段黑色文字中夹杂几句红的绿的黄的句子，更可憎的是有些文字还一闪一闪亮晶晶，这样的例子在互联网上比比皆是，不忍卒读。通俗来讲，称为暴发户气质。</p><p><br  /></p><p>好的排版（指单篇文章）是为了文章的易读性，让人看着愉悦看着舒服，实际经验告诉我们，略微泛黄的奶油色底加黑色文字是让人最愉悦的搭配。当然，除了颜色，还有字体、大小、字间距、行间距等诸多因素影响着排版的效果。</p><p><br  /></p><p>做为写作者，我们应该关注的真的是文章的显示效果么？当我们说「把这段文字加粗」，我们的本意是想强调这段文字，加粗只是表象，强调并不意味着一定要加粗。相反，我们所需要的是理解文字段落的本质，忽略其表现效果，一个好的开头就是改变我们的思维方式，回归本原， <strong>「这段文字需要着重强调一下」</strong>。</p><p><br  /></p><p>正如多年前的互联网，当时（也许现在还存在）还没有样式分离的观念，前端开发者迷失在样式的表象上，忽视了事物的本质。于是，各种 <span style="background-color:#eeece1;">&lt;font&gt;</span> 之类的 HTML 标记大行其道。但是现在的情况好很多了，比如我们会用 <span style="background-color:#eeece1;">&lt;strong&gt;</span> 而不是 <span style="background-color:#eeece1;">&lt;b&gt;</span> 来「加粗」文字，这样的改变体现的正是观念的转变，<span style="background-color:#eeece1;">&lt;b&gt; </span>意味着 bold，是表象上的加粗，<span style="background-color:#eeece1;">&lt;strong&gt;</span> 体现的是著重强调，是本质上的加粗。这是一小步改变，也是一大步改变。</p><p><br  /></p><p>也许你并不了解什么是 HTML，什么是 <span style="background-color:#eeece1;">&lt;strong&gt;</span>，什么是 <span style="background-color:#eeece1;">&lt;b&gt;</span>，这没有关系，你正在看的这个网页其实就是一个HTML。但是你不需要知道这些。因为有更简单，更多适合写作者的标记语言—— Markdown。</p><p><br  /></p><p>已经有不少人谈过 Markdown，例如：</p><p><br  /></p><p>- 为什么作家应该用 Markdown 保存自己的文稿</p><p>- Markdown 写作浅谈</p><p><br  /></p><p>普遍的误解是，这些标记语言是程式师们的东西。但是正如其作者 John Gruber 所说：</p><p><br  /></p><p><span style="color:#7f7f7f;">Markdown is a text-to-HTML conversion tool for web writers.</span></p><p><br  /></p><p>它从一开始就不是所谓 Geek 的东西，恰恰相反，它是为你这样的文字工作者所设计的。它很简单，它在 IT 界所以越发流行也正是因为其简单易学，甚至有人称其学习成本为零。</p><p><br  /></p><p>我们只需要简单介绍一下基本的文法，聪明者如你应该不需要五分钟就可学会。</p><p><br  /></p><p><strong>一级标题（大标题）</strong></p><p> <span style="color:#7f7f7f;">```</span></p><p><span style="color:#7f7f7f;"> # 这是一级标题</span></p><p><span style="color:#7f7f7f;"> ```</span></p><p><br  /></p><p><strong>二级标题（副标题）</strong></p><p><span style="color:#7f7f7f;"> ```</span></p><p><span style="color:#7f7f7f;"> ## 这个是副标题</span></p><p><span style="color:#7f7f7f;"> ```</span></p><p><br  /></p><p><strong>那么三级标题，四级标题也就很容易猜出来了</strong></p><p><span style="color:#7f7f7f;"> ```</span></p><p><span style="color:#7f7f7f;"> ### 三级标题</span></p><p><span style="color:#7f7f7f;"> #### 四级标题</span></p><p><span style="color:#7f7f7f;"> ```</span></p><p><br  /></p><p><strong>图片与链接</strong></p><p><span style="color:#7f7f7f;"> ```</span></p><p><span style="color:#7f7f7f;"> ![image description](image URL)</span></p><p><span style="color:#7f7f7f;"> [link text](link URL)</span></p><p><span style="color:#7f7f7f;"> ```</span></p><p><br  /></p><p><strong>着重强调</strong></p><p> <span style="color:#7f7f7f;">```</span></p><p><span style="color:#7f7f7f;"> *emphasize* **strong**</span></p><p><span style="color:#7f7f7f;"> _emphasize_ __strong__</span></p><p><span style="color:#7f7f7f;"> ```</span></p><p><br  /></p><p><strong>引用的内容</strong></p><p><span style="color:#7f7f7f;"> ```</span></p><p><span style="color:#7f7f7f;"> &gt; 生命是一袭华美的袍，爬满了虱子。</span></p><p><span style="color:#7f7f7f;"> ```</span></p><p><br  /></p><p><strong>有序列表</strong></p><p> <span style="color:#7f7f7f;">```</span></p><p><span style="color:#7f7f7f;"> 1. 有序列表第一条</span></p><p><span style="color:#7f7f7f;"> 2. 有序列表第二条</span></p><p><span style="color:#7f7f7f;"> ```</span></p><p><br  /></p><p><strong>无序列表</strong></p><p><span style="color:#7f7f7f;"> ```</span></p><p><span style="color:#7f7f7f;"> * 无序列表</span></p><p><span style="color:#7f7f7f;"> * 无序列表</span></p><p><span style="color:#7f7f7f;"> ```</span></p><p><br  /></p><p>现在你已经了解了所有你需要知道的了，这难道能叫做难学么？忘记介绍段落了，你只需要保证段落之间有空行就可以了。</p><p><br  /></p><p>也许你还需要一个编辑器来辅助你，例如我现在正在用 Mou 来写作这篇文章。对，你所看到的这篇文章正是用 Markdown 写作的。也许你对自己的写作不放心，需要实时预览，借助这些工具 http://www.zhihu.com/question/19637157 &nbsp;也许能让你更放心。其实真的不需要，例如当我写作这篇文章时，我并不需要即时预览，我知道我写出来的效果一定就会是我想要的。</p><p><br  /></p><p>另外我正在编写一个网页版的 Markdown 编辑器 http://lab.lepture.com/editor/ &nbsp;，虽然还没有完成，不过已经足以帮助你熟悉一下 Markdown 的文法了。我也为你准备了一份详细的英文版文法 http://lab.lepture.com/editor/markdown &nbsp;说明。</p><p><br  /></p><p>也许你还会觉得这些文法不够用，你还是想把你的文章弄得花花绿绿的，我想这篇文章不是为你而写的。我也深深为你的审美捉急呀。</p><p><br  /></p><p>（完）</p><p><br  /></p><p>原文地址： http://lepture.com/work/typography-and-markdown</p><p>南伯新浪微博：@lepture</p><p><br  /></p><p>---</p><p><br  /></p><p><strong><span style="font-size:20px;">玉伯有话说</span></strong></p><p><br  /></p><p>1. 南伯这篇文章介绍了 Markdown 基础用法，非常推荐大家尝试，特别是程序员。如果经常用 GitHub，在 Issue 等页面，可以摁 m 键，快速查看 Markdown Cheat Sheet，用上几次后，就会非常熟悉，效率倍增。</p><p><br  /></p><p>2. Markdown 对我来说，也是用上后就很难离开的东西。自从有了它，就很少开 Word 了。在此推荐 Markdown 编辑器 Byword，安静、自然、舒适，码起字来，如坐幽谷，泉水叮咚。</p><p><br  /></p><p>3. 上个月去上海参加了一席。一席关注人文、科技、白日梦，有点像国外的 TED 论坛。一席上个月的视频已放出，特别推荐蔡朝阳老师：以自由看待教育 http://v.youku.com/v_show/id_XNTMxNDc4MjA0.html &nbsp;无论你现在有没有小孩，这都是值得一听的讲演。</p><p><br  /></p><p>4. 霜波说心理学系列，微信上收到了大量温馨的反馈，也有少量说这是心灵鸡汤没意思的回复。无论在微博还是微信上，某篇文字是否心灵鸡汤，我觉得主要取决你阅读时的心态。你是否真的沉浸去读了、去思考了。把自己掏空，抛去一些自以为是的预设，你会看到更多美好。</p><p><br  /></p><p><strong>题图</strong>：好的排版，简单、舒适、自然。</p><p><br  /></p><p>---</p><p><br  /></p><p>感谢订阅 WTP（Web 技术与产品交流）微信公众帐号。WTP 关注技术、产品、自由梦，在每个工作日（偶尔休息日）会定期推送一篇原创文字。</p></div>
+						<p class="page-url"><a href="javascript:void(0)" onclick="viewSource()" class="page-url-link">阅读原文</a></p>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">好的排版，让人看着愉悦看着舒服。实际经验告诉我们，略微泛黄的奶油色底加黑色文字是让人最愉悦的搭配。当然，除了颜色，还有字体、大小、字间距、行间距等诸多因素影响着排版的效果……</script>
+	<script id="txt-title" type="txt/text">文字排印与标记语言</script>
+	<script id="txt-sourceurl" type="txt/text">https://github.com/lifesinger/lifesinger.github.com/issues/134#wechat_redirect</script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000063&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000063&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLiczIADtxq9NeftYV5k50D0xeyjEyAkibqUFsqwFdYpXozCA/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000063&itemidx=1#wechat_redirect",
+						title  = htmlDecode("文字排印与标记语言"),
+            desc   = htmlDecode("好的排版，让人看着愉悦看着舒服。实际经验告诉我们，略微泛黄的奶油色底加黑色文字是让人最愉悦的搭配。当然，除了颜色，还有字体、大小、字间距、行间距等诸多因素影响着排版的效果……"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

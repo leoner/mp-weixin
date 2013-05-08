@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>简单还是一致</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">简单还是一致</h1>
+			<span id="post-date">2013-04-02</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLiczk8HTduHleOoeV64UuWo435nH3s2jx38GTbsyEBgiclZw/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p><span style="font-size:18px;">今天要讨论的问题挺有意思，来自 SeaJS 中的一个实现细节。描述如下：</span></p><p><br  /><span style="font-size:18px;"></span></p><p><span style="color:#953734;font-size:16px;" class="nx">seajs</span><span style="color:#953734;font-size:16px;" class="p">.</span><span style="color:#953734;font-size:16px;" class="nx">use</span><span style="color:#953734;font-size:16px;" class="p">(</span><span style="color:#953734;font-size:16px;" class="s1">&#39;a&#39;</span><span style="color:#953734;font-size:16px;" class="p">,</span><span style="color:#953734;font-size:16px;" class="nx">callback</span><span style="color:#953734;font-size:16px;" class="p">)</span></p><p><br  /><span style="color:#953734;font-size:16px;" class="p"></span></p><p><span style="font-size:18px;">假设模块 a 对应文件 a.js，上面的代码，会先下载 a.js，下载并执行完成后，再调用 callback 方法。</span></p><p><br  /><span style="font-size:18px;"></span></p><p><span style="font-size:18px;">问题来了：</span></p><p><br  /><span style="font-size:18px;"></span></p><div class="highlight"><p><img data-pinit="registered" src="http://mmsns.qpic.cn/mmsns/VY9yD3qicLiczk8HTduHleOoeV64UuWo43ibUvBYz99gTcbVficpu4KW9A/0"  /></p><p><br  /></p></div><p><span style="font-size:18px;">问题可以简述为： </span><strong><span style="font-size:18px;">对于已经就绪的模块，在 use 时，callback 是同步执行还是异步执行。</span></strong></p><p><br  /></p><p><strong><span style="font-size:24px;text-decoration:none;">现状</span></strong><br  /></p><p><br  /><strong><span style="font-size:18px;"></span></strong></p><p><span style="font-size:18px;">不同 loader 的处理策略不同：</span></p><p><br  /><span style="font-size:18px;"></span></p><ul style="list-style-type:disc;"><li><p><span style="font-size:18px;">在 SeaJS 2.0 中，输出 1 2</span></p></li><li><p><span style="font-size:18px;">在 RequireJS 2.1.5 中，输出 2 1</span></p></li><li><p><span style="font-size:18px;">在 YUI 3.9.1 中，输出 1 2</span></p></li><li><p><span style="font-size:18px;">在 KISSY 1.3 中，输出 2 1</span></p><p><br  /></p></li></ul><p><span style="font-size:18px;">测试代码：https://github.com/lifesinger/lifesinger.github.com/tree/master/lab/2013/callback-order</span></p><p><br  /></p><p><strong><span style="font-size:24px;">一致认可的观点</span></strong><br  /></p><p><br  /></p><p><span style="font-size:18px;">与同事讨论后，一致认可的是：</span></p><p><br  /><span style="font-size:18px;"></span></p><p><strong><span style="font-size:18px;">无论同步还是异步执行 callback，都不应该影响最终结果。</span></strong><span style="font-size:18px;">即：</span></p><p><br  /><span style="font-size:18px;"></span></p><div class="highlight"><p><span style="color:#953734;" class="nx">seajs</span><span style="color:#953734;" class="p">.</span><span style="color:#953734;" class="nx">use</span><span style="color:#953734;" class="p">(</span><span style="color:#953734;" class="s1">&#39;a&#39;</span><span style="color:#953734;" class="p">,</span><span style="color:#953734;" class="nx">callback</span><span style="color:#953734;" class="p">)</span><span class="c1"></span></p><p><span style="color:#953734;" class="c1">// 这里的代码，不应该依赖上面 callback 的执行结果</span></p><p><br  /><span style="color:#953734;" class="c1"></span></p></div><p><span style="font-size:18px;">在 KISSY 1.3 之前，当模块已就绪时，callback 是同步执行的。1.3 时，调整成了异步执行，考虑点为：</span></p><p><br  /><span style="font-size:18px;">1）</span><strong><span style="font-size:18px;"> 保持一致性</span></strong><span style="font-size:18px;">。无论模块是否就绪，始终让 callback 保持异步执行。</span></p><p><br  /><span style="font-size:18px;"></span></p><p><span style="font-size:18px;">2） 在 KISSY 1.2 的实际使用中，会有人让 use 后面的代码依赖 callback 的执行，当把前面的 script 引入去掉时，就出错了。为了避免这种误用，改成了异步，强制使得 use 后面的代码不能依赖 callback 的执行。</span></p><p><br  /></p><p><span style="font-size:18px;">具体实现原理，是在调用 callback 时，始终放在 setTimeout 中执行。</span></p><p><br  /></p><p><strong><span style="font-size:24px;">同步执行的观点</span></strong><br  /><span style="font-size:18px;"></span></p><p><br  /></p><p><span style="font-size:18px;">在模块已就绪时，SeaJS 和 YUI3 中 callback 是同步执行的。考虑点是：</span></p><p><br  /><span style="font-size:18px;"></span></p><p>1） <strong><span style="font-size:18px;">保持简单性</span></strong><span style="font-size:18px;">。因为代码本就不应该依赖 callback 的执行时机，因此加一个 setTimeout 显得多余，增加了复杂性。</span></p><p><br  /><span style="font-size:18px;"></span></p><p><span style="font-size:18px;">2） 同步性还是有用的，只要用户了解这一规则。比如可以提前引入打包好的关键模块，这样在 use 时，可以确保立刻执行，有利于页面 TTI （Time to Interact）时间的优化。setTimeout 的话，执行时机变得不可控。</span></p><p><br  /><strong><span style="font-size:24px;"></span></strong></p><p><strong><span style="font-size:24px;">两种观点的背后</span></strong></p><p><br  /><span style="font-size:18px;"></span></p><p><span style="font-size:18px;">这个问题，让我想起了一篇经典老文：简单之美——系统设计黄金法则。</span></p><p><br  /><span style="font-size:18px;"></span></p><p><span style="font-size:18px;">文章中提及两种经典的设计哲学：</span></p><p><br  /><span style="font-size:18px;"></span></p><p><strong><code><span style="font-size:18px;">1）MIT Approach </span></code></strong></p><p><br  /><strong><code><span style="font-size:20px;"></span></code></strong></p><ul style="list-style-type:disc;"><li><p><code><span style="font-size:18px;">简单性：设计必须简单，这既是对实现的要求，也是对接口的要求。接口的简单要比实现的简单更加重要。</span></code></p></li><li><p><code><span style="font-size:18px;">正确性：设计在任何值得注意的方面都要保证正确。不正确是绝对不允许的。</span></code></p></li><li><p><code><span style="font-size:18px;">一致性：设计必须保持一致兼容。设计可以允许轻微少量的不简单和不完整，来避免不一致。一致性和正确性同等重要。</span></code></p></li><li><p><code><span style="font-size:18px;">完整性：设计必须覆盖到实际应用的各种重要场景。所有可预料到的情况都必须覆盖到。简单性不能过度的损害完整性。 </span></code></p></li></ul><p><br  /></p><p><span style="font-size:18px;">来看另一个世界：</span></p><p><br  /><span style="font-size:18px;"></span></p><p><strong><code><span style="font-size:18px;">2）New Jersey Approach </span></code></strong></p><p><strong><code><span style="font-size:20px;"><br  /></span></code></strong></p><ul style="list-style-type:disc;"><li><p><code><span style="font-size:18px;">简单性：设计必须简单，这既是对实现的要求，也是对接口的要求。实现的简单要比接口的简单更加重要。简单是设计中需要第一重视的因素。</span></code></p></li><li><p><code><span style="font-size:18px;">正确性：设计在任何值得注意的方面都要求正确。为了简单性，正确性可以做轻微的让步。<br  /></span></code></p></li><li><p><code><span style="font-size:18px;">一致性：设计不能过度不兼容一致。为了简单，一致性可以在某些方面做些牺牲，但与其允许设计中的这些处理不常见情况的部分去增加实现的复杂性和不一致性，不如丢掉它们。<br  /></span></code></p></li><li><p><code><span style="font-size:18px;">完整性：设计必须覆盖到实际应用的各种重要场景。所有可预料到的情况都应该覆盖到。为了保证其它几种特征的品质，完整性可以作出牺牲。事实上，一旦简单性受到危害，完整性必须做出牺牲。一致性可以为实现的完整性作出牺牲；最不重要的是接口上的一致性。</span></code></p><p><br  /></p></li></ul><p><span style="font-size:18px;">回到我们的问题，可以看出 RequireJS、KISSY 的背后是 MIT 理念，强调一致性，可以牺牲简单性。SeaJS、YUI 的背后则是 New Jersey 理念，追求简单性，可以放弃部分一致性。</span></p><p><br  /><span style="font-size:18px;"></span></p><p><strong><span style="font-size:24px;">最后</span></strong></p><p><br  /><span style="font-size:18px;"></span></p><p><span style="font-size:18px;">你的观点是什么？</span></p><p><br  /></p><p><span style="font-size:18px;">（完）</span></p><p><br  /></p><p><span style="font-size:16px;">文 / 玉伯</span></p><p><span style="font-size:16px;">题图：最爱的莲花，即简单，又一致。</span></p><p><span style="font-size:16px;">PS：爱丽丝那篇文章还没写好，太多思绪。</span></p><p><br  /></p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">今天要讨论的问题挺有意思，来自&nbsp;SeaJS&nbsp;中的一个实现细节。描述如下：seajs.use(&#39;a&#39;,call</script>
+	<script id="txt-title" type="txt/text">简单还是一致</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000075&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000075&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/VY9yD3qicLiczk8HTduHleOoeV64UuWo435nH3s2jx38GTbsyEBgiclZw/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5OTcwNzYwMQ==&appmsgid=10000075&itemidx=1#wechat_redirect",
+						title  = htmlDecode("简单还是一致"),
+            desc   = htmlDecode("今天要讨论的问题挺有意思，来自&nbsp;SeaJS&nbsp;中的一个实现细节。描述如下：seajs.use(&#39;a&#39;,call"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>

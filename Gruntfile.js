@@ -15,7 +15,8 @@ module.exports = function(grunt) {
     jshint: {
       all: [
           'Gruntfile.js',
-          'lib/**/*.js'
+          'lib/**/*.js',
+          'messages/*.json'
       ],
       options: {
           'jshintrc': '.jshintrc'

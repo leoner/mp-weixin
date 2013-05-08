@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+	<title>永远没时间</title>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+ 		<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/client-page1530cb.css"/>
+	<style>
+	  #nickname{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 90%;		
+	  }
+	  ol,ul{
+		list-style-position:inside;
+	  }
+	</style>
+	</head> 
+	<body id="activity-detail">
+		   	
+			<div class="page-bizinfo">
+			<div class="header">
+			<h1 id="activity-name">永远没时间</h1>
+			<span id="post-date">2013-02-08</span>
+			</div>
+		</div>
+
+		<div class="page-content">
+						<div class="media" id="media">
+			<img src="http://mmsns.qpic.cn/mmsns/JuJRyjO2zcbMnp7x1GfLNIKKsIHcS7GL0Ge8cfQjsoBHPDhm0kJkiag/0" onerror="this.parentNode.removeChild(this)"	/>
+			</div>
+						<div class="text"><p>之前说过“如何提升自己，一方面靠工作积累，一方面靠另外8小时。一天24小时，8小时工作8小时睡觉，剩下的8小时才是能够决定你未来的东西。”但还是很多人反馈，没时间。要吃饭、要交友、要锻炼、要购物、要娱乐，没时间啊就是没时间。今天就拿出点时间来再谈谈这事。</p><p><br  /></p><p>我曾经有一个阶段处于永远没时间学习的状态。忙得焦头烂额，没时间；有点空闲时间了，上上网聊聊天，很快没时间；终于有了整段的时间，好吧，时间如此充裕以至于完全可以先看个美剧，听听音乐......等终于打开书本开始阅读时才发现：没时间了！<br  /></p><p><br  /></p><p>事情就是这样，无论是工作、娱乐、学习，时间就那么多，每个人都一样，它并不是随取随用，而是不管不顾无声无息的流走，和冰冷的河水并无二致。所以你没法管理时间，没法埋怨时间，只能合理利用它。如何合理利用，那就仁者见仁了，我的建议：<br  /></p><p>1、合理使用碎片时间，现在电子阅读和互联网如此便利，Anytime、AnyWhere、AnyDevice，都可以吸取知识。<br  /></p><p>2、合理使用整块时间，这个时间段就需要你专注的执行自己的计划。<br  /></p><p><br  /></p><p>关于时间这件事，有两本书我觉得说得非常清楚，一本是《把时间当做朋友》一本是《暗时间》，有心人阅读后必有收获。<br  /></p><p><br  /></p><p>今天再为大家推荐一张最近在听的音乐专辑《这小小的葡萄我从来没吃过》，这是左小祖咒先生2013年的新专辑。左小诅咒相对小众，如果你没听说过这个人，那就用Googel百度一下。用一句话概括，左小诅咒是个富有传奇色彩的摇滚师、当代艺术家，同时又是诗人、小说家和电影配乐人。他的作品既充满愤怒，又有对贫苦大众的悲天悯人，游走在社会和审查制度的边缘，我个人非常喜欢，但左小的风格并不适合所有人，我也只能欣赏他一半的作品。<br  /></p><p><br  /></p><p>在这个新专辑中，左小诅咒融入了很多儿童的元素，但依然充满了对当代社会的思考，我比较喜欢其中的奶奶个腿、他们的儿歌、大西瓜、黑猫白猫。<br  /></p><p><br  /></p><p>今天就不再写Mac技巧了，春节后继续。祝所有已经回家的和还在路上的童靴，健康平安！</p></div>
+					</div>
+		<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/jquery-1.8.3.min1530d1.js"></script>
+	<script src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/wxm-core1530d0.js"></script>
+	<script id="txt-desc" type="txt/text">之前说过“如何提升自己，一方面靠工作积累，一方面靠另外8小时。一天24小时，8小时工作8小时睡觉，剩下的8小</script>
+	<script id="txt-title" type="txt/text">永远没时间</script>
+	<script id="txt-sourceurl" type="txt/text"></script>
+    <script>
+      (function(){
+        /**
+         * @description get a Max length for text, cut the long words
+         * @author zemzheng
+         **/
+        var 
+          _dom   = jQuery('.text'),
+          _html0 = _dom.html();
+          _em    = jQuery('<p></p>').html('a').css({display:'inline'}),
+          _init  = function(){
+            _em.appendTo(_dom);
+            var 
+              _html = _html0,
+              _max  = Math.floor( _dom.width() / _em.width() ),
+              _reg  = new RegExp('[a-z1-9]{' + _max + ',}', 'ig');
+            _em.remove();
+
+            _html = _html.replace(/>[^<]+</g,function(txt){
+              return txt.replace(_reg, function(str){
+                var _str = str, result = []
+                while(_str.length > _max){
+                  result.push(
+                    _str.substr(0, _max)
+                  );
+                  _str = _str.substr(_max);
+                }
+                result.push(_str);
+                return result.join('<br/>');
+              });
+            });
+
+            _dom.html(_html);
+            //console.log(_dom.html());
+          };
+        jQuery(window).on('resize', _init).trigger('resize');
+        
+      })();
+
+      function getStrFromTxtDom(selector){
+        return jQuery('#txt-' + selector)
+                  .html()                  
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>');
+      }
+    
+
+
+		function viewSource(){
+				var UA = navigator.userAgent.toLowerCase();
+				var isIem = function(){
+					if(/IEMobile/i.test(UA)) return true;
+					else return false;
+				}
+				if(isIem()){
+					jQuery(".page-url-link:first").attr("href", getStrFromTxtDom('sourceurl') );
+					return ;
+				}
+				jQuery.ajax({
+						url: '/mp/appmsg/show-ajax' + location.search, //location.href
+          				async:false,
+						type:'POST',
+						timeout :2000,
+						data :{url:getStrFromTxtDom('sourceurl')},
+						complete:function(){location.href = getStrFromTxtDom('sourceurl');}
+				});	 
+				return false;
+    };
+          function report(link, fakeid, action_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return ;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['action_type'] = action_type;
+            query_obj['uin'] = fakeid;
+            var report_url = '/mp/appmsg/show?' + jQuery.param( query_obj );
+            jQuery.ajax({
+              url: report_url,
+              type: 'POST',
+              timeout: 2000
+            })
+          };
+
+          function share_scene(link, scene_type){
+            var parse_link = parseUrl(link);
+            if(parse_link == null)
+            {
+              return link;
+            }
+            var query_obj = parseParams( parse_link['query_str'] );
+            query_obj['scene'] = scene_type;
+            var share_url = 'http://' + parse_link['domain'] + parse_link['path'] + '?' + jQuery.param( query_obj ) + (parse_link['sharp'] ? parse_link['sharp'] : '');
+            return share_url;
+          };
+          
+      //report("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000104&itemidx=1#wechat_redirect",1);
+      //console.log('share url %s', share_scene("http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000104&itemidx=1#wechat_redirect", 1));
+			(function(){
+        var onBridgeReady =  function () {
+          var 
+            appId  = '',
+			      imgUrl = "http://mmsns.qpic.cn/mmsns/JuJRyjO2zcbMnp7x1GfLNIKKsIHcS7GL0Ge8cfQjsoBHPDhm0kJkiag/0",
+			      link   = "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5ODQ2MDIyMA==&appmsgid=10000104&itemidx=1#wechat_redirect",
+						title  = htmlDecode("永远没时间"),
+            desc   = htmlDecode("之前说过“如何提升自己，一方面靠工作积累，一方面靠另外8小时。一天24小时，8小时工作8小时睡觉，剩下的8小"),
+            fakeid = "",
+            desc = desc || link;	
+
+
+
+					// 发送给好友; 
+          WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            
+						WeixinJSBridge.invoke('sendAppMessage',{
+											  "appid"      : appId,
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 1),
+											  "desc"       : desc,
+											  "title"      : title
+                        }, function(res) {report(link, fakeid, 1);
+                        });
+					});
+					// 分享到朋友圈;
+          WeixinJSBridge.on('menu:share:timeline', function(argv){
+            report(link, fakeid, 2);
+						WeixinJSBridge.invoke('shareTimeline',{
+											  "img_url"    : imgUrl,
+											  "img_width"  : "640",
+											  "img_height" : "640",
+											  "link"       : share_scene(link, 2),
+											  "desc"       : desc,
+											  "title"      : title
+											  }, function(res) {
+                        });
+            
+					});
+
+					// 分享到微博;
+					var weiboContent = '';
+          WeixinJSBridge.on('menu:share:weibo', function(argv){
+            
+						WeixinJSBridge.invoke('shareWeibo',{
+											  "content" : title + share_scene(link, 3),
+											  "url"     : share_scene(link, 3) 
+											  }, function(res) {report(link, fakeid, 3);
+											  });
+					});
+					// 隐藏右上角的选项菜单入口;
+					//WeixinJSBridge.call('hideOptionMenu');
+				};
+        if(document.addEventListener){
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if(document.attachEvent){
+          document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+          document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+        }
+			})();
+		</script>
+	</body>
+</html>
